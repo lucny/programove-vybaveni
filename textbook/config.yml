@@ -1,0 +1,20 @@
+site:
+  name: "Informatika"
+  language: "cs"
+
+source:
+  topic_pattern: '^\\d{2}-.+$'
+  lessons: [1, 2, 3, 4, 5, 6]
+
+liascript:
+  reader_base: "https://liascript.github.io/course/?"
+  raw_base: ""
+  branch: "main"
+
+exports:
+  pdf: true
+  latex: true
+
+build:
+  strict_quizzes: true
+  missing_images_are_errors: false

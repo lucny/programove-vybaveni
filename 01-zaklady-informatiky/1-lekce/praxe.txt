@@ -1,0 +1,52 @@
+# Základy informatiky - praktické lekce
+1. Mobil jako osobní informační centrum - mobil obsahuje mnoho technických prostředků (kamery, senzory atd.), pomocí kterých můžeme získávat velké množství dat, vyhodnocovat z nich důležité informace a využívat je v praktickém životě. 
+Úkol bude formulován pro dvojice žáků například tímto způsobem:
+Vytvořte společně se spolužákem v lavici prezentaci o různých možnostech praktického použití mobilního telefonu (např. Jak funguje měření úhlu a sklonu pomocí mobilního telefonu) pomocí libovolných dostupných aplikací (např. Power-Point, Lumi/H5P, software pro úpravu zvuku - např. Audacity, editor videa, různí AI pomocníci apod.). 
+
+Prezentace by mohla obsahovat:
+
+Malý výlet do historie spojený s objevem nebo začátky využití určitého zařízení či principu
+Přehledný popis fungování zařízení/senzoru, technické parametry
+Zdůrazněte cestu od získaných dat, přes informace až k možnostem praktického využití 
+Představte případně zajímavé aplikace, které 
+Vtipné ověření získaných znalostí - krátký kvíz k danému tématu pro spolužáky 
+Uvedení použitých informačních zdrojů 
+Nachystejte prezentaci tak, aby si ji mohli prohlédnout ostatní spolužáci a připravte si ve dvojici kratší živé vystoupení k danému tématu v rozsahu do 5 minut.
+
+V přiložených souborech naleznete podrobnější zadání, ukázkovou osnovu zpracování jednoho tématu a příklad možnosti využití AI k objasnění tématu formou fiktivního rozhovoru nebo článku do fiktivní učebnice.
+
+Hodnotit se bude nejen kvalita prezentace, ale také originalita. :-)
+
+Good luck!
+
+Nabídka témat:
+
+Jak funguje měření vzdáleností pomocí mobilního telefonu (využití AR a kamery)
+Jak funguje měření hlasitosti okolí pomocí mobilního telefonu (využití mikrofonu jako hlukoměru)
+Jak funguje měření úrovně osvětlení pomocí mobilního telefonu (využití senzoru okolního světla)
+Jak funguje měření magnetického pole pomocí mobilního telefonu (využití magnetometru)
+Jak funguje měření nadmořské výšky pomocí mobilního telefonu (využití barometru)
+Jak funguje měření rychlosti pohybu pomocí mobilního telefonu (využití GPS a akcelerometru)
+Jak funguje měření kroků a fyzické aktivity pomocí mobilního telefonu (využití akcelerometru a gyroskopu)
+Jak funguje měření tepové frekvence pomocí mobilního telefonu (využití kamery a LED blesku)
+Jak funguje měření kvality vzduchu pomocí mobilního telefonu (využití externích senzorů nebo dat z okolních stanic)
+Jak funguje měření rychlosti větru pomocí mobilního telefonu (využití mikrofonu)
+Jak funguje měření vibrací pomocí mobilního telefonu (využití akcelerometru)
+Jak funguje měření barev a teploty barev pomocí mobilního telefonu (využití kamery)
+Jak funguje měření vlhkosti vzduchu pomocí mobilního telefonu (s externím senzorem nebo bez něj)
+Jak funguje měření radiace pomocí mobilního telefonu (s využitím kamery jako improvizovaného detektoru)
+Jak funguje měření rychlosti reakce pomocí mobilního telefonu (využití dotykového displeje) 
+Jak funguje měření kvality spánku pomocí mobilního telefonu (využití akcelerometru a mikrofonu) (Kern)
+Jak funguje měření hustoty kapalin pomocí mobilního telefonu (využití akcelerometru a AR)
+Jak funguje měření vzdálenosti mezi dvěma body na mapě pomocí mobilního telefonu (využití GPS a matematických výpočtů)
+Jak funguje měření intenzity UV záření pomocí mobilního telefonu (s využitím předního fotoaparátu nebo externího senzoru)
+Jak funguje měření hladiny hluku v decibelech pomocí mobilního telefonu (kalibrace mikrofonu)
+Jak funguje měření frekvence zvuku pomocí mobilního telefonu (využití mikrofonu a Fourierovy transformace)
+Jak funguje GPS v mobilním telefonu
+Jak funguje rozpoznávání obličeje v mobilním telefonu 
+Jak funguje bezdrátové nabíjení v mobilním telefonu 
+Jak funguje NFC (Near Field Communication) v mobilním telefonu 
+Jak funguje snímač otisků prstů v mobilním telefonu 
+Jak funguje stabilizace obrazu v kameře mobilního telefonu
+Jak funguje měření srdečního tepu v mobilním telefonu 
+Jak lze využít proximity senzor 

@@ -1,0 +1,17 @@
+version: 2
+build:
+  os: ubuntu-24.04
+  tools:
+    python: "3.11"
+  jobs:
+    pre_build:
+      - python tools/textbook.py all
+  apt_packages:
+    - pandoc
+    - texlive-xetex
+    - texlive-lang-european
+mkdocs:
+  configuration: mkdocs.yml
+python:
+  install:
+    - requirements: requirements.txt

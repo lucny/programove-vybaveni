@@ -1,0 +1,6 @@
+:root { --md-primary-fg-color: #183b56; --md-accent-fg-color: #0f8790; }
+.md-content { max-width: 58rem; }
+.md-content img { max-width: 100%; height: auto; }
+.md-button { margin-top: .5rem; }
+.admonition { border-radius: .25rem; }
+@media print { .md-sidebar, .md-header, .md-tabs { display: none; } .md-content { max-width: 100%; } }

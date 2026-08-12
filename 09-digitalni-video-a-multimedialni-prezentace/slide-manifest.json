@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "project": "09-digitalni-video-a-multimedialni-prezentace",
+  "project_root": ".",
+  "staging_dir": "_generated",
+  "status_values": [
+    "pending",
+    "generating",
+    "done",
+    "needs_review",
+    "failed"
+  ],
+  "policy": {
+    "max_generation_attempts": 3,
+    "continue_after_needs_review": true,
+    "continue_after_failed": true,
+    "skip_done": true,
+    "expected_width": 1600,
+    "expected_height": 900
+  },
+  "lessons": [
+    {
+      "lesson": 1,
+      "title": "Od světla k digitálnímu videu",
+      "scenario_file": "1-lekce/prezentace.md",
+      "output_dir": "1-lekce/media/images"
+    },
+    {
+      "lesson": 2,
+      "title": "Komprese, kodeky a kontejnery",
+      "scenario_file": "2-lekce/prezentace.md",
+      "output_dir": "2-lekce/media/images"
+    },
+    {
+      "lesson": 3,
+      "title": "Natáčení: technika slouží příběhu",
+      "scenario_file": "3-lekce/prezentace.md",
+      "output_dir": "3-lekce/media/images"
+    },
+    {
+      "lesson": 4,
+      "title": "Postprodukce, export a distribuce",
+      "scenario_file": "4-lekce/prezentace.md",
+      "output_dir": "4-lekce/media/images"
+    },
+    {
+      "lesson": 5,
+      "title": "Multimediální prezentace jako řízené sdělení",
+      "scenario_file": "5-lekce/prezentace.md",
+      "output_dir": "5-lekce/media/images"
+    },
+    {
+      "lesson": 6,
+      "title": "E-learning, umělá inteligence a důvěra v multimédia",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output_dir": "6-lekce/media/images"
+    }
+  ],
+  "slides": [
+    {
+      "id": "1.1",
+      "lesson": 1,
+      "title": "Video jako řada obrazů v čase",
+      "scenario_file": "1-lekce/prezentace.md",
+      "output": "1-lekce/media/images/1-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "1.2",
+      "lesson": 1,
+      "title": "Co se děje uvnitř kamery",
+      "scenario_file": "1-lekce/prezentace.md",
+      "output": "1-lekce/media/images/1-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "1.3",
+      "lesson": 1,
+      "title": "Rozlišení, poměr stran a skutečná ostrost",
+      "scenario_file": "1-lekce/prezentace.md",
+      "output": "1-lekce/media/images/1-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "1.4",
+      "lesson": 1,
+      "title": "Snímková frekvence a charakter pohybu",
+      "scenario_file": "1-lekce/prezentace.md",
+      "output": "1-lekce/media/images/1-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "1.5",
+      "lesson": 1,
+      "title": "Barva, jas a dynamický rozsah",
+      "scenario_file": "1-lekce/prezentace.md",
+      "output": "1-lekce/media/images/1-5.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "2.1",
+      "lesson": 2,
+      "title": "Proč nekomprimované video rychle zaplní disk",
+      "scenario_file": "2-lekce/prezentace.md",
+      "output": "2-lekce/media/images/2-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "2.2",
+      "lesson": 2,
+      "title": "Prostorová a časová komprese",
+      "scenario_file": "2-lekce/prezentace.md",
+      "output": "2-lekce/media/images/2-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "2.3",
+      "lesson": 2,
+      "title": "Bitrate, kvalita a velikost souboru",
+      "scenario_file": "2-lekce/prezentace.md",
+      "output": "2-lekce/media/images/2-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "2.4",
+      "lesson": 2,
+      "title": "H.264, HEVC, VP9 a AV1 jako reprezentativní generace",
+      "scenario_file": "2-lekce/prezentace.md",
+      "output": "2-lekce/media/images/2-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "2.5",
+      "lesson": 2,
+      "title": "Kontejner není kodek",
+      "scenario_file": "2-lekce/prezentace.md",
+      "output": "2-lekce/media/images/2-5.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "3.1",
+      "lesson": 3,
+      "title": "Preprodukce ušetří nejvíce času",
+      "scenario_file": "3-lekce/prezentace.md",
+      "output": "3-lekce/media/images/3-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "3.2",
+      "lesson": 3,
+      "title": "Kompozice, velikosti záběrů a prostor",
+      "scenario_file": "3-lekce/prezentace.md",
+      "output": "3-lekce/media/images/3-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "3.3",
+      "lesson": 3,
+      "title": "Stabilita, ostření a práce s objektivem",
+      "scenario_file": "3-lekce/prezentace.md",
+      "output": "3-lekce/media/images/3-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "3.4",
+      "lesson": 3,
+      "title": "Světlo, expozice a barva v praxi",
+      "scenario_file": "3-lekce/prezentace.md",
+      "output": "3-lekce/media/images/3-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "3.5",
+      "lesson": 3,
+      "title": "Zvuk je polovina zážitku",
+      "scenario_file": "3-lekce/prezentace.md",
+      "output": "3-lekce/media/images/3-5.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "4.1",
+      "lesson": 4,
+      "title": "Nedestruktivní střih a práce s materiálem",
+      "scenario_file": "4-lekce/prezentace.md",
+      "output": "4-lekce/media/images/4-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "4.2",
+      "lesson": 4,
+      "title": "Obrazová a zvuková úprava",
+      "scenario_file": "4-lekce/prezentace.md",
+      "output": "4-lekce/media/images/4-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "4.3",
+      "lesson": 4,
+      "title": "Export podle cíle, ne podle největšího čísla",
+      "scenario_file": "4-lekce/prezentace.md",
+      "output": "4-lekce/media/images/4-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "4.4",
+      "lesson": 4,
+      "title": "Co se stane po stisknutí „Publikovat“",
+      "scenario_file": "4-lekce/prezentace.md",
+      "output": "4-lekce/media/images/4-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "4.5",
+      "lesson": 4,
+      "title": "Přístupnost, práva a archivace",
+      "scenario_file": "4-lekce/prezentace.md",
+      "output": "4-lekce/media/images/4-5.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "5.1",
+      "lesson": 5,
+      "title": "Prezentace není dokument promítnutý na stěnu",
+      "scenario_file": "5-lekce/prezentace.md",
+      "output": "5-lekce/media/images/5-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "5.2",
+      "lesson": 5,
+      "title": "Vizuální hierarchie, typografie a barva",
+      "scenario_file": "5-lekce/prezentace.md",
+      "output": "5-lekce/media/images/5-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "5.3",
+      "lesson": 5,
+      "title": "Animace, video a interaktivita",
+      "scenario_file": "5-lekce/prezentace.md",
+      "output": "5-lekce/media/images/5-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "5.4",
+      "lesson": 5,
+      "title": "Technika vystoupení a záložní plán",
+      "scenario_file": "5-lekce/prezentace.md",
+      "output": "5-lekce/media/images/5-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "6.1",
+      "lesson": 6,
+      "title": "Od živého výkladu k učebnímu prostředí",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output": "6-lekce/media/images/6-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "6.2",
+      "lesson": 6,
+      "title": "Screencast jako malá video lekce",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output": "6-lekce/media/images/6-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "6.3",
+      "lesson": 6,
+      "title": "AI jako pomocník ve výrobním řetězci",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output": "6-lekce/media/images/6-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "6.4",
+      "lesson": 6,
+      "title": "Personalizace není totéž co kvalitní učení",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output": "6-lekce/media/images/6-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "6.5",
+      "lesson": 6,
+      "title": "Původ média a otázka důvěry",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output": "6-lekce/media/images/6-5.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    }
+  ]
+}

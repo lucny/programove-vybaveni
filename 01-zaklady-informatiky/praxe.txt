@@ -1,0 +1,9 @@
+Experimenty se zvukem. Cíl - naučit se používat některé funkce programu Audacity, poznat vlastnosti zvuku, procvičit pojmy související s digitalizací. Odstranit šum, použít filtry, pracovat se stopami.
+
+Procvičit si převody mezi číselnými soustavami. Experimenty s grafickými kódy. Práce s kalkulačkou. 
+
+Experimenty s kódováním: Morseovka, Braillovo písmo, grafické kódy. Kódování znaků. Chytré používání Mapy znaků.
+
+Experimenty s kompresí. Výběr jednoho státu EU. Vlajka, mapa, fotka hlavy státu, krátké video, hymna, ukázka řeči, textový soubor, webová stránka.
+
+Digitální detektivka. Chytré hledání informací a chytré úpravy dat.

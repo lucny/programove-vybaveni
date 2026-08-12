@@ -1,0 +1,5 @@
+site/
+docs/
+.textbook-build/
+__pycache__/
+.pytest_cache/

@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "project": "10-relacni-databaze-a-sql",
+  "project_root": ".",
+  "staging_dir": "_generated",
+  "status_values": [
+    "pending",
+    "generating",
+    "done",
+    "needs_review",
+    "failed"
+  ],
+  "policy": {
+    "max_generation_attempts": 3,
+    "continue_after_needs_review": true,
+    "continue_after_failed": true,
+    "skip_done": true,
+    "expected_width": 1600,
+    "expected_height": 900
+  },
+  "lessons": [
+    {
+      "lesson": 1,
+      "title": "Relační model – data jako tvrzení a vztahy",
+      "scenario_file": "1-lekce/prezentace.md",
+      "output_dir": "1-lekce/media/images"
+    },
+    {
+      "lesson": 2,
+      "title": "Od požadavků k databázovému schématu",
+      "scenario_file": "2-lekce/prezentace.md",
+      "output_dir": "2-lekce/media/images"
+    },
+    {
+      "lesson": 3,
+      "title": "Vytvoření databáze a bezpečné změny dat",
+      "scenario_file": "3-lekce/prezentace.md",
+      "output_dir": "3-lekce/media/images"
+    },
+    {
+      "lesson": 4,
+      "title": "SELECT – od otázky k výsledku",
+      "scenario_file": "4-lekce/prezentace.md",
+      "output_dir": "4-lekce/media/images"
+    },
+    {
+      "lesson": 5,
+      "title": "Když odpověď leží ve více tabulkách",
+      "scenario_file": "5-lekce/prezentace.md",
+      "output_dir": "5-lekce/media/images"
+    },
+    {
+      "lesson": 6,
+      "title": "Transakce, výkon, bezpečnost a provoz",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output_dir": "6-lekce/media/images"
+    }
+  ],
+  "slides": [
+    {
+      "id": "1.1",
+      "lesson": 1,
+      "title": "Proč nestačí jedna velká tabulka",
+      "scenario_file": "1-lekce/prezentace.md",
+      "output": "1-lekce/media/images/1-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "1.2",
+      "lesson": 1,
+      "title": "Tabulka, řádek, sloupec a datový typ",
+      "scenario_file": "1-lekce/prezentace.md",
+      "output": "1-lekce/media/images/1-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "1.3",
+      "lesson": 1,
+      "title": "Klíče dávají záznamům identitu",
+      "scenario_file": "1-lekce/prezentace.md",
+      "output": "1-lekce/media/images/1-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "1.4",
+      "lesson": 1,
+      "title": "Kardinalita a převod vztahů do tabulek",
+      "scenario_file": "1-lekce/prezentace.md",
+      "output": "1-lekce/media/images/1-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "2.1",
+      "lesson": 2,
+      "title": "Návrh začíná otázkami, ne tabulkami",
+      "scenario_file": "2-lekce/prezentace.md",
+      "output": "2-lekce/media/images/2-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "2.2",
+      "lesson": 2,
+      "title": "ER diagram jako mapa významu",
+      "scenario_file": "2-lekce/prezentace.md",
+      "output": "2-lekce/media/images/2-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "2.3",
+      "lesson": 2,
+      "title": "Normalizace odstraňuje skryté závislosti",
+      "scenario_file": "2-lekce/prezentace.md",
+      "output": "2-lekce/media/images/2-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "2.4",
+      "lesson": 2,
+      "title": "Omezení převádějí pravidla do databáze",
+      "scenario_file": "2-lekce/prezentace.md",
+      "output": "2-lekce/media/images/2-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "3.1",
+      "lesson": 3,
+      "title": "SQL je deklarativní jazyk",
+      "scenario_file": "3-lekce/prezentace.md",
+      "output": "3-lekce/media/images/3-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "3.2",
+      "lesson": 3,
+      "title": "Schéma jako spustitelná specifikace",
+      "scenario_file": "3-lekce/prezentace.md",
+      "output": "3-lekce/media/images/3-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "3.3",
+      "lesson": 3,
+      "title": "INSERT, UPDATE a DELETE mění stav systému",
+      "scenario_file": "3-lekce/prezentace.md",
+      "output": "3-lekce/media/images/3-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "3.4",
+      "lesson": 3,
+      "title": "Databázový server, klient a role uživatelů",
+      "scenario_file": "3-lekce/prezentace.md",
+      "output": "3-lekce/media/images/3-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "4.1",
+      "lesson": 4,
+      "title": "Projekce, filtrování a řazení",
+      "scenario_file": "4-lekce/prezentace.md",
+      "output": "4-lekce/media/images/4-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "4.2",
+      "lesson": 4,
+      "title": "Výrazy, funkce a práce s NULL",
+      "scenario_file": "4-lekce/prezentace.md",
+      "output": "4-lekce/media/images/4-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "4.3",
+      "lesson": 4,
+      "title": "Agregace mění úroveň detailu",
+      "scenario_file": "4-lekce/prezentace.md",
+      "output": "4-lekce/media/images/4-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "4.4",
+      "lesson": 4,
+      "title": "Poddotazy a CTE rozdělují složitou otázku",
+      "scenario_file": "4-lekce/prezentace.md",
+      "output": "4-lekce/media/images/4-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "5.1",
+      "lesson": 5,
+      "title": "JOIN skládá související řádky",
+      "scenario_file": "5-lekce/prezentace.md",
+      "output": "5-lekce/media/images/5-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "5.2",
+      "lesson": 5,
+      "title": "Vazební tabulka a vztah N:M",
+      "scenario_file": "5-lekce/prezentace.md",
+      "output": "5-lekce/media/images/5-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "5.3",
+      "lesson": 5,
+      "title": "Pohledy skrývají složitost, ne cenu výpočtu",
+      "scenario_file": "5-lekce/prezentace.md",
+      "output": "5-lekce/media/images/5-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "5.4",
+      "lesson": 5,
+      "title": "Procedury, funkce a triggery",
+      "scenario_file": "5-lekce/prezentace.md",
+      "output": "5-lekce/media/images/5-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "6.1",
+      "lesson": 6,
+      "title": "Transakce chrání celek operace",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output": "6-lekce/media/images/6-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "6.2",
+      "lesson": 6,
+      "title": "Index je rejstřík s provozní cenou",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output": "6-lekce/media/images/6-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "6.3",
+      "lesson": 6,
+      "title": "SQL injection a princip nejmenších oprávnění",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output": "6-lekce/media/images/6-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "6.4",
+      "lesson": 6,
+      "title": "Záloha, replikace a obnova nejsou totéž",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output": "6-lekce/media/images/6-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "6.5",
+      "lesson": 6,
+      "title": "Databáze v aplikaci a role AI",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output": "6-lekce/media/images/6-5.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    }
+  ]
+}

@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "project": "07-prace-s-daty-a-tabulkove-procesory",
+  "project_root": ".",
+  "staging_dir": "_generated",
+  "status_values": [
+    "pending",
+    "generating",
+    "done",
+    "needs_review",
+    "failed"
+  ],
+  "policy": {
+    "max_generation_attempts": 3,
+    "continue_after_needs_review": true,
+    "continue_after_failed": true,
+    "skip_done": true,
+    "expected_width": 1600,
+    "expected_height": 900
+  },
+  "lessons": [
+    {
+      "lesson": 1,
+      "title": "Od otázky k datové sadě",
+      "scenario_file": "1-lekce/prezentace.md",
+      "output_dir": "1-lekce/media/images"
+    },
+    {
+      "lesson": 2,
+      "title": "Tabulkový procesor jako datová laboratoř",
+      "scenario_file": "2-lekce/prezentace.md",
+      "output_dir": "2-lekce/media/images"
+    },
+    {
+      "lesson": 3,
+      "title": "Čištění a transformace: práce, kterou výsledek skrývá",
+      "scenario_file": "3-lekce/prezentace.md",
+      "output_dir": "3-lekce/media/images"
+    },
+    {
+      "lesson": 4,
+      "title": "Od souhrnu ke statistickému uvažování",
+      "scenario_file": "4-lekce/prezentace.md",
+      "output_dir": "4-lekce/media/images"
+    },
+    {
+      "lesson": 5,
+      "title": "Graf jako odpověď, ne jako dekorace",
+      "scenario_file": "5-lekce/prezentace.md",
+      "output_dir": "5-lekce/media/images"
+    },
+    {
+      "lesson": 6,
+      "title": "Trend, predikce a odpovědný datový workflow",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output_dir": "6-lekce/media/images"
+    }
+  ],
+  "slides": [
+    {
+      "id": "1.1",
+      "lesson": 1,
+      "title": "Data nezačínají v tabulce",
+      "scenario_file": "1-lekce/prezentace.md",
+      "output": "1-lekce/media/images/1-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "1.2",
+      "lesson": 1,
+      "title": "Jeden záznam, jedna proměnná, jedna hodnota",
+      "scenario_file": "1-lekce/prezentace.md",
+      "output": "1-lekce/media/images/1-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "1.3",
+      "lesson": 1,
+      "title": "Sběr dat a neviditelné zkreslení",
+      "scenario_file": "1-lekce/prezentace.md",
+      "output": "1-lekce/media/images/1-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "1.4",
+      "lesson": 1,
+      "title": "Metadata jsou návod k použití",
+      "scenario_file": "1-lekce/prezentace.md",
+      "output": "1-lekce/media/images/1-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "2.1",
+      "lesson": 2,
+      "title": "Buňka má obsah, adresu a zobrazení",
+      "scenario_file": "2-lekce/prezentace.md",
+      "output": "2-lekce/media/images/2-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "2.2",
+      "lesson": 2,
+      "title": "Vzorec jako opakovatelný postup",
+      "scenario_file": "2-lekce/prezentace.md",
+      "output": "2-lekce/media/images/2-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "2.3",
+      "lesson": 2,
+      "title": "Několik funkcí, které řeší většinu prvních úloh",
+      "scenario_file": "2-lekce/prezentace.md",
+      "output": "2-lekce/media/images/2-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "2.4",
+      "lesson": 2,
+      "title": "Filtr, řazení a kontingenční tabulka",
+      "scenario_file": "2-lekce/prezentace.md",
+      "output": "2-lekce/media/images/2-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "2.5",
+      "lesson": 2,
+      "title": "CSV, XLSX a JSON nejsou totéž",
+      "scenario_file": "2-lekce/prezentace.md",
+      "output": "2-lekce/media/images/2-5.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "3.1",
+      "lesson": 3,
+      "title": "Když počítač nevidí to, co člověk",
+      "scenario_file": "3-lekce/prezentace.md",
+      "output": "3-lekce/media/images/3-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "3.2",
+      "lesson": 3,
+      "title": "Prázdná buňka není nula a dvojitý řádek nemusí být duplicita",
+      "scenario_file": "3-lekce/prezentace.md",
+      "output": "3-lekce/media/images/3-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "3.3",
+      "lesson": 3,
+      "title": "Jednotky, kategorie a odlehlé hodnoty",
+      "scenario_file": "3-lekce/prezentace.md",
+      "output": "3-lekce/media/images/3-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "3.4",
+      "lesson": 3,
+      "title": "Transformace vytváří proměnné, které umíme analyzovat",
+      "scenario_file": "3-lekce/prezentace.md",
+      "output": "3-lekce/media/images/3-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "3.5",
+      "lesson": 3,
+      "title": "Raw data se nepřepisují",
+      "scenario_file": "3-lekce/prezentace.md",
+      "output": "3-lekce/media/images/3-5.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "4.1",
+      "lesson": 4,
+      "title": "Agregace odpovídá na otázku — a část detailu zahazuje",
+      "scenario_file": "4-lekce/prezentace.md",
+      "output": "4-lekce/media/images/4-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "4.2",
+      "lesson": 4,
+      "title": "Průměr bez rozdělení může lhát",
+      "scenario_file": "4-lekce/prezentace.md",
+      "output": "4-lekce/media/images/4-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "4.3",
+      "lesson": 4,
+      "title": "Korelace je vodítko, nikoli rozsudek",
+      "scenario_file": "4-lekce/prezentace.md",
+      "output": "4-lekce/media/images/4-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "4.4",
+      "lesson": 4,
+      "title": "Vzorek, nejistota a přiměřená jistota",
+      "scenario_file": "4-lekce/prezentace.md",
+      "output": "4-lekce/media/images/4-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "5.1",
+      "lesson": 5,
+      "title": "Typ grafu vybírá otázka",
+      "scenario_file": "5-lekce/prezentace.md",
+      "output": "5-lekce/media/images/5-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "5.2",
+      "lesson": 5,
+      "title": "Čitelnost vzniká výběrem, ne zdobením",
+      "scenario_file": "5-lekce/prezentace.md",
+      "output": "5-lekce/media/images/5-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "5.3",
+      "lesson": 5,
+      "title": "Pravdivá data lze zobrazit zavádějícím způsobem",
+      "scenario_file": "5-lekce/prezentace.md",
+      "output": "5-lekce/media/images/5-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "5.4",
+      "lesson": 5,
+      "title": "Od analýzy k rozhodnutí",
+      "scenario_file": "5-lekce/prezentace.md",
+      "output": "5-lekce/media/images/5-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "6.1",
+      "lesson": 6,
+      "title": "Model je užitečné zjednodušení",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output": "6-lekce/media/images/6-1.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "6.2",
+      "lesson": 6,
+      "title": "Predikce není věštění",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output": "6-lekce/media/images/6-2.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "6.3",
+      "lesson": 6,
+      "title": "Kdy tabulka přestává stačit",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output": "6-lekce/media/images/6-3.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "6.4",
+      "lesson": 6,
+      "title": "AI asistent musí ukázat práci",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output": "6-lekce/media/images/6-4.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    },
+    {
+      "id": "6.5",
+      "lesson": 6,
+      "title": "Soukromí, etika a reprodukovatelnost",
+      "scenario_file": "6-lekce/prezentace.md",
+      "output": "6-lekce/media/images/6-5.png",
+      "status": "pending",
+      "attempts": 0,
+      "last_error": null,
+      "qa_note": null,
+      "updated_at": null
+    }
+  ]
+}
