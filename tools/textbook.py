@@ -25,11 +25,21 @@ LESSON_HEADING_RE = re.compile(r"^(?:Lekce\s+)?(\d+)\.?\s*[:.-]?\s+(.+?)\s*$", r
 
 
 @dataclass
+class Subchapter:
+    lesson_number: int
+    number: int
+    full_number: str
+    source_heading: str
+    title: str
+    lines: list[str] = field(default_factory=list)
+
+
+@dataclass
 class Section:
     number: int
     title: str
     lines: list[str] = field(default_factory=list)
-    subchapters: list[tuple[int, str, list[str]]] = field(default_factory=list)
+    subchapters: list[Subchapter] = field(default_factory=list)
 
 
 @dataclass
@@ -128,7 +138,27 @@ class Book:
             for sidx, (pos, sm) in enumerate(subheads):
                 assert sm
                 sub_end = subheads[sidx + 1][0] if sidx + 1 < len(subheads) else len(body)
-                section.subchapters.append((int(sm.group(1)), sm.group(3), body[pos + 1 : sub_end]))
+                sub_lesson = int(sm.group(1))
+                sub_number = int(sm.group(2))
+                full_number = f"{sub_lesson}.{sub_number}"
+                if sub_lesson != num:
+                    self.errors.append(
+                        f"{topic.slug}: podkapitola {full_number} nepatří do lekce {num}"
+                    )
+                if any(sub.number == sub_number for sub in section.subchapters):
+                    self.errors.append(
+                        f"{topic.slug}: duplicitní číslo podkapitoly {full_number} v lekci {num}"
+                    )
+                section.subchapters.append(
+                    Subchapter(
+                        lesson_number=sub_lesson,
+                        number=sub_number,
+                        full_number=full_number,
+                        source_heading=sm.group(0),
+                        title=sm.group(3),
+                        lines=body[pos + 1 : sub_end],
+                    )
+                )
             topic.lessons.append(section)
 
     def find_assets(self, topic: Topic) -> None:
@@ -205,8 +235,10 @@ class Book:
     def validate(self) -> bool:
         for topic in self.topics:
             for lesson in topic.lessons:
-                for sub, _, _ in lesson.subchapters:
-                    self.image_for(topic, lesson.number, sub)
+                for subchapter in lesson.subchapters:
+                    self.image_for(
+                        topic, subchapter.lesson_number, subchapter.number
+                    )
                 if lesson.number in topic.quizzes:
                     self.raw_url(topic.quizzes[lesson.number])
         return not self.errors
@@ -235,15 +267,17 @@ class Book:
                 ld = td / f"{lesson.number}-lekce"
                 ld.mkdir()
                 chunks = [f"# {lesson.number}. {lesson.title}", ""]
-                for sub, title, content in lesson.subchapters:
-                    chunks += [f"## {lesson.number}.{sub} {title}", ""] + content + [""]
-                    image = self.image_for(topic, lesson.number, sub)
+                for subchapter in lesson.subchapters:
+                    chunks += [f"## {subchapter.source_heading}", ""] + subchapter.lines + [""]
+                    image = self.image_for(
+                        topic, subchapter.lesson_number, subchapter.number
+                    )
                     if image:
                         dest = docs / "assets/images" / topic.slug / f"{lesson.number}-lekce" / image.name
                         dest.parent.mkdir(parents=True, exist_ok=True)
                         shutil.copy2(image, dest)
                         rel = Path("../../assets/images") / topic.slug / f"{lesson.number}-lekce" / image.name
-                        chunks += [f"![Grafické shrnutí podkapitoly {lesson.number}.{sub} – {title}]({rel.as_posix()})", ""]
+                        chunks += [f"![Grafické shrnutí podkapitoly {subchapter.full_number} – {subchapter.title}]({rel.as_posix()})", ""]
                 if lesson.number == 6:
                     end_marker = next((i for i, x in enumerate(lesson.lines) if x.strip().lower().startswith("# závěrečné propojení")), None)
                     if end_marker is not None:
@@ -293,10 +327,14 @@ class Book:
                 report.append(f"- QUIZ {lesson}: {str(quiz.resolve()) if quiz else 'CHYBÍ'}")
             duplicate_lines = []
             for lesson in topic.lessons:
-                for sub, _, _ in lesson.subchapters:
-                    matches = self.image_matches(topic, lesson.number, sub)
+                for subchapter in lesson.subchapters:
+                    matches = self.image_matches(
+                        topic, subchapter.lesson_number, subchapter.number
+                    )
                     if len(matches) > 1:
-                        duplicate_lines.append(f"  - Obrázek {lesson.number}.{sub}:")
+                        duplicate_lines.append(
+                            f"  - Obrázek {subchapter.full_number}:"
+                        )
                         for image in matches:
                             try:
                                 digest = hashlib.sha256(image.read_bytes()).hexdigest()
