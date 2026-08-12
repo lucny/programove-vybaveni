@@ -1,13 +1,13 @@
 # TEXTBOOK BUILD REPORT
 
-Datum: 2026-08-12T20:55:34.238547+00:00
+Datum: 2026-08-12T21:08:47.308314+00:00
 Git commit: NEOVĚŘENO (repozitář není Git pracovní kopie)
 
 - Témata: 20
 - Lekce: 120
 - Podkapitoly: 607
 - Nalezené QUIZ: 120
-- Nalezené WEBP: 294
+- Nalezené WEBP: 293
 - Doplňkové kapitoly: 0
 - PDF: NEOVĚŘENO
 - TEX: NEOVĚŘENO
