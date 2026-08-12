@@ -6,8 +6,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.1 Model je užitečné zjednodušení
-
 Časová řada může obsahovat dlouhodobý **trend**, pravidelnou **sezónnost** a krátkodobý šum. Spotřeba školy se mění s venkovní teplotou, rozvrhem, víkendy i prázdninami. Porovnání prosince s lednem proto nemusí dokazovat nový trend; může zachycovat běžný roční rytmus. U sezónních dat bývá výstižnější porovnat stejné období různých let.
 
 Kolísavý průběh lze vyhladit **klouzavým průměrem**, který pro každý bod počítá průměr z několika sousedních období. Delší okno ukáže hladší trend, ale skryje více krátkých změn a reaguje se zpožděním. Ani vyhlazená křivka není „pravá hodnota“; je to další pohled na tatáž data.
@@ -27,7 +25,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.2 Predikce není věštění
 
 Použijeme-li model uvnitř rozsahu známých hodnot, mluvíme o **interpolaci**. Odhad mimo tento rozsah je **extrapolace** a bývá mnohem riskantnější. Vztah pozorovaný při venkovních teplotách od −5 do 15 °C nemusí pokračovat při −25 °C. Matematická přímka pokračuje bez váhání, i když se chování budovy nebo topného systému dávno změnilo.
 
@@ -48,7 +45,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.3 Kdy tabulka přestává stačit
 
 Tabulkový procesor je výborný pro průzkum, výpočty a komunikaci menších až středních datových úloh. S rostoucím objemem, počtem zdrojů a požadavkem na opakování však roste riziko ručních chyb. Databáze lépe spravuje sdílená strukturovaná data a vztahy, Power Query opakuje importní a transformační kroky a jazyky jako Python s knihovnou pandas umožňují zpracovat více souborů, verzovat postup a vytvářet složitější analýzy.
 
@@ -67,7 +63,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.4 AI asistent musí ukázat práci
 
 AI může navrhnout vzorec, vysvětlit chybu, vytvořit skript, shrnout tabulku nebo doporučit graf. Tím zrychluje práci, ale nemá přístup k žádné skryté „správné odpovědi“. Může zaměnit význam sloupce, použít chybný rozsah, přehlédnout výběrové zkreslení nebo přesvědčivě tvrdit kauzalitu z pouhé korelace.
 
@@ -88,7 +83,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.5 Soukromí, etika a reprodukovatelnost
 
 Školní data mohou obsahovat jména, výsledky, docházku, polohu nebo jiné osobní údaje. Základním principem je **minimalizace dat**: sbíráme jen údaje skutečně potřebné pro vymezený účel, přístup dáváme jen oprávněným lidem a data neuchováváme déle, než je nutné. Pro analýzu prostředí obvykle nepotřebujeme jména žáků; stačí počet přítomných.
 
@@ -100,21 +94,6 @@ Dobře odevzdaný datový projekt neobsahuje jen finální graf. Uchovává pův
 
 **Hlavní myšlenka:** Predikce je podmíněný odhad, nikoli věštba. Odpovědný workflow odděluje data, postup a výstup, testuje model na nových případech, chrání soukromí a ponechává člověku kontrolu nad závěrem.
 
-# Závěrečné propojení
-
-Příběh školních učeben ukazuje, proč práce s daty není posloupnost izolovaných funkcí. Otázka rozhodne, co budeme měřit. Způsob měření určí, jaké zkreslení může vzniknout. Struktura tabulky ovlivní, zda lze data spolehlivě filtrovat a spojovat. Čištění změní, které záznamy vstoupí do analýzy. Statistická metoda určí, co ze složitosti zachováme, a graf rozhodne, co uvidí příjemce jako první. Predikce pak přidá předpoklad, že určitá část minulého vztahu bude platit i dál.
-
-Celý proces lze shrnout dvěma propojenými řetězci:
-
-**otázka → sběr → metadata → struktura → čištění → analýza → vizualizace → interpretace**
-
-**trend → model → test → predikce → rozhodnutí → nové měření**
-
-Druhý řetězec nekončí definitivní pravdou, ale návratem k datům. Po změně větrání nebo vytápění znovu měříme, porovnáme očekávání se skutečností a model opravíme. Datová práce je proto cyklus učení.
-
-Tabulkový procesor v něm zůstává první praktickou laboratoří. Učí přesně formulovat vztahy pomocí vzorců, oddělit hodnotu od zobrazení, změnit pohled bez přepisování zdroje a rychle prověřit hypotézu. Jakmile však data přerostou možnosti ruční kontroly, stejný mentální model pokračuje v databázích, transformačních nástrojích, programování i strojovém učení.
-
-Nejcennější dovedností tedy není zapamatovat si všechny funkce. Je to schopnost položit dobrou otázku, poznat omezení dat, vytvořit kontrolovatelný postup a tvrdit jen to, co výsledek opravdu podporuje.**
 ------
 Formát 16:9, ideálně 1600 × 900 px. Profesionální encyklopedická grafika pro středoškolskou výuku informatiky. Světlá, vzdušná kompozice s dostatkem volného prostoru; dominantní metafora může vytvářet vlastní prostor a hloubku. Výrazný tmavý titulek organicky začleněný do architektury obrazu, bez povinné horní lišty. Velké bezpatkové písmo, vysoký kontrast, bezpečné okraje. Grafické prvky mají nést hlavní výklad; text používej jen pro nezbytné přesné názvy, cesty a krátká vysvětlení.
 **Obraz má vysvětlovat, ne jen zdobit.** Atraktivita musí pomáhat pochopení nebo zapamatování.
