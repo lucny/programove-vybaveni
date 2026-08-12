@@ -53,7 +53,6 @@ build:
 """,
         encoding="utf-8",
     )
-
     topic = tmp_path / "01-testovaci-okruh"
     topic.mkdir()
     master = ["# Testovací okruh", "", "Úvod.", ""]

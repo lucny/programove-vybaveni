@@ -277,14 +277,15 @@ class Book:
                         dest.parent.mkdir(parents=True, exist_ok=True)
                         shutil.copy2(image, dest)
                         rel = Path("../../assets/images") / topic.slug / f"{lesson.number}-lekce" / image.name
-                        chunks += [f"![Grafické shrnutí podkapitoly {subchapter.full_number} – {subchapter.title}]({rel.as_posix()})", ""]
+                        gallery = f"{topic.slug}-{lesson.number}-lekce"
+                        chunks += [f"![Grafické shrnutí podkapitoly {subchapter.full_number} – {subchapter.title}]({rel.as_posix()}){{ .on-glb data-gallery=\"{gallery}\" }}", ""]
                 if lesson.number == 6:
                     end_marker = next((i for i, x in enumerate(lesson.lines) if x.strip().lower().startswith("# závěrečné propojení")), None)
                     if end_marker is not None:
                         chunks += lesson.lines[end_marker:] + [""]
                 if lesson.number in topic.quizzes:
                     url = self.raw_url(topic.quizzes[lesson.number])
-                    chunks += ["---", "", "## Procvičení lekce", "", "Ověřte si porozumění v interaktivním kvízu.", "", f"[Spustit interaktivní kvíz v LiaScriptu]({url}){{ .md-button .md-button--primary }}", ""]
+                    chunks += ["---", "", "## Procvičení lekce", "", "Ověřte si porozumění v interaktivním kvízu.", "", f"[Spustit interaktivní kvíz v LiaScriptu]({url}){{ .md-button .md-button--primary target=\"_blank\" rel=\"noopener noreferrer\" }}", ""]
                 (ld / "index.md").write_text(self.generated_text(str(topic.master.relative_to(self.root)) if topic.master else topic.slug, "\n".join(chunks)), encoding="utf-8")
             for p, title in topic.supplements:
                 lesson = next((x for x in topic.path.glob("*-lekce") if p.parent == x / "doplnky"), None)
@@ -296,7 +297,7 @@ class Book:
         self.write_report()
 
     def write_mkdocs_nav(self) -> None:
-        lines = ["site_name: Informatika", 'site_url: ""', "docs_dir: docs", "theme:", "  name: material", "  language: cs", "  features:", "    - navigation.sections", "    - navigation.indexes", "    - navigation.path", "    - navigation.top", "    - search.suggest", "    - search.highlight", "    - content.code.copy", "extra_css:", "  - stylesheets/extra.css", "plugins:", "  - search", "markdown_extensions:", "  - admonition", "  - attr_list", "  - md_in_html", "  - pymdownx.details", "  - pymdownx.superfences", "nav:", "  - Přehled: index.md"]
+        lines = ["site_name: Informatika", 'site_url: ""', "docs_dir: docs", "theme:", "  name: material", "  language: cs", "  features:", "    - navigation.sections", "    - navigation.indexes", "    - navigation.path", "    - navigation.top", "    - search.suggest", "    - search.highlight", "    - content.code.copy", "extra_css:", "  - stylesheets/extra.css", "plugins:", "  - search", "  - glightbox:", "      manual: true", "markdown_extensions:", "  - admonition", "  - attr_list", "  - md_in_html", "  - pymdownx.details", "  - pymdownx.superfences", "nav:", "  - Přehled: index.md"]
         for topic in self.topics:
             lines.append(f'  - "{topic.number:02d} {topic.title}":')
             lines.append(f"    - Přehled: {topic.slug}/index.md")

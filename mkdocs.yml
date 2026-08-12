@@ -16,6 +16,8 @@ extra_css:
   - stylesheets/extra.css
 plugins:
   - search
+  - glightbox:
+      manual: true
 markdown_extensions:
   - admonition
   - attr_list

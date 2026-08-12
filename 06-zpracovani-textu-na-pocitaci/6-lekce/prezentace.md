@@ -6,7 +6,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.1 Dokument nekončí tlačítkem Uložit
 
 Dokument má životní cyklus.
 
@@ -35,7 +34,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.2 Předtisková příprava
 
 Před odesláním dokumentu do profesionálního tisku se provádí **preflight**.
 
@@ -64,7 +62,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.3 PostScript a cesta k PDF
 
 PostScript je stránkový popisný jazyk vytvořený společností Adobe.
 
@@ -97,7 +94,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.4 Elektronické knihy a reflowable layout
 
 Elektronická kniha nemusí mít pevné stránky jako PDF.
 
@@ -134,7 +130,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.5 Přístupnost dokumentů
 
 Moderní dokument nemá být pouze vizuálně pěkný.
 
@@ -171,7 +166,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.6 Dokument jako single source of truth
 
 Moderní publikační systémy se stále více snaží nevytvářet každou verzi dokumentu zvlášť.
 
@@ -214,7 +208,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.7 Moderní publikační pipeline
 
 Představme si technickou učebnici.
 
@@ -259,7 +252,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.8 Kdy použít který nástroj
 
 Neexistuje jeden nejlepší nástroj pro všechny dokumenty.
 
@@ -279,49 +271,6 @@ V profesionálním workflow se nástroje často kombinují.
 
 ---
 
-# Závěrečné propojení kurzu
-
-Zpracování textu na počítači začíná jednoduchým znakem a končí celým publikačním systémem.
-
-Na nejnižší úrovni máme:
-
-**znaky → Unicode → bajty**
-
-Z nich vzniká prostý text.
-
-K textu přidáme významovou strukturu:
-
-**odstavec → nadpis → seznam → tabulka → kapitola**
-
-Tu můžeme zapsat různými způsoby:
-
-**Markdown / LaTeX / HTML / DOCX**
-
-Potom přichází typografie:
-
-**font → řádkování → mezery → hierarchie → stránková sazba**
-
-A nakonec publikace:
-
-**zdroj → šablona → sazba → PDF / HTML / EPUB / tisk**
-
-Největší změnou moderního zpracování textu je posun od dokumentu jako jednoho ručně formátovaného souboru k dokumentu jako **strukturovanému zdroji, který lze automaticky transformovat**.
-
-Markdown ukazuje nejjednodušší podobu tohoto principu.
-
-LaTeX ukazuje jeho profesionální sazební variantu.
-
-Git umožňuje zdroj verzovat.
-
-Pandoc, Quarto a podobné nástroje z něj mohou generovat více výstupů.
-
-A automatizační pipeline může celý proces opakovat pokaždé stejným způsobem.
-
-Výsledná cesta proto může vypadat:
-
-**myšlenka → strukturovaný text → verzovaný zdroj → automatická sazba → publikace → čtenář**
-
-Právě toto propojení dává tématu „zpracování textu na počítači“ současný význam. Nejde jen o ovládání Wordu nebo znalost několika typografických pravidel. Jde o pochopení, **jak se text mění v dlouhodobě udržitelný, strojově zpracovatelný a kvalitně publikovatelný dokument**.**
 ------
 Formát 16:9, ideálně 1600 × 900 px. Profesionální encyklopedická grafika pro středoškolskou výuku informatiky. Světlá, vzdušná kompozice s dostatkem volného prostoru; dominantní metafora může vytvářet vlastní prostor a hloubku. Výrazný tmavý titulek organicky začleněný do architektury obrazu, bez povinné horní lišty. Velké bezpatkové písmo, vysoký kontrast, bezpečné okraje. Grafické prvky mají nést hlavní výklad; text používej jen pro nezbytné přesné názvy, cesty a krátká vysvětlení.
 **Obraz má vysvětlovat, ne jen zdobit.** Atraktivita musí pomáhat pochopení nebo zapamatování.

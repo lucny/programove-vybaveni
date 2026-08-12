@@ -1,13 +1,13 @@
 # TEXTBOOK BUILD REPORT
 
-Datum: 2026-08-12T18:32:59.698370+00:00
+Datum: 2026-08-12T19:22:00.211530+00:00
 Git commit: NEOVĚŘENO (repozitář není Git pracovní kopie)
 
 - Témata: 20
 - Lekce: 120
 - Podkapitoly: 607
 - Nalezené QUIZ: 120
-- Nalezené WEBP: 188
+- Nalezené WEBP: 233
 - Doplňkové kapitoly: 0
 - PDF: NEOVĚŘENO
 - TEX: NEOVĚŘENO
@@ -302,51 +302,6 @@ Git commit: NEOVĚŘENO (repozitář není Git pracovní kopie)
 
 - 02-programy-a-data: chybí WEBP pro podkapitolu 1.5
 - 04-rastrova-grafika-a-digitalni-fotografie: chybí WEBP pro podkapitolu 6.7
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 1.1
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 1.2
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 1.3
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 1.4
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 1.5
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 2.1
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 2.2
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 2.3
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 2.4
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 2.5
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 2.6
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 2.7
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 2.8
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 3.1
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 3.2
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 3.3
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 3.4
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 3.5
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 3.6
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 3.7
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 4.1
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 4.2
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 4.3
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 4.4
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 4.5
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 4.6
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 4.7
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 5.1
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 5.2
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 5.3
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 5.4
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 5.5
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 5.6
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 5.7
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 5.8
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 5.9
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 5.10
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 6.1
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 6.2
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 6.3
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 6.4
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 6.5
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 6.6
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 6.7
-- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 6.8
 - 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 1.1
 - 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 1.2
 - 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 1.3
