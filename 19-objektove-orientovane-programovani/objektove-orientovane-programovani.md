@@ -1,8 +1,8 @@
 # Objektově orientované programování
 
-## 1. Důvody vzniku OOP a jeho principy
+# 1. Důvody vzniku OOP a jeho principy
 
-### 1.1 Vznik objektově orientovaného programování
+## 1.1 Vznik objektově orientovaného programování
 
 Procedurální programování, které řeší problémy postupným vykonáváním posloupnosti instrukcí, se ukázalo být nedostatečné pro vývoj rozsáhlých a složitých aplikací. S rostoucí velikostí programů se objevily zásadní problémy:
 
@@ -12,7 +12,7 @@ Procedurální programování, které řeší problémy postupným vykonávání
 - Náchylnost na chyby – změny v jedné části kódu neočekávaně ovlivňují jiné části. Tyto problémy vedly v 70. a 80. letech 20. století ke vzniku objektově orientovaného
 programování (OOP), které nabízí fundamentálně odlišný přístup: místo soustředění se na procedury a datové struktury se program modeluje pomocí objektů, které kombinují data a operace nad nimi v jeden celek.
 
-### 1.2 Základní pojmy OOP
+## 1.2 Základní pojmy OOP
 
 Třída je abstraktní předpis (šablona, plán) definující, jaké vlastnosti a chování mají objekty daného typu. Třída určuje:
 
@@ -20,9 +20,9 @@ Třída je abstraktní předpis (šablona, plán) definující, jaké vlastnosti
 - jaké metody (operace, chování) budou objekty vykonávat. Třída sama o sobě není entita existující v paměti, je pouze definicí. Objekt je konkrétní instance třídy vzniklá v paměti počítače. Objekt obsahuje
 skutečné hodnoty atributů a může vykonávat metody definované v třídě. Stejně jako lze mít mnoho instancí stejného programu spuštěno současně, lze vytvořit z jedné třídy mnoho objektů.
 
-Příklad z reálného světa: Třída Automobil by mohla definovat atributy jako barva , rychlost , množství_paliva a metody jako akcelerace() , brzdění() , doplnění_paliva() . Konkrétní automobil značky Škoda Octavia s červenou barvou a plnou nádrží by byl objektem třídy Automobil .
+Příklad z reálného světa: Třída `Automobil` by mohla definovat atributy jako `barva`, `rychlost`, `mnozstvi_paliva` a metody jako `akcelerace()`, `brzdeni()`, `doplneni_paliva()`. Konkrétní automobil značky Škoda Octavia s červenou barvou a plnou nádrží by byl objektem třídy `Automobil`.
 
-### 1.3 Využití OOP v praxi
+## 1.3 Využití OOP v praxi
 
 Objektově orientované programování se uplatňuje v mnoha oblastech:
 
@@ -32,9 +32,9 @@ Objektově orientované programování se uplatňuje v mnoha oblastech:
 - Informační systémy – objekty reprezentují záznamy o zákaznících, výrobcích, transakcích.
 - Grafika a vizualizace – objekty reprezentují geometrické tvary, kameru, osvětlení. OOP je převažujícím paradigmatem v moderním softwarovém inženýrství, neboť přináší lepší organizaci, bezpečnost a znovupoužitelnost kódu.
 
-## 2. Třídy a objekty
+# 2. Třídy a objekty
 
-### 2.1 Struktura třídy
+## 2.1 Struktura třídy
 
 Třída jako základní stavební jednotka OOP obsahuje několik klíčových prvků:
 
@@ -43,90 +43,76 @@ Třída jako základní stavební jednotka OOP obsahuje několik klíčových pr
 - konstruktor – speciální metoda volaná při vytváření objektu,
 - destruktor – speciální metoda volaná při zrušení objektu. Příklad deklarace třídy v C++:
 
-```
+```cpp
+#include <iostream>
+#include <string>
+using namespace std;
+
 class Osoba {
-private :
-int vek;                // Privatni atribut
-string jmeno ;          // Privatni atribut
-```
+private:
+    int vek;
+    string jmeno;
 
-```
-public :
-// Konstruktor
-Osoba ( string j, int v) {
-jmeno = j;
-vek = v;
-}
-```
+public:
+    Osoba(string j, int v) : vek(v), jmeno(j) {}
 
-```
-// Metoda
-void predstaveni () {
-cout << " Jmenuju se " << jmeno << ", je mi " << vek << " let." << endl;
-}
-```
+    void predstaveni() const {
+        cout << "Jmenuji se " << jmeno << ", je mi " << vek << " let." << endl;
+    }
 
-
-```
-// Destruktor
-~Osoba () {
-cout << " Osoba " << jmeno << " je zrusena ." << endl;
-}
+    ~Osoba() {
+        cout << "Osoba " << jmeno << " je zrušena." << endl;
+    }
 };
 ```
 
 Příklad deklarace třídy v Pythonu:
 
-```
-class Osoba :
-def __init__ (self , jmeno , vek):    # Konstruktor
-self. jmeno = jmeno
-self.vek = vek
+```python
+class Osoba:
+    def __init__(self, jmeno, vek):
+        self.jmeno = jmeno
+        self.vek = vek
+
+    def predstaveni(self):
+        print(f"Jmenuji se {self.jmeno}, je mi {self.vek} let.")
+
+    def __del__(self):
+        print(f"Osoba {self.jmeno} je zrušena.")
 ```
 
-```
-def predstaveni (self): # Metoda
-print (f" Jmenuju se {self. jmeno }, je mi {self.vek} let.")
-```
-
-```
-def __del__ (self): # Destruktor
-print (f"Osoba {self.jmeno } je zrusena .")
-```
-
-### 2.2 Atributy a metody
+## 2.2 Atributy a metody
 
 Atributy jsou proměnné, které uchovávají data objektu. Každý objekt má svou vlastní sadu hodnot atributů. Metody jsou funkce definované v třídě, které mohou pracovat s atributy objektu a provádět operace. Při volání metody musíme metodu volat na konkrétním objektu. Příklad v C++:
 
-```
-Osoba osoba (" Alice", 25);
-osoba. predstaveni (); // Volani metody na objektu
-cout << osoba .vek; // Pristup k atributu
+```cpp
+Osoba osoba("Alice", 25);
+osoba.predstaveni();  // Volání metody na objektu
 ```
 
 Příklad v Pythonu:
 
-```
-osoba = Osoba (" Alice", 25)
-osoba. predstaveni () # Volani metody na objektu
-print (osoba .vek)     # Pristup k atributu
+```python
+osoba = Osoba("Alice", 25)
+osoba.predstaveni()  # Volání metody na objektu
+print(osoba.vek)     # Přístup k atributu
 ```
 
-### 2.3 Konstruktor a destruktor
+## 2.3 Konstruktor a destruktor
 
 Konstruktor je speciální metoda, která se automaticky volá ve chvíli, kdy je objekt vytvářen. Slouží k inicializaci atributů objektu.
 
 - V C++ má konstruktor stejné jméno jako třída a nemá návratový typ,
 - v Pythonu je to metoda pojmenovaná __init__ . Konstruktor přijímá parametry, které určují počáteční hodnoty atributů: Příklad volání konstruktoru v C++:
 
-```
-Osoba osoba ("Bob", 30);      // Volani konstruktoru
+```cpp
+Osoba osoba("Bob", 30);  // Volání konstruktoru
 ```
 
 Příklad volání konstruktoru v Pythonu:
 
-```
-osoba = Osoba ("Bob", 30)      # Volani konstruktoru
+```python
+osoba = Osoba("Bob", 30)  # Volání konstruktoru
 ```
 
 Destruktor je speciální metoda volaná, když se objekt maže z paměti. Slouží k uvolnění prostředků (soubory, paměť) a čistění před zničením objektu.
@@ -134,82 +120,75 @@ Destruktor je speciální metoda volaná, když se objekt maže z paměti. Slou�
 - V C++ je destruktor pojmenován vlnkou ~ před jménem třídy,
 - v Pythonu je to metoda __del__ . Je však méně používaný, protože Python má automatickou správu paměti. Příklad destruktoru v C++:
 
-```
-~Osoba () {
-// Uvolneni prostredku
+```cpp
+~Osoba() {
+    // Uvolnění prostředků
 }
 ```
 
 Příklad destruktoru v Pythonu:
 
-```
-def __del__ (self):
-# Uvolneni prostredku
-pass
+```python
+def __del__(self):
+    # Uvolnění prostředků
+    pass
 ```
 
-### 2.4 Instanční a třídní prvky
+## 2.4 Instanční a třídní prvky
 
 Instanční atributy a metody patří konkrétnímu objektu. Každá instance má vlastní hodnoty instančních atributů.
 
-```
+```cpp
 class Ucet {
-private :
-double zustatek ;      // Instancni atribut
+private:
+    double zustatek;  // Instanční atribut
 };
 ```
 
-Objekty se vytvářejí instancování třídy:
+Objekty se vytvářejí instancováním třídy:
 
-```
-Ucet ucet1 (1000) ;     // Prvni instance se zustatkem 1000
-Ucet ucet2 (500) ;      // Druha instance se zustatkem 500
+```cpp
+Ucet ucet1(1000);  // První instance se zůstatkem 1000
+Ucet ucet2(500);   // Druhá instance se zůstatkem 500
 ```
 
 Třídní (statické) prvky jsou sdíleny všemi instancemi třídy. Existují pouze jednou, bez ohledu na počet vytvořených objektů. Příklad v C++:
 
-```
+```cpp
 class Ucet {
-private :
-double zustatek ;
-static int pocet_uctu ;        // Tridni atribut
-```
+private:
+    double zustatek;
+    static int pocet_uctu;  // Třídní atribut
 
-```
-public :
-Ucet( double z) : zustatek (z) {
-pocet_uctu ++; // Pocet uctu se zvysi
-}
-```
+public:
+    explicit Ucet(double z) : zustatek(z) {
+        pocet_uctu++;
+    }
 
-```
-static int getPocetUctu () {          // Tridni metoda
-return pocet_uctu ;
-}
+    static int getPocetUctu() {
+        return pocet_uctu;
+    }
 };
-int Ucet :: pocet_uctu = 0;       // Inicializace tridniho atributu
+
+int Ucet::pocet_uctu = 0;
 ```
 
 Příklad v Pythonu:
 
-```
+```python
 class Ucet:
-pocet_uctu = 0       # Tridni atribut
+    pocet_uctu = 0  # Třídní atribut
+
+    def __init__(self, zustatek):
+        self.zustatek = zustatek
+        Ucet.pocet_uctu += 1
+
+    @classmethod
+    def get_pocet_uctu(cls):
+        return cls.pocet_uctu
 ```
 
-```
-def __init__ (self , zustatek ):
-self. zustatek = zustatek
-Ucet. pocet_uctu += 1
-```
-
-```
-@classmethod
-def get_pocet_uctu (cls): # Tridni metoda
-return cls. pocet_uctu
-```
-
-### 2.5 Princip zapouzdření
+## 2.5 Princip zapouzdření
 
 Zapouzdření (encapsulation) je princip skrývání interního stavu objektu a řízení přístupu k němu. Objekty poskytují veřejné rozhraní (veřejné metody), zatímco interní implementace zůstává skryta.
 
@@ -225,66 +204,61 @@ Zapouzdření zajišťuje:
 - private – přístupné pouze z třídy samotné. Privátní atributy a metody jsou přístupné pouze z metod třídy, což umožňuje skrýt
 vnitřní stav objektu. Přístupové metody se obvykle nazývají gettery (slouží k získání hodnoty) a settery (slouží k nastavení hodnoty) a umožňují kontrolovat přístup k atributům. Příkladem getteru a setteru v C++:
 
-```
+```cpp
 class Auto {
-private :
-int rychlost ;
-public :
-int getRychlost () { // Getter
-return rychlost ;
-}
-void setRychlost (int r) { // Setter
-if (r >= 0) {
-rychlost = r;
-}
-}
+private:
+    int rychlost;
+
+public:
+    int getRychlost() const {
+        return rychlost;
+    }
+
+    void setRychlost(int r) {
+        if (r >= 0) {
+            rychlost = r;
+        }
+    }
 };
 ```
 
 V Pythonu není zapouzdření striktně vynuceno, ale konvenčně se private prvky označují podtržítkem:
 
-```
+```python
 class Auto:
-def __init__ (self , rychlost ):
-self. _rychlost = rychlost       # Konvencne privatni
-```
+    def __init__(self, rychlost):
+        self._rychlost = rychlost  # Konvenčně privátní
 
-```
-def get_rychlost (self): # Getter
-return self. _rychlost
-```
+    def get_rychlost(self):
+        return self._rychlost
 
-```
-def set_rychlost (self , r):     # Setter
-if r >= 0:
-self. _rychlost = r
+    def set_rychlost(self, r):
+        if r >= 0:
+            self._rychlost = r
 ```
 
 Modernějším přístupem v Pythonu je použití dekorátorů @property pro vytvoření getterů a setterů:
 
-```
+```python
 class Auto:
-def __init__ (self , rychlost ):
-self. _rychlost = rychlost
+    def __init__(self, rychlost):
+        self._rychlost = rychlost
 
-@property
-def rychlost (self): # Getter
-return self. _rychlost
-```
+    @property
+    def rychlost(self):
+        return self._rychlost
 
-## 9. @rychlost . setter
-
-```
-def rychlost (self , r): # Setter
-if r >= 0:
-self. _rychlost = r
+    @rychlost.setter
+    def rychlost(self, r):
+        if r >= 0:
+            self._rychlost = r
 ```
 
 Zapouzdření je jedním z pilířů OOP a umožňuje vytváření robustních a bezpečných aplikací.
 
-## 3. Dědičnost a polymorfismus
+# 3. Dědičnost a polymorfismus
 
-### 3.1 Princip dědičnosti
+## 3.1 Princip dědičnosti
 
 Dědičnost je mechanismus, kterým nová třída (odvozená třída, potomek) zdědí vlastnosti a chování z již existující třídy (základní třída, rodič). Dědičnost umožňuje vytvářet hierarchie tříd a znovu používat kód. Základní třída (rodičovská třída) obsahuje obecné vlastnosti a metody, které jsou společné pro skupinu objektů. Odvozená třída zdědí všechny veřejné a chráněné prvky základní třídy a může je rozšířit novými atributy a metodami.
 
@@ -292,60 +266,58 @@ Příklady z reálného světa: Zvíře je rodičovská třída, Pes nebo Kočka
 
 Při dědičnosti může odvozená třída přidat nové metody a atributy, které nejsou v základní třídě, a také může překrýt (override) metody základní třídy, aby poskytla specifické chování. Příklad v C++:
 
-```
-// Zakladni trida ( rodicovska trida )
+```cpp
+// Základní třída (rodičovská třída)
 class Zvire {
-protected :
-string jmeno ;
+protected:
+    string jmeno;
 
 public:
-Zvire ( string j) : jmeno (j) {}
+    explicit Zvire(string j) : jmeno(j) {}
 
-void zvuk () {
-cout << jmeno << " vydava zvuk." << endl;
-}
+    virtual void zvuk() const {
+        cout << jmeno << " vydává zvuk." << endl;
+    }
+
+    virtual ~Zvire() = default;
 };
-```
 
-```
-// Odvozen a trida ( potomek )
+// Odvozená třída (potomek)
 class Pes : public Zvire {
-public :
-Pes( string j) : Zvire (j) {}
-void zvuk () { // Prekryti metody
-cout << jmeno << " šětká." << endl;
-}
+public:
+    explicit Pes(string j) : Zvire(j) {}
+
+    void zvuk() const override {
+        cout << jmeno << " štěká." << endl;
+    }
 };
 ```
 
 Příklad v Pythonu:
 
-```
-# Zakladni trida ( rodicovska trida)
-class Zvire :
-def __init__ (self , jmeno ):
-self. jmeno = jmeno
+```python
+# Základní třída (rodičovská třída)
+class Zvire:
+    def __init__(self, jmeno):
+        self.jmeno = jmeno
+
+    def zvuk(self):
+        print(f"{self.jmeno} vydává zvuk.")
+
+
+# Odvozená třída (potomek)
+class Pes(Zvire):
+    def zvuk(self):
+        print(f"{self.jmeno} štěká.")
 ```
 
-```
-def zvuk(self):
-print (f"{self.jmeno } vydava zvuk.")
-```
-
-```
-# Odvozen a trida ( potomek )
-class Pes( Zvire ): # Dedi z Zvire
-def zvuk(self): # Prekryti metody
-print (f"{self.jmeno } šětká.")
-```
-
-V obou příkladech Pes dědí z Zvire a přepisuje metodu zvuk() , aby poskytla specifické chování pro psy.
+V obou příkladech `Pes` dědí ze `Zvire` a přepisuje metodu `zvuk()`, aby poskytla specifické chování pro psy.
 
 > **Poznámka**
 >
 > V některých jazycích je možné dědit z více tříd (vícenásobná dědičnost), což umožňuje kombinovat chování z různých zdrojů, ale může také vést k problémům s konflikty metod (např. v C++).
 
-### 3.2 Polymorfismus a přetěžování metod
+## 3.2 Polymorfismus a přetěžování metod
 
 Polymorfismus (mnohočetnost forem) umožňuje objektům různých typů reagovat na stejný příkaz různě. Stejné volání metody se chová odlišně v závislosti na typu objektu.
 
@@ -353,66 +325,61 @@ Příklady z reálného světa: Když řeknete ”zvuk”, pes může štěkat, 
 
 Příklad v C++:
 
-```
-Zvire* zvire1 = new      Zvire ("Zvíře");
-Zvire* zvire2 = new      Pes("Rex");
-zvire1 ->zvuk (); //     Vystup : Zvire vydava zvuk.
-zvire2 ->zvuk (); //     Vystup : Rex steka .
-delete zvire1 ;
-delete zvire2 ;
+```cpp
+Zvire* zvire1 = new Zvire("Zvíře");
+Zvire* zvire2 = new Pes("Rex");
+zvire1->zvuk();  // Výstup: Zvíře vydává zvuk.
+zvire2->zvuk();  // Výstup: Rex štěká.
+delete zvire1;
+delete zvire2;
 ```
 
 Příklad v Pythonu:
 
-```
-zvire1 = Zvire ("Zvíře")
+```python
+zvire1 = Zvire("Zvíře")
 zvire2 = Pes("Rex")
-```
 
-```
-zvire1 .zvuk ()   # Vystup : Zvire vydava zvuk.
-zvire2 .zvuk ()   # Vystup : Rex steka.
+zvire1.zvuk()  # Výstup: Zvíře vydává zvuk.
+zvire2.zvuk()  # Výstup: Rex štěká.
 ```
 
 Ačkoliv se obě volání jmenují zvuk() , chování se liší – to je polymorfismus. Přetěžování metod znamená, že metoda se stejným jménem může v jedné třídě existovat s různými parametry (různými typy nebo počtem argumentů). Přetěžování umožňuje definovat více verzí stejné metody pro různé situace. Příklad v C++:
 
-```
+```cpp
 class Kalkulator {
-public :
-int secti (int a, int b) {
-return a + b;
-}
-```
+public:
+    int secti(int a, int b) {
+        return a + b;
+    }
 
-```
-double secti ( double a, double b) {          // Pretezovani
-return a + b;
-}
+    double secti(double a, double b) {
+        return a + b;
+    }
 };
 ```
 
 Příklad volání přetížených metod:
 
-```
+```cpp
 Kalkulator k;
-cout << k. secti (3, 4);              // Vola int verzi
-cout << k. secti (3.5 , 4.2);       // Vola double verzi
+cout << k.secti(3, 4);      // Volá verzi pro int
+cout << k.secti(3.5, 4.2);  // Volá verzi pro double
 ```
 
 V Pythonu není přetěžování metod podporováno jako v jazyce C++, ale lze jej simulovat pomocí výchozích parametrů nebo proměnného počtu argumentů:
 
-```
-class Kalkulator :
-def secti (self , a, b=None , c=None):
-if c is not None:
-return a + b + c
-elif b is not None:
-return a + b
-else:
-return a
+```python
+class Kalkulator:
+    def secti(self, a, b=None, c=None):
+        if c is not None:
+            return a + b + c
+        if b is not None:
+            return a + b
+        return a
 ```
 
-### 3.3 Opětovné použití kódu
+## 3.3 Opětovné použití kódu
 
 Dědičnost a polymorfismus umožňují výrazně snížit opakování kódu:
 
@@ -423,44 +390,44 @@ Dědičnost a polymorfismus umožňují výrazně snížit opakování kódu:
 - snadnější údržbě – změna v základní třídě se automaticky promítne do všech potomků,
 - lepší organizaci – třídy jsou logicky hierarchicky uspořádány. Příklad hierarchie tříd v OOP:
 
-Vozidlo (základní třída) ��� Auto ��� OsobníAuto ��� NákladníAuto ��� Motocykl
+Vozidlo (základní třída) → Auto → OsobníAuto / NákladníAuto; Vozidlo → Motocykl
 
-Všechny třídy mohou dědit například metodu urychlit() z Vozidla , ale každá ji může implementovat jinak.
+Všechny třídy mohou dědit například metodu `urychlit()` z třídy `Vozidlo`, ale každá ji může implementovat jinak.
 
-## 4. Vytváření objektů, možnosti práce s objekty a s pamětí v různých jazycích
+# 4. Vytváření objektů, možnosti práce s objekty a s pamětí v různých jazycích
 
-### 4.1 Vznik objektu v paměti
+## 4.1 Vznik objektu v paměti
 
 Když se vytváří objekt, dochází k několika procesům: 1. přidělení paměti – operační systém přidělí potřebné místo v paměti, 2. inicializace – konstruktor inicializuje atributy objektu, 3. reference – objekt je dostupný skrze proměnnou (referenci nebo ukazatel). V C++ se objekt vytváří dvěma způsoby:
 
-```
-// Vytvoreni na zasobniku ( stack)
-Osoba osoba1 ("Alice ", 25);
+```cpp
+// Vytvoření na zásobníku (stack)
+Osoba osoba1("Alice", 25);
 ```
 
-```
-// řVytvoen í na ěhald (heap) –ž vyaduje ukazatel
-Osoba * osoba2 = new Osoba ("Bob", 30);
+```cpp
+// Vytvoření na haldě (heap) – vyžaduje ukazatel
+Osoba* osoba2 = new Osoba("Bob", 30);
 ```
 
 Objekt na zásobníku se automaticky zruší, když opustí svůj obor platnosti. Objekt na haldě zůstává, dokud není explicitně zrušen pomocí delete :
 
-```
-delete osoba2 ;     // Uvolneni pameti
+```cpp
+delete osoba2;  // Uvolnění paměti
 ```
 
 Rozdíl mezi stackem (zásobník) a heapem (halda): Stack – rychlejší, ale omezený velikostí a životností (objekt existuje pouze v rámci bloku kódu). Heap – pomalejší, ale flexibilnější (objekt může existovat, dokud není explicitně zrušen).
 
-V Pythonu se objekty vždy vytváření na haldě a proměnné jsou pouze odkazy na tyto objekty:
+V Pythonu se objekty vytvářejí na haldě a proměnné jsou pouze odkazy na tyto objekty:
 
-```
-osoba1 = Osoba ("Alice ", 25)        # Automaticky na halde
-osoba2 = Osoba ("Bob", 30)
+```python
+osoba1 = Osoba("Alice", 25)  # Automaticky na haldě
+osoba2 = Osoba("Bob", 30)
 ```
 
 Díky automatické správě paměti v Pythonu se programátor nemusí starat o přidělování a uvolňování paměti.
 
-### 4.2 Hodnota vs. reference
+## 4.2 Hodnota vs. reference
 
 V C++ rozlišujeme:
 
@@ -469,178 +436,163 @@ V C++ rozlišujeme:
 
 Příklad:
 
-```
-Osoba osoba1 ("Alice ", 25);
-Osoba osoba2 = osoba1 ; // Hodnotov ý řpístup – kopie
-osoba2 . jmeno = " Alice2 "; // osoba1 se nezmeni
+```cpp
+Osoba osoba1("Alice", 25);
+Osoba osoba2 = osoba1;  // Hodnotový přístup – kopie
 ```
 
-```
-Osoba *ptr1 = & osoba1 ; // čReferenn í řpístup – adresa objektu
-Osoba *ptr2 = ptr1;        // ptr2 ukazuje na stejny objekt
-ptr2 ->jmeno = " Alice3 "; // osoba1 se zmeni
+```cpp
+Osoba* ptr1 = &osoba1;  // Referenční přístup – adresa objektu
+Osoba* ptr2 = ptr1;     // ptr2 ukazuje na stejný objekt
 ```
 
 V Pythonu jsou všechny objekty referenční (vždy se předává odkaz):
 
-```
-osoba1 = Osoba ("Alice ", 25)
-osoba2 = osoba1 # Odkaz na stejny objekt
-osoba2 . jmeno = " Alice2 " # osoba1 se take zmeni
+```python
+osoba1 = Osoba("Alice", 25)
+osoba2 = osoba1          # Odkaz na stejný objekt
+osoba2.jmeno = "Alice2"  # Změna se projeví i přes osoba1
 ```
 
-### 4.3 Správa paměti
+## 4.3 Správa paměti
 
 C++ – Explicitní správa V C++ programátor sám odpovídá za přidělení a uvolnění paměti. Objekty na haldě se vytváří pomocí new a ruší pomocí delete :
 
-```
-Osoba * osoba = new Osoba ("Alice ", 25);
-// Pouziti objektu
-delete osoba ; // Manualni uvolneni
+```cpp
+Osoba* osoba = new Osoba("Alice", 25);
+// Použití objektu
+delete osoba;  // Manuální uvolnění
 ```
 
 Zapomenutí delete vede k úniku paměti (memory leak), kdy paměť zůstává obsazena zbytečně. K automatizaci správy paměti se v moderním C++ používají inteligentní ukazatele:
 
-```
-std :: unique_ptr <Osoba > osoba (new Osoba ("Alice ", 25));
-// Pamet se automaticky uvolni , kdyz unique_ptr opusti obor
+```cpp
+auto osoba = std::make_unique<Osoba>("Alice", 25);
+// Paměť se automaticky uvolní, když unique_ptr opustí obor.
 ```
 
 Python – Automatická správa Python automaticky spravuje paměť pomocí garbage collectoru, který sleduje, které objekty jsou ještě používány. Jakmile se objekt přestane používat, je automaticky odstraněn:
 
-```
-osoba = Osoba (" Alice", 25)
-# Python automaticky uvolni pamet , kdyz osoba uz neni potreba
+```python
+osoba = Osoba("Alice", 25)
+# Python automaticky uvolní paměť, když objekt již není potřeba.
 ```
 
-Programátor se nemusí starat o delete či free .
+Programátor se nemusí starat o `delete` či `free`.
 
-### 4.4 Zrušení objektu a destruktor
+## 4.4 Zrušení objektu a destruktor
 
 Destruktor se volá automaticky, když se objekt maže. V C++ se volá při delete nebo když objekt opustí obor:
 
-```
+```cpp
 {
-Osoba osoba (" Alice", 25);
-// destruktor se vola na konci bloku
+    Osoba osoba("Alice", 25);
+    // Destruktor se volá na konci bloku.
 }
 ```
 
 V Pythonu se destruktor volá, když garbage collector detekuje, že objekt není už nikde referován. Je však důležité poznamenat, že v Pythonu není zaručeno, kdy přesně se destruktor __del__ zavolá, protože závisí na implementaci garbage collectoru.
 
-## 5. Další aplikace principů OOP: abstraktní třídy, rozhraní
+# 5. Další aplikace principů OOP: abstraktní třídy, rozhraní
 
-### 5.1 Abstraktní třídy
+## 5.1 Abstraktní třídy
 
 Abstraktní třída je třída, kterou nelze bezprostředně instancovat. Slouží jako šablona pro odvozené třídy a definuje společné rozhraní.
 
-Příklady z reálného světa: Zvíře může být abstraktní třída, protože nemůžeme mít konkrétní zvíře bez specifikace druhu. Místo toho můžeme mít odvozené třídy jako Pes , Kočka , které implementují konkrétní chování. Vozidlo může být abstraktní třída, protože nemůžeme mít konkrétní vozidlo bez specifikace typu. Místo toho můžeme mít odvozené třídy jako Auto , Motocykl , které implementují konkrétní chování.
+Příklady z reálného světa: `Zvire` může být abstraktní třída, protože nemůžeme mít konkrétní zvíře bez specifikace druhu. Místo toho můžeme mít odvozené třídy jako `Pes` a `Kocka`, které implementují konkrétní chování. `Vozidlo` může být abstraktní třída, protože nemůžeme mít konkrétní vozidlo bez specifikace typu. Místo toho můžeme mít odvozené třídy jako `Auto` a `Motocykl`, které implementují konkrétní chování.
 
 Abstraktní třída obsahuje abstraktní metody – metody bez implementace, které musí být implementovány v odvozených třídách. Příklad v C++:
 
-```
-class Zvire { // Abstraktni trida
-public :
-virtual void zvuk () = 0; // Ciste virtualni – abstraktn í
-```
-
-metoda
-
-```
-virtual ~ Zvire () {}
+```cpp
+class Zvire {  // Abstraktní třída
+public:
+    virtual void zvuk() const = 0;  // Čistě virtuální metoda
+    virtual ~Zvire() = default;
 };
-```
 
-```
 class Pes : public Zvire {
-public :
-void zvuk () { // Povinna implementace
-cout << "Šětkání" << endl;
-}
+public:
+    void zvuk() const override {
+        cout << "Štěkání" << endl;
+    }
 };
-```
 
-```
-// Zvire z; // Chyba – nelze instancovat
-Pes p; // OK
+// Zvire z;  // Chyba – abstraktní třídu nelze instancovat.
+Pes p;       // OK
 ```
 
 Příklad v Pythonu s použitím modulu abc :
 
-```
+```python
 from abc import ABC, abstractmethod
-class Zvire (ABC): # Abstraktni trida
-@abstractmethod
-def zvuk(self): # Abstraktni metoda
-  pass
-```
 
-```
-# z = Zvire () # Chyba
-class Pes( Zvire ):
-def zvuk(self): # Povinna implementace
-  print ("Šětkání")
+
+class Zvire(ABC):
+    @abstractmethod
+    def zvuk(self):
+        pass
+
+
+# z = Zvire()  # Chyba – abstraktní třídu nelze instancovat.
+class Pes(Zvire):
+    def zvuk(self):
+        print("Štěkání")
 ```
 
 V obou příkladech Zvire je abstraktní třída, která definuje abstraktní metodu zvuk() . Odvozená třída Pes musí tuto metodu implementovat, jinak by také byla abstraktní. Abstraktní třídy vynucují, aby všechny odvozené třídy implementovaly určitá chování.
 
-### 5.2 Rozhraní (Interface)
+## 5.2 Rozhraní (Interface)
 
 Rozhraní definuje sadu metod, které třídy musí implementovat.
 
-Příklady z reálného světa: Pohyblivý může být rozhraní, které definuje metody jako pohni_se() , zastav() . Různé třídy jako Auto , Pes , Robot mohou implementovat toto rozhraní a poskytovat vlastní implementaci těchto metod. Rozhraní tak umožňuje různým třídám sdílet společné chování, aniž by musely být ve stejné hierarchii dědičnosti.
+Příklady z reálného světa: `Pohyblivy` může být rozhraní, které definuje metody jako `pohni_se()` a `zastav()`. Různé třídy jako `Auto`, `Pes` a `Robot` mohou implementovat toto rozhraní a poskytovat vlastní implementaci těchto metod. Rozhraní tak umožňuje různým třídám sdílet společné chování, aniž by musely být ve stejné hierarchii dědičnosti.
 
 V C++ se rozhraní simuluje pomocí abstraktní třídy obsahující pouze abstraktní metody:
 
-```
-class Vozidlo { // Rozhrani
-public :
-virtual void urychlit () = 0;
-virtual void zastavit () = 0;
-virtual ~ Vozidlo () {}
+```cpp
+class Vozidlo {  // Rozhraní
+public:
+    virtual void urychlit() = 0;
+    virtual void zastavit() = 0;
+    virtual ~Vozidlo() = default;
 };
-```
 
-```
 class Auto : public Vozidlo {
-public :
-void urychlit () { cout << "Auto akceleruje ." << endl; }
-void zastavit () { cout << "Auto brzdí." << endl; }
+public:
+    void urychlit() override { cout << "Auto akceleruje." << endl; }
+    void zastavit() override { cout << "Auto brzdí." << endl; }
 };
 ```
 
 V Pythonu se používá abstraktní třída s metodami:
 
-```
+```python
 from abc import ABC, abstractmethod
-class Vozidlo (ABC):
-@abstractmethod
-def urychlit (self):
-pass
-```
 
-```
-@abstractmethod
-def zastavit (self):
-pass
-```
 
-```
-class Auto( Vozidlo ):
-def urychlit (self):
-print ("Auto akceleruje .")
-```
+class Vozidlo(ABC):
+    @abstractmethod
+    def urychlit(self):
+        pass
 
-```
-def zastavit (self):
-print ("Auto brzdí.")
+    @abstractmethod
+    def zastavit(self):
+        pass
+
+
+class Auto(Vozidlo):
+    def urychlit(self):
+        print("Auto akceleruje.")
+
+    def zastavit(self):
+        print("Auto brzdí.")
 ```
 
 Rozhraní zajišťují, že různé třídy disponují jednotným chováním.
 
-## 6 Návrh objektového programu
+# 6. Návrh objektového programu
 
-### 6.1 Objekty spolupracují, neexistují izolovaně
+## 6.1 Objekty spolupracují, neexistují izolovaně
 
 Jednoduché příklady OOP často ukazují jednu třídu, například `Osoba`, `Auto` nebo `Zvire`. Skutečné programy ale obvykle obsahují větší množství objektů, které spolu nějak souvisejí a předávají si informace.
 
@@ -781,7 +733,7 @@ Třída automobilu může podle potřeby pracovat s různými typy motoru, aniž
 
 Dědičnost je tedy užitečný mechanismus, ale neměla by být používána automaticky jen proto, že OOP dědičnost nabízí. Mnoho programů je přehlednějších, když jsou větší objekty sestaveny z menších spolupracujících objektů.
 
-### 6.3 Každá třída by měla mít srozumitelnou odpovědnost
+## 6.3 Každá třída by měla mít srozumitelnou odpovědnost
 
 Představme si třídu:
 
@@ -858,7 +810,7 @@ Pokud odpověď zní například:
 
 pravděpodobně řeší příliš mnoho věcí najednou.
 
-### 6.4 Od tříd ke struktuře celé aplikace
+## 6.4 Od tříd ke struktuře celé aplikace
 
 Jakmile program obsahuje desítky nebo stovky tříd, nestačí už pouze správně navrhnout každý jednotlivý objekt. Musíme také rozhodnout, jak budou větší části aplikace uspořádány.
 
@@ -930,7 +882,7 @@ Stejný princip pokračuje i na vyšší úrovni:
 
 **program → části systému → třídy → objekty → jejich spolupráce**
 
-### 6.5 Návrhové vzory: osvědčená řešení opakujících se problémů
+## 6.5 Návrhové vzory: osvědčená řešení opakujících se problémů
 
 Při vývoji větších programů se často opakují podobné problémy. Například potřebujeme oddělit vytváření objektu od jeho použití nebo zajistit, aby více objektů reagovalo na změnu stavu jiného objektu.
 
@@ -977,4 +929,3 @@ Celou cestu od jednoduchého objektu k aplikaci lze proto shrnout:
 **třída → objekt → vztahy mezi objekty → spolupráce → návrhové vzory → struktura aplikace**
 
 Právě zde se OOP mění z pouhé znalosti syntaxe tříd na způsob uvažování o návrhu programu.
-

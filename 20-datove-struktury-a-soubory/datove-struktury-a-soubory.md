@@ -1,8 +1,8 @@
 # Datové struktury a soubory
 
-## 1. Strukturované datové typy a ukazatele
+# 1. Strukturované datové typy a ukazatele
 
-### 1.1 Strukturované datové typy
+## 1.1 Strukturované datové typy
 
 Skalární datové typy reprezentují jednotlivé hodnoty, například celá čísla (int), desetinná čísla (float) nebo znaky (char). Každá proměnná skalárního typu obsahuje právě jednu hodnotu.
 
@@ -10,7 +10,7 @@ Pojem ”skalární”pochází z matematiky a znamená ”jednoduchý”nebo �
 
 Opakem skalárních datových typů jsou strukturované datové typy, které mohou obsahovat více hodnot uspořádaných podle určitého pravidla. Strukturované datové typy umožňují ukládat více hodnot uspořádaných podle určitého pravidla. Strukturované typy poskytují způsob organizace dat do logických celků, což zjednodušuje práci se složitějšími datovými strukturami.
 
-Příklady z reálného světa: Osoba může být strukturovaný datový typ, který obsahuje atributy jako jmeno , vek , mesto . Každý atribut představuje jednu vlastnost osoby, a všechny tyto vlastnosti dohromady tvoří komplexní datovou strukturu.
+Příklad z reálného světa: `Osoba` může být strukturovaný datový typ, který obsahuje atributy jako `jmeno`, `vek` a `mesto`. Každý atribut představuje jednu vlastnost osoby a všechny tyto vlastnosti dohromady tvoří komplexní datovou strukturu.
 
 Základní typy strukturovaných dat zahrnují:
 
@@ -19,7 +19,7 @@ Základní typy strukturovaných dat zahrnují:
 - seznamy – dynamické kolekce prvků,
 - slovníky – kolekce párů klíč-hodnota.
 
-### 1.2 Pole jako základní datová struktura
+## 1.2 Pole jako základní datová struktura
 
 Pole je základní strukturovaný datový typ, který uchovává pevný počet prvků stejného typu uspořádaných v posloupnosti. Každý prvek pole je přístupný pomocí indexu, což je číselná pozice prvku v poli. Vlastnosti pole:
 
@@ -33,15 +33,15 @@ Pole je základní strukturovaný datový typ, který uchovává pevný počet p
 
 > **Poznámka**
 >
-> V Pythonu tradiční pole nahrazují seznamy ( list ), které jsou dynamické a mohou obsahovat prvky různých typů, ale základní princip indexování zůstává stejný. Pole v Pythonu lze simulovat pomocí modulu array , který poskytuje efektivní pole pro základní datové typy.
+> V Pythonu tradiční pole často nahrazují seznamy (`list`), které jsou dynamické a mohou obsahovat prvky různých typů, ale základní princip indexování zůstává stejný. Typované pole lze vytvořit pomocí modulu `array`, který poskytuje efektivní pole pro základní datové typy.
 
 Příklad v Pythonu s modulem array :
 
-```
+```python
 import array
-# Vytvoreni pole celych cisel
-cisla = array . array ('i', [10 , 20, 30, 40, 50])
-print (cisla [0]) # Vystup : 10
+# Vytvoření pole celých čísel
+cisla = array.array("i", [10, 20, 30, 40, 50])
+print(cisla[0])  # Výstup: 10
 ```
 
 Schematické znázornění pole:
@@ -54,110 +54,102 @@ Index: 0 1 2 3 4 Hodnota: [10] [20] [30] [40] [50] ^
 
 adresa v paměti
 
-### 1.3 Statické pole
+## 1.3 Statické pole
 
 Statické pole má velikost pevně stanovenou při deklaraci a nelze ji během běhu programu změnit. Paměť pro statické pole je alokována při vytvoření proměnné. Příklad v jazyce C:
 
-```
-int cisla [5]; // Pole s 5 prvky typu int
-cisla [0] = 10;
-cisla [1] = 20;
+```c
+int cisla[5];  // Pole s 5 prvky typu int
+cisla[0] = 10;
+cisla[1] = 20;
 cisla [2] = 30;
 
 // Inicializace pri deklaraci
 
-int hodnoty [5] = {10 , 20, 30, 40, 50};
+int hodnoty[5] = {10, 20, 30, 40, 50};
 ```
 
-### 1.4 Dynamické pole
+## 1.4 Dynamické pole
 
 Dynamické pole umožňuje měnit svou velikost během běhu programu. Paměť se alokuje dynamicky podle potřeby, což poskytuje větší flexibilitu při práci s daty neznámého rozsahu. V jazyce C se dynamická alokace provádí pomocí funkcí malloc a free :
 
-```
-# include <stdlib .h>
+```c
+#include <stdlib.h>
 int *pole;
 int velikost = 5;
-```
 
-```
-// Dynamicka alokace pameti
-pole = (int *) malloc ( velikost * sizeof (int));
-```
+// Dynamická alokace paměti
+pole = malloc(velikost * sizeof *pole);
 
-```
-// Pouziti pole
-pole [0] = 10;
-pole [1] = 20;
-```
+// Použití pole
+pole[0] = 10;
+pole[1] = 20;
 
-```
-// Uvolneni pameti
+// Uvolnění paměti
 free(pole);
 ```
 
 V Pythonu jsou seznamy (list) dynamické automaticky:
 
-```
-cisla = [] # Prazdny seznam
-cisla. append (10) # Pridani prvku
-cisla. append (20)
-cisla. append (30)
-# Seznam automaticky roste podle potreby
+```python
+cisla = []          # Prázdný seznam
+cisla.append(10)    # Přidání prvku
+cisla.append(20)
+cisla.append(30)
+# Seznam automaticky roste podle potřeby.
 ```
 
-### 1.5 Ukazatele a pole
+## 1.5 Ukazatele a pole
 
 Ukazatel je proměnná, která uchovává adresu v paměti, kde je uložena jiná hodnota. Ukazatele jsou klíčové při práci s dynamickými datovými strukturami. V jazyce C existuje úzký vztah mezi poli a ukazateli:
 
-```
-int pole [5] = {10 , 20, 30, 40, 50};
-int * ukazatel = pole; // Ukazatel na prvni prvek
-```
+```c
+int pole[5] = {10, 20, 30, 40, 50};
+int *ukazatel = pole;  // Ukazatel na první prvek
 
-```
-// Pristup pomoci ukazatele
-printf ("%d\n", * ukazatel );     // Vystup : 10
-printf ("%d\n", *( ukazatel + 1)); // Vystup : 20
+// Přístup pomocí ukazatele
+printf("%d\n", *ukazatel);        // Výstup: 10
+printf("%d\n", *(ukazatel + 1));  // Výstup: 20
 ```
 
 Název pole v jazyce C funguje jako ukazatel na jeho první prvek. To umožňuje efektivní práci s pamětí, ale vyžaduje opatrnost při manipulaci.
 
-### 1.6 Matice (vícerozměrná pole)
+## 1.6 Matice (vícerozměrná pole)
 
 Matice je vícerozměrné pole, nejčastěji dvourozměrné, které lze chápat jako tabulku hodnot s řádky a sloupci. Příklad v jazyce C:
 
-```
-int matice [3][4];       // Matice 3 radky x 4 sloupce
+```c
+int matice[3][4];  // Matice se 3 řádky a 4 sloupci
 ```
 
-```
+```c
 // Inicializace
-int cisla [2][3] = {
-{1, 2, 3},
-{4, 5, 6}
+int cisla[2][3] = {
+    {1, 2, 3},
+    {4, 5, 6}
 };
 ```
 
-```
-// Pristup k prvkum
-cisla [0][0] = 10; // Prvni radek , prvni sloupec
-cisla [1][2] = 60; // Druhy radek , treti sloupec
+```c
+// Přístup k prvkům
+cisla[0][0] = 10;  // První řádek, první sloupec
+cisla[1][2] = 60;  // Druhý řádek, třetí sloupec
 ```
 
 Příklad v Pythonu:
 
-```
-# Vnorene seznamy jako matice
+```python
+# Vnořené seznamy jako matice
 matice = [
-[1, 2, 3],
-[4, 5, 6]
+    [1, 2, 3],
+    [4, 5, 6],
 ]
 ```
 
-```
-# Pristup k prvkum
-matice [0][0] = 10 # Prvni radek , prvni sloupec
-matice [1][2] = 60 # Druhy radek , treti sloupec
+```python
+# Přístup k prvkům
+matice[0][0] = 10  # První řádek, první sloupec
+matice[1][2] = 60  # Druhý řádek, třetí sloupec
 ```
 
 Schematické znázornění matice:
@@ -166,26 +158,26 @@ sloupec 0 sloupec 1 sloupec 2 řádek 0 [1] [2] [3] řádek 1 [4] [5] [6]
 
 Matice se používají v mnoha oblastech, například při reprezentaci obrazu, řešení soustav rovnic, grafice nebo zpracování tabulkových dat.
 
-## 2. Znakové řetězce
+# 2. Znakové řetězce
 
-### 2.1 Znakové řetězce jako datový typ
+## 2.1 Znakové řetězce jako datový typ
 
 Znakový řetězec (string) je posloupnost znaků reprezentující text. Řetězce patří mezi nejpoužívanější datové typy, protože většina programů pracuje s textovými daty. Reprezentace řetězců se liší mezi programovacími jazyky:
 
 - v jazyce C je řetězec pole znaků ukončené speciálním znakem,
 - v Pythonu je řetězec samostatný datový typ s mnoha vestavěnými metodami.
 
-### 2.2 Řetězce v jazyce C
+## 2.2 Řetězce v jazyce C
 
-V jazyce C je řetězec implementován jako pole znaků typu char , které je ukončeno nulovým znakem '\0' . Tento ukončující znak signalizuje konec řetězce a umožňuje funkcím určit délku řetězce. Příklad:
+V jazyce C je řetězec implementován jako pole znaků typu `char`, které je ukončeno nulovým znakem `\0`. Tento ukončující znak signalizuje konec řetězce a umožňuje funkcím určit délku řetězce. Příklad:
 
-```
-char pozdrav [6] = {'A', 'h', 'o', 'j', '!', '\0 '};
+```c
+char pozdrav[6] = {'A', 'h', 'o', 'j', '!', '\0'};
 ```
 
-```
-// Zkraceny zapis ukoncovaci znak se prida automaticky
-char text [] = "Ahoj!";
+```c
+// Zkrácený zápis; ukončovací znak se přidá automaticky.
+char text[] = "Ahoj!";
 ```
 
 Reprezentace v paměti:
@@ -194,34 +186,24 @@ Index: 0 1 2 3 4 5 Znak: 'A' 'h' 'o' 'j' '!' '\0'
 
 Práce s řetězci v jazyce C vyžaduje použití funkcí ze standardní knihovny <string.h> :
 
-```
-# include <string .h>
-# include <stdio .h>
-```
+```c
+#include <stdio.h>
+#include <string.h>
 
-```
-char text1 [20] = "Ahoj";
-char text2 [20] = " svete";
-```
+char text1[20] = "Ahoj";
+char text2[20] = " světe";
 
-```
-// Delka retezce
-int delka = strlen ( text1 );      // Vysledek : 4
-```
+// Délka řetězce
+size_t delka = strlen(text1);  // Výsledek: 4
 
-```
-// Kopirovani retezce
-strcpy (text1 , "Novy text");
-```
+// Kopírování řetězce
+strcpy(text1, "Nový text");
 
-```
-// Spojeni retezcu
-strcat (text1 , text2 );     // text1 = "Novy text svete"
-```
+// Spojení řetězců
+strcat(text1, text2);  // text1 = "Nový text světe"
 
-```
-// Porovnani retezcu
-int vysledek = strcmp (text1 , text2 );            // 0 = stejne , <0 nebo >0 = ruzne
+// Porovnání řetězců
+int vysledek = strcmp(text1, text2);  // 0 = stejné, jinak různé
 ```
 
 Základní funkce pro práce s řetězci v C:
@@ -232,71 +214,53 @@ Základní funkce pro práce s řetězci v C:
 - strcmp(str1, str2) – porovnává řetězce,
 - strchr(str, ch) – hledá znak v řetězci.
 
-### 2.3 Řetězce v Pythonu
+## 2.3 Řetězce v Pythonu
 
-V Pythonu je řetězec objektem typu str , který poskytuje mnoho vestavěných metod pro manipulaci s textem. Řetězce v Pythonu jsou neměnné (immutable) – jakmile jsou vytvořeny, nelze změnit jejich obsah, ale lze vytvořit nové řetězce. Příklad:
+V Pythonu je řetězec objektem typu `str`, který poskytuje mnoho vestavěných metod pro manipulaci s textem. Řetězce v Pythonu jsou neměnné (*immutable*) – jakmile jsou vytvořeny, nelze změnit jejich obsah, ale lze vytvořit nové řetězce. Příklad:
 
-```
+```python
 text = "Ahoj!"
-dalsi_text = 'Python '
-```
+dalsi_text = "Python"
 
-```
-# Spojeni retezcu
-spojen = text + " " + dalsi_text               # "Ahoj! Python "
-```
+# Spojení řetězců
+spojen = text + " " + dalsi_text  # "Ahoj! Python"
 
-```
-# Delka retezce
-delka = len(text)      # 5
-```
+# Délka řetězce
+delka = len(text)  # 5
 
-```
-# Pristup k znakum pomoci indexu
-prvni_znak = text [0] # 'A'
-posledni_znak = text [ -1] # '!'
-```
+# Přístup k znakům pomocí indexu
+prvni_znak = text[0]    # "A"
+posledni_znak = text[-1]  # "!"
 
-```
-# Vyriznuti podretezce ( slicing )
-cast = text [0:4] # "Ahoj"
+# Vyříznutí podřetězce (slicing)
+cast = text[0:4]  # "Ahoj"
 ```
 
 Základní metody pro práci s řetězci v Pythonu:
 
-```
+```python
 text = "Ahoj Svete"
-```
 
-```
-# Prevod na velka /mala pismena
-velky = text. upper ()    # "AHOJ SVETE "
-maly = text. lower ()     # "ahoj svete "
-```
+# Převod na velká/malá písmena
+velky = text.upper()  # "AHOJ SVETE"
+maly = text.lower()   # "ahoj svete"
 
-```
-# Hledani podretezce
-pozice = text.find("Svete ")        # 5
-obsahuje = "Svete " in text         # True
-```
+# Hledání podřetězce
+pozice = text.find("Svete")  # 5
+obsahuje = "Svete" in text   # True
 
-```
-# Rozdeleni retezce
-slova = text. split (" ")    # [" Ahoj", " Svete "]
-```
+# Rozdělení řetězce
+slova = text.split(" ")  # ["Ahoj", "Svete"]
 
-```
-# Nahrazeni podretezce
-novy = text. replace ("Ahoj", " Nazdar ")      # " Nazdar Svete "
-```
+# Nahrazení podřetězce
+novy = text.replace("Ahoj", "Nazdar")  # "Nazdar Svete"
 
-```
-# Odstraneni bilych znaku
+# Odstranění bílých znaků
 text2 = " text "
-cisteny = text2 . strip () # "text"
+cisteny = text2.strip()  # "text"
 ```
 
-### 2.4 Srovnání práce s řetězci
+## 2.4 Srovnání práce s řetězci
 
 Hlavní rozdíly mezi jazyky C a Python:
 
@@ -304,9 +268,9 @@ Aspekt C Python Reprezentace Pole znaků s '\0' Objekt typu str Měnitelnost Mě
 
 Python nabízí pohodlnější a bezpečnější práci s řetězci díky vysokoúrovňovým abstrakcím, zatímco C poskytuje větší kontrolu nad pamětí, ale vyžaduje opatrnější přístup.
 
-## 3. Regulární výrazy a jejich využití při práci s textem
+# 3. Regulární výrazy a jejich využití při práci s textem
 
-### 3.1 Princip regulárních výrazů
+## 3.1 Princip regulárních výrazů
 
 Regulární výraz (regular expression, regex) je vzor definující množinu řetězců. Regulární výrazy poskytují mocný nástroj pro vyhledávání, ověřování a manipulaci s textem na základě definovaných pravidel. Regulární výrazy umožňují:
 
@@ -315,13 +279,13 @@ Regulární výraz (regular expression, regex) je vzor definující množinu ře
 - extrahovat části textu,
 - nahrazovat text podle vzoru.
 
-### 3.2 Základní konstrukce regulárních výrazů
+## 3.2 Základní konstrukce regulárních výrazů
 
 Regulární výrazy používají speciální znaky a konstrukce pro definování vzorů: Literály – běžné znaky odpovídají samy sobě:
 
 - abc – odpovídá řetězci ”abc” Metaznaky – speciální znaky s významem:
 - . – jakýkoliv znak
-- ̂ – začátek řetězce
+- ^ – začátek řetězce
 - $ – konec řetězce
 - * – 0 nebo více opakování
 - + – 1 nebo více opakování
@@ -343,91 +307,87 @@ Kvantifikátory – určují počet opakování:
 - {n,} – n nebo více opakování
 - {n,m} – mezi n a m opakování
 
-### 3.3 Použití regulárních výrazů v Pythonu
+## 3.3 Použití regulárních výrazů v Pythonu
 
 Python poskytuje modul re pro práci s regulárními výrazy:
 
-```
+```python
 import re
-text = " Kontakt : email@example .com , telefon : 123 -456 -789"
-```
+text = "Kontakt: email@example.com, telefon: 123-456-789"
 
-```
-# Vyhledani emailove adresy
+# Vyhledání e-mailové adresy
 email_vzor = r'\w+@\w+\.\w+'
-email = re. search ( email_vzor , text)
-if email :
-print ( email . group ()) # Vystup : email@example .com
-```
+email = re.search(email_vzor, text)
+if email:
+    print(email.group())  # Výstup: email@example.com
 
-```
-# Vyhledani vsech cislic
-cisla = re. findall (r'\d+', text)
-print (cisla ) # ['123', '456', '789 ']
-```
+# Vyhledání všech skupin číslic
+cisla = re.findall(r'\d+', text)
+print(cisla)  # ['123', '456', '789']
 
-```
-# Kontrola formatu
-telefon = "123 -456 -789"
-vzor_telefonu = r'^\d{3} -\d{3} -\d{3}$'
-if re.match ( vzor_telefonu , telefon ):
-print (" Platné telefonn í číslo")
+# Kontrola formátu
+telefon = "123-456-789"
+vzor_telefonu = r'^\d{3}-\d{3}-\d{3}$'
+if re.fullmatch(vzor_telefonu, telefon):
+    print("Platné telefonní číslo")
 ```
 
 Běžné operace s regulárními výrazy:
 
-```
+```python
 # Hledani prvniho vyskytu
-vysledek = re. search (vzor , text)
+vysledek = re.search(vzor, text)
 ```
 
-```
+```python
 # Hledani vsech vyskytu
-vse = re. findall (vzor , text)
+vse = re.findall(vzor, text)
 ```
 
-```
+```python
 # Kontrola od zacatku retezce
-shoda = re. match (vzor , text)
+shoda = re.match(vzor, text)
 ```
 
-```
+```python
 # Nahrazeni podle vzoru
-novy_text = re.sub(vzor , nahrada , text)
+novy_text = re.sub(vzor, nahrada, text)
 ```
 
-### 3.4 Praktické příklady
+## 3.4 Praktické příklady
 
 Validace emailové adresy:
 
-```
-email_vzor = r'^[a-zA -Z0 -9._%+ -]+@[a-zA -Z0 -9. -]+\.[a-zA -Z]{2 ,}$'
-email = " uzivatel@example .com"
-```
+```python
+email_vzor = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+email = "uzivatel@example.com"
 
-```
-if re.match ( email_vzor , email ):
-print (" Platný email ")
+if re.fullmatch(email_vzor, email):
+    print("Platný e-mail")
 ```
 
 Extrakce dat z textu:
 
-```
-text = "Datum : 15.01.2026 , cena: 1500 čK"
-datum = re. search (r'\d {2}\.\ d {2}\.\ d{4} ', text)
-cena = re. search (r'\d+', text)
-print (datum . group ()) # 15.01.2026
+```python
+text = "Datum: 15.01.2026, cena: 1500 Kč"
+datum = re.search(r'\d{2}\.\d{2}\.\d{4}', text)
+cena = re.search(r'\d+', text)
+print(datum.group())  # 15.01.2026
 ```
 
 Nahrazení citlivých dat:
 
-```
-text = "Číslo karty : 1234-5678-9012-3456"
-anonymizovano = re.sub(r'\d{4} -\d{4} -\d{4} -\d{4} ', 'XXXX-XXXX-XXXX-XXXX ', text)
-print ( anonymizovano ) # Cislo karty : XXXX -XXXX -XXXX -XXXX
+```python
+text = "Číslo karty: 1234-5678-9012-3456"
+anonymizovano = re.sub(
+    r'\d{4}-\d{4}-\d{4}-\d{4}',
+    'XXXX-XXXX-XXXX-XXXX',
+    text,
+)
+print(anonymizovano)  # Číslo karty: XXXX-XXXX-XXXX-XXXX
 ```
 
-### 3.5 Oblasti využití
+## 3.5 Oblasti využití
 
 Regulární výrazy se používají v mnoha oblastech:
 
@@ -439,9 +399,9 @@ Regulární výrazy se používají v mnoha oblastech:
 
 Proto je důležité používat je uvážlivě a dokumentovat složitější vzory.
 
-## 4. Datov0 soubory a jejich význam v programování
+# 4. Datové soubory a jejich význam v programování
 
-### 4.1 Význam souborů v programování
+## 4.1 Význam souborů v programování
 
 Soubor je pojmenovaná oblast na trvalém úložišti (disk, USB), která uchovává data. Soubory umožňují programům:
 
@@ -450,13 +410,13 @@ Soubor je pojmenovaná oblast na trvalém úložišti (disk, USB), která uchov�
 - zpracovávat velké objemy dat, které by se nevešly do paměti najednou,
 - vytvářet trvalé záznamy a logy.
 
-### 4.2 Textové a binární soubory
+## 4.2 Textové a binární soubory
 
 Textové soubory obsahují data reprezentovaná jako znaky čitelné člověkem. Každý řádek je obvykle ukončen speciálním znakem pro nový řádek. Textové soubory lze otevřít a číst v běžném textovém editoru. Příklady textových souborů:
 
 - .txt – prostý text,
 - .csv – tabulková data oddělená čárkami,
-- .html , .xml , .json – strukturované textové formáty. 
+- `.html`, `.xml`, `.json` – strukturované textové formáty.
 
 Binární soubory obsahují data v binární podobě, která není přímo čitelná člověkem.
 Jsou efektivnější pro ukládání velkých objemů dat nebo složitých struktur. 
@@ -464,30 +424,27 @@ Jsou efektivnější pro ukládání velkých objemů dat nebo složitých struk
 Příklady binárních souborů:
 
 - .exe – spustitelné soubory,
-- .jpg , .png – obrázky,
+- `.jpg`, `.png` – obrázky,
 - .mp3 , .wav – zvukové soubory,
-- .bin , .dat – obecná binární data.
+- `.bin`, `.dat` – obecná binární data.
 
-### 4.3 Základní operace se soubory
+## 4.3 Základní operace se soubory
 
 Práce se soubory typicky zahrnuje čtyři základní kroky: 1. Otevření souboru – vytvoření spojení mezi programem a souborem. 2. Čtení nebo zápis – manipulace s daty. 3. Zpracování dat – operace s načtenými daty. 4. Uzavření souboru – uvolnění prostředků.
 
-### 4.4 Práce se soubory v jazyce C
+## 4.4 Práce se soubory v jazyce C
 
 V jazyce C se používají souborové ukazatele typu FILE* pro práci se soubory. Hlavičkový soubor <stdio.h> obsahuje funkce pro vstup a výstup.
 
 Otevření souboru:
 
-```
-# include <stdio .h>
-FILE * soubor ;
-soubor = fopen ("data.txt", "r");            // "r" = cteni
-```
+```c
+#include <stdio.h>
 
-```
-if ( soubor == NULL) {
-printf ("Chyba řpi otevírání souboru \n");
-return 1;
+FILE *soubor = fopen("data.txt", "r");  // "r" = čtení
+if (soubor == NULL) {
+    printf("Chyba při otevírání souboru\n");
+    return 1;
 }
 ```
 
@@ -500,74 +457,74 @@ Režimy otevření souboru:
 
 Čtení ze souboru:
 
-```
-char radek [100];
+```c
+char radek[100];
 
-// Cteni radku
-while ( fgets (radek , 100 , soubor ) != NULL) {
-printf ("%s", radek );
+// Čtení řádků
+while (fgets(radek, sizeof radek, soubor) != NULL) {
+    printf("%s", radek);
 }
 ```
 
-```
-// Cteni jednotlivych znaku
+```c
+// Čtení jednotlivých znaků
 int znak;
-while (( znak = fgetc ( soubor )) != EOF) {
-putchar (znak);
+while ((znak = fgetc(soubor)) != EOF) {
+    putchar(znak);
 }
 ```
 
 Zápis do souboru:
 
-```
-FILE * soubor = fopen (" vystup .txt", "w");
-fprintf (soubor , "Text: %s\n", "Ahoj");
-fprintf (soubor , "Číslo: %d\n", 42);
+```c
+FILE *soubor = fopen("vystup.txt", "w");
+fprintf(soubor, "Text: %s\n", "Ahoj");
+fprintf(soubor, "Číslo: %d\n", 42);
 ```
 
 Uzavření souboru:
 
-```
-fclose ( soubor );      // Dulezite pro uvolneni prostredku
+```c
+fclose(soubor);  // Důležité pro uvolnění prostředků
 ```
 
-### 4.5 Práce se soubory v Pythonu
+## 4.5 Práce se soubory v Pythonu
 
 Python poskytuje vestavěné funkce pro práci se soubory a doporučuje použít kontextový manažer (with), který automaticky uzavře soubor. Čtení ze souboru:
 
-```
-# Bezpecny zpusob - automaticke uzavreni
-with open("data.txt", "r", encoding ="utf -8") as soubor :
-obsah = soubor .read () # Cely obsah
-print ( obsah )
-```
-
-```
-# Cteni po radcich
-with open("data.txt", "r", encoding ="utf -8") as soubor :
-for radek in soubor :
-print ( radek . strip ()) # strip () odstrani \n
+```python
+# Bezpečný způsob – automatické uzavření
+with open("data.txt", "r", encoding="utf-8") as soubor:
+    obsah = soubor.read()  # Celý obsah
+    print(obsah)
 ```
 
+```python
+# Čtení po řádcích
+with open("data.txt", "r", encoding="utf-8") as soubor:
+    for radek in soubor:
+        print(radek.strip())  # strip() odstraní znak nového řádku
 ```
-# Nacteni vsech radku do seznamu
-with open("data.txt", "r", encoding ="utf -8") as soubor :
-radky = soubor . readlines ()
+
+```python
+# Načtení všech řádků do seznamu
+with open("data.txt", "r", encoding="utf-8") as soubor:
+    radky = soubor.readlines()
 ```
 
 Zápis do souboru:
 
-```
-# Zapis prepise existujici soubor
-with open(" vystup .txt", "w", encoding ="utf -8") as soubor :
-soubor . write ("První řádek\n")
-soubor . write ("Druhý řádek\n")
+```python
+# Zápis přepíše existující soubor
+with open("vystup.txt", "w", encoding="utf-8") as soubor:
+    soubor.write("První řádek\n")
+    soubor.write("Druhý řádek\n")
 ```
 
-```
-# Pripojeni na konec souboru
-with open(" vystup .txt", "a", encoding ="utf -8") as soubor :
-soubor . write ("šDalí řádek\n")
+```python
+# Připojení na konec souboru
+with open("vystup.txt", "a", encoding="utf-8") as soubor:
+    soubor.write("Další řádek\n")
 ```
 
 Režimy otevření v Pythonu:
@@ -578,15 +535,15 @@ Režimy otevření v Pythonu:
 - "r+" – čtení i zápis,
 - "b" – binární režim (např. "rb" , "wb" ).
 
-### 4.6 Srovnání práce se soubory
+## 4.6 Srovnání práce se soubory
 
 Aspekt C Python Otevření fopen() open() Čtení fgets() , fgetc() read() , readline() Zápis fprintf() , fputc() write() Uzavření Manuální fclose() Automatické s with Bezpečnost Vyžaduje kontrolu Jednodušší správa chyb
 
 Python nabízí pohodlnější a bezpečnější práci se soubory díky automatické správě prostředků, zatímco C poskytuje nižší úroveň kontroly.
 
-## 5. Nejpoužívanější typy datových formátů
+# 5. Nejpoužívanější typy datových formátů
 
-### 5.1 Význam strukturovaných datových formátů
+## 5.1 Význam strukturovaných datových formátů
 
 Při ukládání a přenosu dat mezi programy nebo systémy je důležité používat standardizované formáty, které zajistí:
 
@@ -595,11 +552,16 @@ Při ukládání a přenosu dat mezi programy nebo systémy je důležité použ
 - parsovatelnost – programy mohou data snadno načíst a zpracovat,
 - interoperabilitu – různé systémy mohou spolupracovat.
 
-### 5.2 CSV (Comma-Separated Values)
+## 5.2 CSV (Comma-Separated Values)
 
 CSV je jednoduchý textový formát pro ukládání tabulkových dat. Každý řádek souboru odpovídá jednomu záznamu a hodnoty jsou odděleny čárkami (nebo jinými oddělovači). Příklad CSV souboru:
 
-jmeno,vek,mesto Alice,25,Praha Jan,30,Brno Ludmila,22,Ostrava
+```csv
+jmeno,vek,mesto
+Alice,25,Praha
+Jan,30,Brno
+Ludmila,22,Ostrava
+```
 
 Vlastnosti CSV:
 
@@ -608,28 +570,23 @@ Vlastnosti CSV:
 - široká podpora – většina nástrojů CSV podporuje,
 - omezení – obtížné ukládání hierarchických nebo vnořených dat. Práce s CSV v Pythonu:
 
-```
+```python
 import csv
 
-# Cteni CSV
-with open("data.csv", "r", encoding ="utf -8") as soubor :
-ctenar = csv. reader ( soubor )
-hlavicka = next( ctenar ) # Prvni radek
-for radek in ctenar :
-print ( radek ) # [' Alice ', '25', 'Praha ']
+# Čtení CSV
+with open("data.csv", "r", encoding="utf-8", newline="") as soubor:
+    ctenar = csv.reader(soubor)
+    hlavicka = next(ctenar)  # První řádek
+    for radek in ctenar:
+        print(radek)  # ['Alice', '25', 'Praha']
 ```
 
-```
-# Zapis CSV
-with open(" vystup .csv", "w", newline ="", encoding ="utf -8") as
-```
-
-soubor :
-
-```
-zapisovac = csv. writer ( soubor )
-zapisovac . writerow ([" jmeno", "vek", "mesto "])
-zapisovac . writerow ([" David", "28", "ňPlze"])
+```python
+# Zápis CSV
+with open("vystup.csv", "w", newline="", encoding="utf-8") as soubor:
+    zapisovac = csv.writer(soubor)
+    zapisovac.writerow(["jmeno", "vek", "mesto"])
+    zapisovac.writerow(["David", "28", "Plzeň"])
 ```
 
 CSV se používá pro:
@@ -639,24 +596,24 @@ CSV se používá pro:
 - statistické zpracování dat,
 - logy a reporty.
 
-### 5.3 XML (eXtensible Markup Language)
+## 5.3 XML (eXtensible Markup Language)
 
 XML je značkovací jazyk určený pro strukturované ukládání dat. Používá značky (tagy) pro definování hierarchie a struktury dat. Příklad XML souboru:
 
-```
-<?xml version ="1.0" encoding ="UTF -8"?>
-<osoby >
-<osoba >
-<jmeno >Alice </ jmeno >
-<vek >25 </vek >
-<mesto >Praha </ mesto >
-</osoba >
-<osoba >
-<jmeno >Jan </ jmeno >
-<vek >30 </vek >
-<mesto >Brno </ mesto >
-</osoba >
-</osoby >
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<osoby>
+  <osoba>
+    <jmeno>Alice</jmeno>
+    <vek>25</vek>
+    <mesto>Praha</mesto>
+  </osoba>
+  <osoba>
+    <jmeno>Jan</jmeno>
+    <vek>30</vek>
+    <mesto>Brno</mesto>
+  </osoba>
+</osoby>
 ```
 
 Vlastnosti XML:
@@ -671,24 +628,24 @@ Vlastnosti XML:
 - reprezentaci dokumentů (Office Open XML),
 - ukládání komplexních datových struktur.
 
-### 5.4 JSON (JavaScript Object Notation)
+## 5.4 JSON (JavaScript Object Notation)
 
 JSON je lehký textový formát pro výměnu dat založený na syntaxi JavaScriptu. Je čitelnější a kompaktnější než XML. Příklad JSON souboru:
 
-```
+```json
 {
-"osoby ": [
-{
-" jmeno ": " Alice ",
-"vek": 25,
-" mesto ": " Praha "
-},
-{
-" jmeno ": "Jan",
-"vek": 30,
-" mesto ": "Brno"
-}
-]
+  "osoby": [
+    {
+      "jmeno": "Alice",
+      "vek": 25,
+      "mesto": "Praha"
+    },
+    {
+      "jmeno": "Jan",
+      "vek": 30,
+      "mesto": "Brno"
+    }
+  ]
 }
 ```
 
@@ -699,23 +656,24 @@ Vlastnosti JSON:
 - nativní podpora – přímo podporován v JavaScriptu,
 - omezené datové typy – čísla, řetězce, objekty, pole, boolean, null. Práce s JSON v Pythonu:
 
-```
+```python
 import json
-# Nacteni JSON
-with open("data.json", "r", encoding ="utf -8") as soubor :
-data = json.load( soubor )
-print (data["osoby "][0][ "jmeno "]) # Alice
+
+# Načtení JSON
+with open("data.json", "r", encoding="utf-8") as soubor:
+    data = json.load(soubor)
+print(data["osoby"][0]["jmeno"])  # Alice
 ```
 
-```
+```python
 # Zapis JSON
 data = {
-"osoby ": [
-{"jmeno ": " Ludmila ", "vek": 22, "mesto ": " Ostrava "}
-]
+    "osoby": [
+        {"jmeno": "Ludmila", "vek": 22, "mesto": "Ostrava"}
+    ]
 }
-with open(" vystup .json", "w", encoding ="utf -8") as soubor :
-json.dump(data , soubor , indent =2, ensure_ascii = False )
+with open("vystup.json", "w", encoding="utf-8") as soubor:
+    json.dump(data, soubor, indent=2, ensure_ascii=False)
 ```
 
 JSON se používá pro:
@@ -725,11 +683,19 @@ JSON se používá pro:
 - ukládání strukturovaných dat,
 - výměnu dat mezi webovými aplikacemi.
 
-### 5.5 YAML (YAML Ain’t Markup Language)
+## 5.5 YAML (YAML Ain’t Markup Language)
 
 YAML je lidsky čitelný formát pro serializaci dat. Klade důraz na jednoduchost a čitelnost, používá odsazení místo složených závorek. Příklad YAML souboru:
 
-osoby: - jmeno: Alice vek: 25 mesto: Praha - jmeno: Jan vek: 30 mesto: Brno
+```yaml
+osoby:
+  - jmeno: Alice
+    vek: 25
+    mesto: Praha
+  - jmeno: Jan
+    vek: 30
+    mesto: Brno
+```
 
 Vlastnosti YAML:
 
@@ -742,7 +708,7 @@ Vlastnosti YAML:
 - nastavení aplikací,
 - dokumentaci struktury dat.
 
-### 5.6 Srovnání formátů
+## 5.6 Srovnání formátů
 
 Formát Čitelnost Velikost Složitost Typické využití CSV Vysoká Malá Nízká Tabulková data XML Střední Velká Vysoká Dokumenty, komplexní struktury JSON Vysoká Střední Střední Web API, konfigurace YAML Velmi vysoká Střední Střední Konfigurace, DevOps
 
@@ -753,9 +719,9 @@ Volba formátu závisí na konkrétních požadavcích projektu:
 - XML pro komplexní dokumenty a legacy systémy,
 - YAML pro čitelné konfigurační soubory.
 
-## 6. Další datové struktury
+# 6. Další datové struktury
 
-### 6.1 Datová struktura není jen „místo pro data“
+## 6.1 Datová struktura není jen „místo pro data“
 
 Při programování nestačí rozhodnout, **jaká data chceme uložit**. Stejně důležité je, **jak s nimi budeme pracovat**.
 
@@ -771,7 +737,7 @@ Základní otázka při volbě datové struktury proto zní:
 
 > Které operace budu s daty provádět nejčastěji?
 
-### 6.2 Seznam, zásobník a fronta
+## 6.2 Seznam, zásobník a fronta
 
 Jednou z nejjednodušších struktur je **seznam — list**. Obsahuje posloupnost prvků a na rozdíl od klasického statického pole může být v mnoha programovacích jazycích snadno rozšiřován nebo zkracován.
 
@@ -852,7 +818,7 @@ Rozdíl mezi zásobníkem a frontou je tedy především v pořadí:
 
 Stejná data tak můžeme organizovat různými způsoby podle toho, jaké chování potřebujeme.
 
-### 6.3 Množina a slovník: když potřebujeme rychle hledat
+## 6.3 Množina a slovník: když potřebujeme rychle hledat
 
 Představme si program, který eviduje registrační čísla účastníků:
 
@@ -1047,4 +1013,3 @@ Nejdůležitější proto není naučit se zpaměti co nejvíce názvů datovýc
 **Potřebuji data hlavně procházet, vyhledávat, přidávat, odebírat, nebo mezi nimi zachytit vztahy?**
 
 Právě odpověď na tuto otázku často rozhoduje o tom, jaká datová struktura je pro daný problém nejvhodnější.
-

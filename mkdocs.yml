@@ -24,223 +24,73 @@ markdown_extensions:
   - pymdownx.superfences
 nav:
   - Přehled: index.md
-  - "01 Základy informatiky":
-    - Přehled: 01-zaklady-informatiky/index.md
-    - "1. Informatika a informační technologie":
-      - Výukový text: 01-zaklady-informatiky/1-lekce/index.md
-    - "2. Principy digitalizace":
-      - Výukový text: 01-zaklady-informatiky/2-lekce/index.md
-    - "3. Kódování v informatice":
-      - Výukový text: 01-zaklady-informatiky/3-lekce/index.md
-    - "4. Přenos dat":
-      - Výukový text: 01-zaklady-informatiky/4-lekce/index.md
-    - "5. Datová komprese":
-      - Výukový text: 01-zaklady-informatiky/5-lekce/index.md
-    - "6. Práce s informacemi":
-      - Výukový text: 01-zaklady-informatiky/6-lekce/index.md
-  - "02 Programy a data":
-    - Přehled: 02-programy-a-data/index.md
-    - "1. Soubory, adresáře a data na disku":
-      - Výukový text: 02-programy-a-data/1-lekce/index.md
-    - "2. Systémové a aplikační programy":
-      - Výukový text: 02-programy-a-data/2-lekce/index.md
-    - "3. Softwarové licence":
-      - Výukový text: 02-programy-a-data/3-lekce/index.md
-    - "4. Emulace a virtualizace":
-      - Výukový text: 02-programy-a-data/4-lekce/index.md
-    - "5. Cloudové služby":
-      - Výukový text: 02-programy-a-data/5-lekce/index.md
-    - "6. Správa programů a dat":
-      - Výukový text: 02-programy-a-data/6-lekce/index.md
-  - "03 Informační a databázové systémy":
-    - Přehled: 03-informacni-a-databazove-systemy/index.md
-    - "1. Informační systémy v digitální době":
-      - Výukový text: 03-informacni-a-databazove-systemy/1-lekce/index.md
-    - "2. Typy informačních systémů":
-      - Výukový text: 03-informacni-a-databazove-systemy/2-lekce/index.md
-    - "3. Životní cyklus informačního systému":
-      - Výukový text: 03-informacni-a-databazove-systemy/3-lekce/index.md
-    - "4. Databáze a hromadné zpracování dat":
-      - Výukový text: 03-informacni-a-databazove-systemy/4-lekce/index.md
-    - "5. NoSQL databáze":
-      - Výukový text: 03-informacni-a-databazove-systemy/5-lekce/index.md
-    - "6. Big data a datové sklady":
-      - Výukový text: 03-informacni-a-databazove-systemy/6-lekce/index.md
-  - "04 Rastrová grafika a digitální fotografie":
-    - Přehled: 04-rastrova-grafika-a-digitalni-fotografie/index.md
-    - "1. Rastrový obraz: svět složený z pixelů":
-      - Výukový text: 04-rastrova-grafika-a-digitalni-fotografie/1-lekce/index.md
-    - "2. Obrazové formáty, velikost a komprese":
-      - Výukový text: 04-rastrova-grafika-a-digitalni-fotografie/2-lekce/index.md
-    - "3. Barva: od lidského oka k číslům v počítači":
-      - Výukový text: 04-rastrova-grafika-a-digitalni-fotografie/3-lekce/index.md
-    - "4. Rastrový editor a nedestruktivní práce s obrazem":
-      - Výukový text: 04-rastrova-grafika-a-digitalni-fotografie/4-lekce/index.md
-    - "5. Digitální fotoaparát: jak se světlo mění na data":
-      - Výukový text: 04-rastrova-grafika-a-digitalni-fotografie/5-lekce/index.md
-    - "6. Zpracování, publikace a důvěryhodnost digitální fotografie":
-      - Výukový text: 04-rastrova-grafika-a-digitalni-fotografie/6-lekce/index.md
-  - "05 Vektorová grafika":
-    - Přehled: 05-vektorova-grafika/index.md
-    - "1. Principy vektorové grafiky":
-      - Výukový text: 05-vektorova-grafika/1-lekce/index.md
-    - "2. Přesné kreslení a práce s vektorovými objekty":
-      - Výukový text: 05-vektorova-grafika/2-lekce/index.md
-    - "3. Technické kreslení a CAD":
-      - Výukový text: 05-vektorova-grafika/3-lekce/index.md
-    - "4. Trojrozměrné modelování a digitální scéna":
-      - Výukový text: 05-vektorova-grafika/4-lekce/index.md
-    - "5. Rendering a animace":
-      - Výukový text: 05-vektorova-grafika/5-lekce/index.md
-    - "6. Virtuální, rozšířená a smíšená realita":
-      - Výukový text: 05-vektorova-grafika/6-lekce/index.md
-  - "06 Zpracování textu na počítači":
-    - Přehled: 06-zpracovani-textu-na-pocitaci/index.md
-    - "1. Textové dokumenty a nástroje pro práci s textem":
-      - Výukový text: 06-zpracovani-textu-na-pocitaci/1-lekce/index.md
-    - "2. Markdown: dokument jako jednoduchý čitelný zdrojový text":
-      - Výukový text: 06-zpracovani-textu-na-pocitaci/2-lekce/index.md
-    - "3. Typografie a písmo":
-      - Výukový text: 06-zpracovani-textu-na-pocitaci/3-lekce/index.md
-    - "4. Struktura dokumentu, styly a automatizace":
-      - Výukový text: 06-zpracovani-textu-na-pocitaci/4-lekce/index.md
-    - "5. LaTeX: programovatelná profesionální sazba":
-      - Výukový text: 06-zpracovani-textu-na-pocitaci/5-lekce/index.md
-    - "6. Publikace, předtisková příprava a elektronické dokumenty":
-      - Výukový text: 06-zpracovani-textu-na-pocitaci/6-lekce/index.md
-  - "07 Práce s daty a tabulkové procesory":
-    - Přehled: 07-prace-s-daty-a-tabulkove-procesory/index.md
-    - "1. Od otázky k datové sadě":
-      - Výukový text: 07-prace-s-daty-a-tabulkove-procesory/1-lekce/index.md
-    - "2. Tabulkový procesor jako datová laboratoř":
-      - Výukový text: 07-prace-s-daty-a-tabulkove-procesory/2-lekce/index.md
-    - "3. Čištění a transformace: práce, kterou výsledek skrývá":
-      - Výukový text: 07-prace-s-daty-a-tabulkove-procesory/3-lekce/index.md
-    - "4. Od souhrnu ke statistickému uvažování":
-      - Výukový text: 07-prace-s-daty-a-tabulkove-procesory/4-lekce/index.md
-    - "5. Graf jako odpověď, ne jako dekorace":
-      - Výukový text: 07-prace-s-daty-a-tabulkove-procesory/5-lekce/index.md
-    - "6. Trend, predikce a odpovědný datový workflow":
-      - Výukový text: 07-prace-s-daty-a-tabulkove-procesory/6-lekce/index.md
-  - "08 Počítačové zpracování zvuku":
-    - Přehled: 08-pocitacove-zpracovani-zvuku/index.md
-    - "1. Zvuk jako fyzikální a informační jev":
-      - Výukový text: 08-pocitacove-zpracovani-zvuku/1-lekce/index.md
-    - "2. Od mikrofonu k digitální nahrávce":
-      - Výukový text: 08-pocitacove-zpracovani-zvuku/2-lekce/index.md
-    - "3. Audio soubory, komprese a psychoakustika":
-      - Výukový text: 08-pocitacove-zpracovani-zvuku/3-lekce/index.md
-    - "4. Jak lze zvuk vytvářet v počítači":
-      - Výukový text: 08-pocitacove-zpracovani-zvuku/4-lekce/index.md
-    - "5. Od syrové nahrávky k hotovému zvuku":
-      - Výukový text: 08-pocitacove-zpracovani-zvuku/5-lekce/index.md
-    - "6. Umělá inteligence mění práci se zvukem":
-      - Výukový text: 08-pocitacove-zpracovani-zvuku/6-lekce/index.md
-  - "09 Digitální video a multimediální prezentace":
-    - Přehled: 09-digitalni-video-a-multimedialni-prezentace/index.md
-    - "1. Od světla k digitálnímu videu":
-      - Výukový text: 09-digitalni-video-a-multimedialni-prezentace/1-lekce/index.md
-    - "2. Komprese, kodeky a kontejnery":
-      - Výukový text: 09-digitalni-video-a-multimedialni-prezentace/2-lekce/index.md
-    - "3. Natáčení: technika slouží příběhu":
-      - Výukový text: 09-digitalni-video-a-multimedialni-prezentace/3-lekce/index.md
-    - "4. Postprodukce, export a distribuce":
-      - Výukový text: 09-digitalni-video-a-multimedialni-prezentace/4-lekce/index.md
-    - "5. Multimediální prezentace jako řízené sdělení":
-      - Výukový text: 09-digitalni-video-a-multimedialni-prezentace/5-lekce/index.md
-    - "6. E-learning, umělá inteligence a důvěra v multimédia":
-      - Výukový text: 09-digitalni-video-a-multimedialni-prezentace/6-lekce/index.md
-  - "10 Relační databáze a jazyk SQL":
-    - Přehled: 10-relacni-databaze-a-sql/index.md
-    - "1. Relační model – data jako tvrzení a vztahy":
-      - Výukový text: 10-relacni-databaze-a-sql/1-lekce/index.md
-    - "2. Od požadavků k databázovému schématu":
-      - Výukový text: 10-relacni-databaze-a-sql/2-lekce/index.md
-    - "3. Vytvoření databáze a bezpečné změny dat":
-      - Výukový text: 10-relacni-databaze-a-sql/3-lekce/index.md
-    - "4. SELECT – od otázky k výsledku":
-      - Výukový text: 10-relacni-databaze-a-sql/4-lekce/index.md
-    - "5. Když odpověď leží ve více tabulkách":
-      - Výukový text: 10-relacni-databaze-a-sql/5-lekce/index.md
-    - "6. Transakce, výkon, bezpečnost a provoz":
-      - Výukový text: 10-relacni-databaze-a-sql/6-lekce/index.md
-  - "11 Internet a WWW":
-    - Přehled: 11-internet-a-www/index.md
-    - "1. Principy internetu":
-      - Výukový text: 11-internet-a-www/1-lekce/index.md
-    - "2. Internetové služby a URL":
-      - Výukový text: 11-internet-a-www/2-lekce/index.md
-    - "3. World Wide Web a HTTP":
-      - Výukový text: 11-internet-a-www/3-lekce/index.md
-    - "4. Webové prohlížeče, bezpečnost a digitální stopa":
-      - Výukový text: 11-internet-a-www/4-lekce/index.md
-    - "5. Vyhledávače, SEO a informační gramotnost":
-      - Výukový text: 11-internet-a-www/5-lekce/index.md
-    - "6. Vývoj internetu, nové technologie a digitální rizika":
-      - Výukový text: 11-internet-a-www/6-lekce/index.md
-  - "12 HTML a CSS":
-    - Přehled: 12-html-a-css/index.md
-    - "1. HTML: dokument, kterému rozumí člověk i stroj":
-      - Výukový text: 12-html-a-css/1-lekce/index.md
-    - "2. Sémantická struktura, odkazy, média a formuláře":
-      - Výukový text: 12-html-a-css/2-lekce/index.md
-    - "3. CSS: kaskáda, selektory a box model":
-      - Výukový text: 12-html-a-css/3-lekce/index.md
-    - "4. Layout: od normálního toku k Flexboxu a Gridu":
-      - Výukový text: 12-html-a-css/4-lekce/index.md
-    - "5. Webdesign, přístupnost a výkon":
-      - Výukový text: 12-html-a-css/5-lekce/index.md
-    - "6. Od zdrojového souboru k publikovanému webu":
-      - Výukový text: 12-html-a-css/6-lekce/index.md
-  - "13 Webové technologie":
-    - Přehled: 13-webove-technologie/index.md
-    - "1. Klient, server, frontend a backend":
-      - Výukový text: 13-webove-technologie/1-lekce/index.md
-    - "3. Propojení JavaScriptu s webovou stránkou":
-      - Výukový text: 13-webove-technologie/3-lekce/index.md
-  - "14 Webové aplikace":
-    - Přehled: 14-webove-aplikace/index.md
-    - "1. Architektura webové aplikace":
-      - Výukový text: 14-webove-aplikace/1-lekce/index.md
-    - "2. Django jako konkrétní příklad backendového frameworku":
-      - Výukový text: 14-webove-aplikace/2-lekce/index.md
-    - "3. Šablony, formuláře a vstupní data":
-      - Výukový text: 14-webove-aplikace/3-lekce/index.md
-    - "4. Stav, autentizace a autorizace":
-      - Výukový text: 14-webove-aplikace/4-lekce/index.md
-    - "5. Bezpečnost webové aplikace":
-      - Výukový text: 14-webove-aplikace/5-lekce/index.md
-    - "6. CMS, nasazení a provoz":
-      - Výukový text: 14-webove-aplikace/6-lekce/index.md
-  - "15 Kyberbezpečnost":
-    - Přehled: 15-kyberbezpecnost/index.md
-    - "1. Kyberprostor, hrozby a řízení bezpečnosti":
-      - Výukový text: 15-kyberbezpecnost/1-lekce/index.md
-    - "2. Malware a sociální inženýrství":
-      - Výukový text: 15-kyberbezpecnost/2-lekce/index.md
-    - "3. Rozpoznání napadení a vícevrstvá obrana":
-      - Výukový text: 15-kyberbezpecnost/3-lekce/index.md
-    - "4. Digitální identita, autentizace a hesla":
-      - Výukový text: 15-kyberbezpecnost/4-lekce/index.md
-    - "5. Ochrana dat a kryptografie":
-      - Výukový text: 15-kyberbezpecnost/5-lekce/index.md
-    - "6. Bezpečnost jako proces: od jednotlivce k organizaci":
-      - Výukový text: 15-kyberbezpecnost/6-lekce/index.md
   - "16 Základy programování a algoritmizace":
     - Přehled: 16-zaklady-programovani-a-algoritmizace/index.md
+    - "1. Základní pojmy z programování":
+      - Výukový text: 16-zaklady-programovani-a-algoritmizace/1-lekce/index.md
+    - "2. Vývoj programování, nižší a vyšší programovací jazyky":
+      - Výukový text: 16-zaklady-programovani-a-algoritmizace/2-lekce/index.md
+    - "3. Princip fungování programu v počítači":
+      - Výukový text: 16-zaklady-programovani-a-algoritmizace/3-lekce/index.md
+    - "4. Algoritmizace, možnost zápisu algoritmů":
+      - Výukový text: 16-zaklady-programovani-a-algoritmizace/4-lekce/index.md
+    - "5. Základní prvky syntaxe programovacího jazyka":
+      - Výukový text: 16-zaklady-programovani-a-algoritmizace/5-lekce/index.md
     - "6. Efektivita algoritmů a volba řešení":
       - Výukový text: 16-zaklady-programovani-a-algoritmizace/6-lekce/index.md
   - "17 Vývojářské nástroje a verzovací systémy":
     - Přehled: 17-vyvojarske-nastroje-a-verzovaci-systemy/index.md
+    - "1. Fáze tvorby programu a vývojářské nástroje":
+      - Výukový text: 17-vyvojarske-nastroje-a-verzovaci-systemy/1-lekce/index.md
+    - "2. IDE, pomůcky pro editaci a refaktorování kódu":
+      - Výukový text: 17-vyvojarske-nastroje-a-verzovaci-systemy/2-lekce/index.md
+    - "3. Nástroje pro ladění a testování kódu, vývoj řízený testy":
+      - Výukový text: 17-vyvojarske-nastroje-a-verzovaci-systemy/3-lekce/index.md
+    - "4. Správa závislostí, virtuální prostředí, kontejnery":
+      - Výukový text: 17-vyvojarske-nastroje-a-verzovaci-systemy/4-lekce/index.md
+    - "5. Verzovací systémy, jejich funkce a využití v praxi":
+      - Výukový text: 17-vyvojarske-nastroje-a-verzovaci-systemy/5-lekce/index.md
+    - "6. Využití umělé inteligence při programování":
+      - Výukový text: 17-vyvojarske-nastroje-a-verzovaci-systemy/6-lekce/index.md
   - "18 Strukturované programování":
     - Přehled: 18-strukturovane-programovani/index.md
+    - "1. Důvody vzniku strukturovaného programování, zásady a základní rysy":
+      - Výukový text: 18-strukturovane-programovani/1-lekce/index.md
+    - "2. Konstanty, proměnné, datové typy":
+      - Výukový text: 18-strukturovane-programovani/2-lekce/index.md
+    - "3. Řídicí struktury":
+      - Výukový text: 18-strukturovane-programovani/3-lekce/index.md
+    - "4. Podprogramy a jejich význam; funkce, lokální a globální proměnné":
+      - Výukový text: 18-strukturovane-programovani/4-lekce/index.md
+    - "5. Modularita programů, knihovny a jejich využití, hlavičkové soubory":
+      - Výukový text: 18-strukturovane-programovani/5-lekce/index.md
     - "6. Rekurze, výjimky a validace vstupu":
       - Výukový text: 18-strukturovane-programovani/6-lekce/index.md
   - "19 Objektově orientované programování":
     - Přehled: 19-objektove-orientovane-programovani/index.md
+    - "1. Důvody vzniku OOP a jeho principy":
+      - Výukový text: 19-objektove-orientovane-programovani/1-lekce/index.md
+    - "2. Třídy a objekty":
+      - Výukový text: 19-objektove-orientovane-programovani/2-lekce/index.md
+    - "3. Dědičnost a polymorfismus":
+      - Výukový text: 19-objektove-orientovane-programovani/3-lekce/index.md
+    - "4. Vytváření objektů, možnosti práce s objekty a s pamětí v různých jazycích":
+      - Výukový text: 19-objektove-orientovane-programovani/4-lekce/index.md
+    - "5. Další aplikace principů OOP: abstraktní třídy, rozhraní":
+      - Výukový text: 19-objektove-orientovane-programovani/5-lekce/index.md
     - "6. Návrh objektového programu":
       - Výukový text: 19-objektove-orientovane-programovani/6-lekce/index.md
   - "20 Datové struktury a soubory":
     - Přehled: 20-datove-struktury-a-soubory/index.md
-    - "6. Další datové struktury a jejich vhodná volba":
+    - "1. Strukturované datové typy a ukazatele":
+      - Výukový text: 20-datove-struktury-a-soubory/1-lekce/index.md
+    - "2. Znakové řetězce":
+      - Výukový text: 20-datove-struktury-a-soubory/2-lekce/index.md
+    - "3. Regulární výrazy a jejich využití při práci s textem":
+      - Výukový text: 20-datove-struktury-a-soubory/3-lekce/index.md
+    - "4. Datové soubory a jejich význam v programování":
+      - Výukový text: 20-datove-struktury-a-soubory/4-lekce/index.md
+    - "5. Nejpoužívanější typy datových formátů":
+      - Výukový text: 20-datove-struktury-a-soubory/5-lekce/index.md
+    - "6. Další datové struktury":
       - Výukový text: 20-datove-struktury-a-soubory/6-lekce/index.md

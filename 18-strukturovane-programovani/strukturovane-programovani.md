@@ -1,18 +1,19 @@
 # Strukturované programování
 
-## 1. Důvody vzniku strukturovaného programování, zásady a základní rysy
+# 1. Důvody vzniku strukturovaného programování, zásady a základní rysy
 
-### 1.1 Vznik strukturovaného programování
+## 1.1 Vznik strukturovaného programování
 
-V raných dobách programování se programy psaly převážně pomocí nestrukturovaného kódu, který obsahoval velké množství příkazů pro bezpodmínečné skoky (například příkaz GOTO ). Tento způsob programování vedl k vytváření kódu, který byl obtížně čitelný a ještě obtížněji udržovatelný. S rostoucí složitostí programů se začaly projevovat závažné problémy:
+V raných dobách programování se programy psaly převážně pomocí nestrukturovaného kódu, který obsahoval velké množství příkazů pro bezpodmínečné skoky (například příkaz `GOTO`). Tento způsob programování vedl k vytváření kódu, který byl obtížně čitelný a ještě obtížněji udržovatelný. S rostoucí složitostí programů se začaly projevovat závažné problémy:
 
 - Špatná čitelnost – program se stal obtížně pochopitelný i pro jeho autora po určité době,
 - Náročná údržba – jakákoliv změna mohla způsobit neočekávané chyby na jiných místech,
 - Složité testování – bylo téměř nemožné ověřit správnost všech možných průchodů programem,
-- Nízká produktivita – vývoj a opravy zabíraly nepřiměřeně dlouhou dobu. Tyto problémy vedly od 60. let 20. století k vývoji konceptu strukturovaného programování, který formulovali především Edsger Dijkstra, C. A. R. Hoare a další informatici. Dijkstra ve svém slavném dopise z roku 1968 s názvem „Go To Statement Considered
-Harmful” (česky „Příkaz GOTO považován za škodlivý”) upozornil na nebezpečí nekontrolovaného používání příkazu GOTO .
+- Nízká produktivita – vývoj a opravy zabíraly nepřiměřeně dlouhou dobu.
 
-### 1.2 Principy strukturovaného programování
+Tyto problémy vedly od 60. let 20. století k vývoji konceptu strukturovaného programování, který formulovali především Edsger Dijkstra, C. A. R. Hoare a další informatici. Dijkstra ve svém slavném dopise z roku 1968 s názvem „Go To Statement Considered Harmful“ (česky „Příkaz GOTO považován za škodlivý“) upozornil na nebezpečí nekontrolovaného používání příkazu `GOTO`.
+
+## 1.2 Principy strukturovaného programování
 
 Strukturované programování je programovací paradigma, které klade důraz na přehlednost, logickou strukturu a systematický přístup k tvorbě programů. Jeho základním principem je rozklad složitých problémů na menší, lépe zvládnutelné části. Základní zásady strukturovaného programování zahrnují:
 
@@ -28,53 +29,53 @@ Strukturované programování je programovací paradigma, které klade důraz na
 - udržovatelnější – změny lze provádět s menším rizikem zavedení chyb,
 - testovatelné – jednotlivé části lze testovat odděleně,
 
-## 2. Konstanty, proměnné, datové typy
+# 2. Konstanty, proměnné, datové typy
 
-### 2.1 Proměnné a konstanty
+## 2.1 Proměnné a konstanty
 
 Proměnná je pojmenované místo v paměti počítače, které uchovává hodnotu, jež se může během běhu programu měnit. Proměnné jsou základním stavebním kamenem téměř každého programu, protože umožňují pracovat s daty a ukládat mezivýsledky výpočtů. Konstanta je podobně jako proměnná pojmenované místo v paměti, ale její hodnota je nastavena při inicializaci a během běhu programu se již nemění. Použití konstant zvyšuje bezpečnost a čitelnost kódu, protože jasně vymezuje hodnoty, které by neměly být měněny. Rozdíl mezi proměnnou a konstantou:
 
 - proměnná může měnit svou hodnotu během běhu programu,
 - konstanta má pevně stanovenou hodnotu, která zůstává neměnná.
 
-### 2.2 Datové typy
+## 2.2 Datové typy
 
 Datový typ určuje, jaký druh hodnot může proměnná nebo konstanta obsahovat a jaké operace s nimi lze provádět. Datové typy definují:
 
 - rozsah možných hodnot,
 - velikost paměti potřebné pro uložení hodnoty,
 - operace, které lze s hodnotou provádět. Základní datové typy zahrnují:
-- Celá čísla ( int ) – např. -5 , 0 , 42 ,
-- Desetinná čísla ( float , double ) – např. 3.14 , -0.001 ,
-- Znaky ( char ) – jednotlivé znaky jako 'a' , 'Z' , '5' ,
-- Textové řetězce ( string ) – posloupnosti znaků jako "Hello" , "Programování" ,
-- Logické hodnoty ( bool ) – true nebo false.
+- Celá čísla (`int`) – např. -5, 0, 42,
+- Desetinná čísla (`float`, `double`) – např. 3.14, -0.001,
+- Znaky (`char`) – jednotlivé znaky jako `'a'`, `'Z'`, `'5'`,
+- Textové řetězce (`string`) – posloupnosti znaků jako `"Hello"`, `"Programování"`,
+- Logické hodnoty (`bool`) – `true` nebo `false`.
 
-### 2.3 Statické vs. dynamické typování
+## 2.3 Statické vs. dynamické typování
 
 Programovací jazyky se liší v přístupu k deklaraci a typování proměnných: Statické typování – datový typ proměnné musí být explicitně deklarován a nelze jej během běhu programu změnit. Tento přístup používají jazyky jako C, C++, Java nebo C#. Výhodou je lepší kontrola chyb již při překladu programu a často i vyšší výkon. Dynamické typování – datový typ proměnné není explicitně deklarován a může se měnit během běhu programu. Tento přístup používají jazyky jako Python, JavaScript nebo Ruby. Výhodou je rychlejší vývoj a flexibilnější kód, nevýhodou může být menší kontrola chyb a potenciálně pomalejší běh programu. Příklad deklarace v jazyce C (statické typování):
 
-```
-int vek = 25;                     //   Cele cislo
-float teplota = 36.6;             //   Desetinne cislo
-char pismeno = 'A';               //   Znak
-const double PI = 3.14159;        //   Konstanta
+```c
+int vek = 25;                     // Celé číslo
+float teplota = 36.6f;            // Desetinné číslo
+char pismeno = 'A';               // Znak
+const double PI = 3.14159;        // Konstanta
 ```
 
 Příklad deklarace v jazyce Python (dynamické typování):
 
+```python
+vek = 25                    # Celé číslo (int)
+teplota = 36.6              # Desetinné číslo (float)
+pismeno = "A"               # Řetězec (str) s jedním znakem
+PI = 3.14159                # Konstanta (podle konvence velkými písmeny)
 ```
-vek = 25                    # Cele cislo (int)
-teplota = 36.6              # Desetinne cislo (float )
-pismeno = 'A'               # Retezec (str) s jednim znakem
-PI = 3.14159                # Konstanta ( podle konvence velkymi pismeny )
-```
 
-V jazyce C je nutné při deklaraci proměnné uvést její datový typ ( int , float , char ), zatímco Python datový typ automaticky odvodí z přiřazené hodnoty. V jazyce C se pro konstanty používá klíčové slovo const , v Pythonu se konstanty označují konvenčně velkymi pismeny, ale technicky se chovají jako běžné proměnné.
+V jazyce C je nutné při deklaraci proměnné uvést její datový typ (`int`, `float`, `char`), zatímco Python datový typ automaticky odvodí z přiřazené hodnoty. V jazyce C se pro konstanty používá klíčové slovo `const`, v Pythonu se konstanty označují konvenčně velkými písmeny, ale technicky se chovají jako běžné proměnné.
 
-## 3. Řídicí struktury
+# 3. Řídicí struktury
 
-### 3.1 Význam řídicích struktur
+## 3.1 Význam řídicích struktur
 
 Řídicí struktury určují, v jakém pořadí se budou vykonávat jednotlivé příkazy programu. Bez řídicích struktur by program vykonával příkazy pouze sekvenčně jeden za druhým. Řídicí struktury umožňují vytvářet složitější logiku a reagovat na různé situace. V rámci strukturovaného programování rozlišujeme tři základní typy řídicích struktur:
 
@@ -82,46 +83,39 @@ V jazyce C je nutné při deklaraci proměnné uvést její datový typ ( int , 
 - **Větvení (selekce)** – umožňuje programu rozhodnout se mezi různými cestami vykonávání na základě splnění nebo nesplnění určité podmínky.
 - **Cykly (iterace)** – umožňují opakované vykonávání skupiny příkazů, dokud je splněna určitá podmínka. Tyto tři typy řídicích struktur tvoří základní stavební kameny pro tvorbu logicky správných a efektivních programů.
 
-### 3.2 Sekvence
+## 3.2 Sekvence
 
 Sekvence je nejjednodušší řídicí struktura. Příkazy jsou vykonávány postupně v pořadí, v jakém jsou zapsány v kódu. Příklad v Pythonu:
 
-```
+```python
 a = 5
 b = 10
 c = a + b
-print (c) # Vystup : 15
+print(c)  # Výstup: 15
 ```
 
 Příklad v jazyce C:
 
-```
+```c
 int a = 5;
 int b = 10;
 int c = a + b;
-printf ("%d\n", c);      // Vystup : 15
+printf("%d\n", c);  // Výstup: 15
 ```
 
-### 3.3 Větvení (selekce)
+## 3.3 Větvení (selekce)
 
 Větvení umožňuje programu rozhodnout se mezi různými cestami vykonávání na základě splnění nebo nesplnění určité podmínky. Základním nástrojem větvení je podmíněný příkaz. Podmíněný příkaz if vyhodnotí logickou podmínku a na základě jejího výsledku vykoná nebo nevykoná příslušný blok kódu. Schéma toku řízení pro podmíněný příkaz:
 
 ```text
-[Podmínka?]
-```
-
-/ \ ANO NE / \
-
-```text
-[Příkazy A] [Příkazy B]
-```
-
-\ /
-
-\ /
-
-```text
-[Pokračování]
+             [Podmínka?]
+              /      \
+            ANO      NE
+            /          \
+    [Příkazy A]    [Příkazy B]
+            \          /
+             \        /
+            [Pokračování]
 ```
 
 Obecná struktura:
@@ -134,72 +128,72 @@ if (podmínka): příkazy vykonané, pokud je podmínka splněna else: příkazy
 
 Příkaz elif/else if umožňuje testovat více podmínek postupně. Příklad v jazyce C:
 
-```
+```c
 int vek = 18;
 if (vek >= 18) {
-printf ("Jste plnoletý");
+    printf("Jste plnoletý");
 } else {
-printf ("Jste mladistvý");
+    printf("Jste mladistvý");
 }
 ```
 
 Příklad v Pythonu:
 
 
-```
+```python
 vek = 18
 if vek >= 18:
-print ("Jste plnoletý")
+    print("Jste plnoletý")
 else:
-print ("Jste mladistvý")
+    print("Jste mladistvý")
 ```
 
 Ternární operátor je zkrácený zápis jednoduchého podmíněného příkazu, který vrací jednu ze dvou hodnot podle splnění podmínky. Používá se především tam, kde je potřeba stručné rozhodnutí v rámci výrazu. Příklad v Pythonu:
 
-```
+```python
 vek = 20
-stav = " plnoletý" if vek >= 18 else " mladistvý"
-print (stav)
+stav = "plnoletý" if vek >= 18 else "mladistvý"
+print(stav)
 ```
 
 Příklad v jazyce C:
 
-```
+```c
 int vek = 20;
-const char *stav = (vek >= 18) ? " plnoletý" : " mladistvý";
-printf ("%s\n", stav);
+const char *stav = (vek >= 18) ? "plnoletý" : "mladistvý";
+printf("%s\n", stav);
 ```
 
-Příkaz switch umožňuje výběr z více větví na základě hodnoty výrazu. Je vhodný tam, kde by bylo potřeba dlouhé řetězení if-else if . Větve se obvykle ukončují příkazem break , aby nedošlo k nechtěnému průchodu do další větve. Příklad v jazyce C:
+Příkaz `switch` umožňuje výběr z více větví na základě hodnoty výrazu. Je vhodný tam, kde by bylo potřeba dlouhé řetězení `if`–`else if`. Větve se obvykle ukončují příkazem `break`, aby nedošlo k nechtěnému průchodu do další větve. Příklad v jazyce C:
 
-```
+```c
 int volba = 2;
-switch ( volba ) {
-case 1:
-printf ("První volba \n");
-break ;
-case 2:
-printf ("Druhá volba \n");
-break ;
-default :
-printf ("Neznámá volba \n");
+switch (volba) {
+    case 1:
+        printf("První volba\n");
+        break;
+    case 2:
+        printf("Druhá volba\n");
+        break;
+    default:
+        printf("Neznámá volba\n");
 }
 ```
 
 Příklad v Pythonu (od verze 3.10):
 
-```
+```python
 volba = 2
-match volba :
-case 1:
-print ("První volba")
-case 2:
-print ("Druhá volba")
-case _:
-print ("Neznámá volba")
+match volba:
+    case 1:
+        print("První volba")
+    case 2:
+        print("Druhá volba")
+    case _:
+        print("Neznámá volba")
 ```
 
-### 3.3 Cykly (iterace)
+## 3.4 Cykly (iterace)
 
 Cykly umožňují opakované vykonávání skupiny příkazů. Schéma toku řízení pro cyklus:
 
@@ -233,75 +227,75 @@ while (podmínka): příkazy opakované, dokud je podmínka splněna
 
 Příklad v jazyce C:
 
-```
+```c
 int i = 0;
 while (i < 5) {
-printf ("%d\n", i);
-i++;
+    printf("%d\n", i);
+    i++;
 }
-// Vystup : 0, 1, 2, 3, 4
+// Výstup: 0, 1, 2, 3, 4
 ```
 
 Příklad v Pythonu:
 
-```
+```python
 i = 0
 while i < 5:
-print (i)
-i += 1
-# Vystup : 0, 1, 2, 3, 4
+    print(i)
+    i += 1
+# Výstup: 0, 1, 2, 3, 4
 ```
 
 Cyklus do...while – podmínka se testuje až po vykonání těla cyklu, takže tělo proběhne vždy alespoň jednou. Tento typ cyklu je standardní v jazyce C, v Pythonu nemá přímou syntaktickou podporu a obvykle se nahrazuje konstrukcí while s ručně řízeným ukončením. Příklad v jazyce C:
 
-```
+```c
 int i = 0;
 do {
-printf ("%d\n", i);
-i++;
+    printf("%d\n", i);
+    i++;
 } while (i < 5);
-// Vystup : 0, 1, 2, 3, 4
+// Výstup: 0, 1, 2, 3, 4
 ```
 
 Příklad v Pythonu (napodobení do...while):
 
-```
+```python
 i = 0
 while True:
-print (i)
-i += 1
-if i >= 5:
-break
-# Vystup : 0, 1, 2, 3, 4
+    print(i)
+    i += 1
+    if i >= 5:
+        break
+# Výstup: 0, 1, 2, 3, 4
 ```
 
 Cyklus for – používá se typicky pro opakování s předem známým počtem iterací. Cyklus for obvykle obsahuje inicializaci řídící proměnné, podmínku ukončení a krok změny proměnné. Příklad v jazyce C:
 
-```
+```c
 for (int i = 0; i < 5; i++) {
-printf ("%d\n", i);
+    printf("%d\n", i);
 }
-// Vystup : 0, 1, 2, 3, 4
+// Výstup: 0, 1, 2, 3, 4
 ```
 
 Příklad v Pythonu:
 
-```
-for i in range (5):
-print (i)
-# Vystup : 0, 1, 2, 3, 4
+```python
+for i in range(5):
+    print(i)
+# Výstup: 0, 1, 2, 3, 4
 ```
 
 Rozdíly v zápisu mezi Pythonem a C:
 
 - V Pythonu se bloky kódu oddělují odsazením, v jazyce C složenými závorkami {} ,
-- Python používá konstrukci range() pro generování posloupnosti čísel v cyklu for ,
+- Python používá konstrukci `range()` pro generování posloupnosti čísel v cyklu `for`,
 - V jazyce C má cyklus for explicitní tři části: inicializaci, podmínku a krok. Řídicí struktury jsou základem strukturovaného programování a jejich správné použití
 je klíčové pro tvorbu logicky správných a efektivních programů.
 
-## 4. Podprogramy a jejich význam; funkce, lokální a globální proměnné
+# 4. Podprogramy a jejich význam; funkce, lokální a globální proměnné
 
-### 4.1 Význam podprogramů
+## 4.1 Význam podprogramů
 
 S rostoucí složitostí programů se stává nezbytné rozdělit kód na menší, lépe spravovatelné části. Podprogramy jsou samostatné bloky kódu, které plní určitou specifickou úlohu a mohou být volány z různých míst programu. Výhody používání podprogramů:
 
@@ -312,7 +306,7 @@ S rostoucí složitostí programů se stává nezbytné rozdělit kód na menš�
 - Týmová spolupráce – různí programátoři mohou pracovat na různých podprogramech. V moderních programovacích jazycích se podprogramy implementují především jako
 funkce (v některých jazycích také jako procedury nebo metody).
 
-### 4.2 Funkce
+## 4.2 Funkce
 
 Funkce je pojmenovaný blok kódu, který provádí určitou úlohu. Funkce může:
 
@@ -323,37 +317,34 @@ funkce název(parametry): tělo funkce return výsledek
 
 Příklad funkce v jazyce C:
 
-```
-int secti (int a, int b) {
-int vysledek = a + b;
-return vysledek ;
+```c
+int secti(int a, int b) {
+    int vysledek = a + b;
+    return vysledek;
 }
-```
 
-```
 // Volani funkce
-int main () {
-int suma = secti (5, 3);
-printf ("%d\n", suma); // Vystup : 8
-return 0;
+int main(void) {
+    int suma = secti(5, 3);
+    printf("%d\n", suma);  // Výstup: 8
+    return 0;
 }
 ```
 
 Příklad funkce v Pythonu:
 
-```
-def secti (a, b):
-vysledek = a + b
-return vysledek
-```
+```python
+def secti(a, b):
+    vysledek = a + b
+    return vysledek
 
-```
+
 # Volani funkce
-suma = secti (5, 3)
-print (suma) # Vystup : 8
+suma = secti(5, 3)
+print(suma)  # Výstup: 8
 ```
 
-### 4.3 Parametry a argumenty funkcí
+## 4.3 Parametry a argumenty funkcí
 
 Parametry jsou proměnné definované v hlavičce funkce, které přijímají hodnoty argumentů. Argumenty jsou konkrétní hodnoty, které se předávají funkci při jejím volání. Návratová hodnota je výsledek, který funkce vrací volajícímu kódu. Funkce může mít:
 
@@ -361,54 +352,55 @@ Parametry jsou proměnné definované v hlavičce funkce, které přijímají ho
 - žádný parametr,
 - žádnou návratovou hodnotu (procedura). Příklad funkce s více parametry a návratovou hodnotou v jazyce C:
 
-```
-int secti (int a, int b) {
-return a + b;
+```c
+int secti(int a, int b) {
+    return a + b;
 }
 ```
 
 Volání funkce:
 
-```
-int suma = secti (5, 3);
-printf ("%d\n", suma); // Vystup : 8
+```c
+int suma = secti(5, 3);
+printf("%d\n", suma);  // Výstup: 8
 ```
 
 Příklad funkce s více parametry a návratovou hodnotou v Pythonu:
 
-```
-def secti (a, b):
-return a + b
+```python
+def secti(a, b):
+    return a + b
 ```
 
 Volání funkce:
 
-```
-suma = secti (5, 3)
-print (suma) # Vystup : 8
+```python
+suma = secti(5, 3)
+print(suma)  # Výstup: 8
 ```
 
 Příklad funkce bez návratové hodnoty v C:
 
-```
-void pozdrav (char * jmeno ) {
-printf ("Ahoj , %s!\n", jmeno );
+```c
+void pozdrav(const char *jmeno) {
+    printf("Ahoj, %s!\n", jmeno);
 }
 ```
 
 Příklad funkce bez návratové hodnoty v Pythonu:
 
+```python
+def pozdrav(jmeno):
+    print(f"Ahoj, {jmeno}!")
+
+
+pozdrav("Alice")
+# Výstup: Ahoj, Alice!
 ```
-def pozdrav ( jmeno ):
-print (f"Ahoj , { jmeno }!")
-...
-pozdrav ("Alice")    
-# Vystup : Ahoj , Alice !
-```
 
 
 
-### 4.4 Lokální a globální proměnné
+## 4.4 Lokální a globální proměnné
 
 Lokální proměnné jsou deklarovány uvnitř funkce a existují pouze po dobu jejího vykonávání. Po ukončení funkce jsou lokální proměnné zrušeny a jejich hodnoty přestávají existovat. Vlastnosti lokálních proměnných:
 
@@ -420,36 +412,37 @@ Lokální proměnné jsou deklarovány uvnitř funkce a existují pouze po dobu 
 - uchování hodnoty mezi jednotlivými voláními funkcí. Příklad v jazyce C:
 
 
-```
-int globalni_promenna = 100; // Globalni promennavoid funkce () {
-int lokalni_promenna = 50; // Lokalni promenna
-printf ("Lokální: %d\n", lokalni_promenna );
-printf ("Globální: %d\n", globalni_promenna );
-}
-```
+```c
+int globalni_promenna = 100;  // Globální proměnná
 
-```
-int main () {
-funkce ();
-return 0;
+void funkce(void) {
+    int lokalni_promenna = 50;  // Lokální proměnná
+    printf("Lokální: %d\n", lokalni_promenna);
+    printf("Globální: %d\n", globalni_promenna);
+}
+
+int main(void) {
+    funkce();
+    return 0;
 }
 ```
 
 Příklad v Pythonu:
 
-```
-globalni_promenna = 100    # Globalni promenna
-def funkce ():
-lokalni_promenna = 50 # Lokalni promenna
-print (f"Lokální: { lokalni_promenna }")
-print (f"Globální: { globalni_promenna }")
-```
+```python
+globalni_promenna = 100  # Globální proměnná
 
-```
-funkce ()
-# Vystup :
-# Lokalni : 50
-# Globalni : 100
+
+def funkce():
+    lokalni_promenna = 50  # Lokální proměnná
+    print(f"Lokální: {lokalni_promenna}")
+    print(f"Globální: {globalni_promenna}")
+
+
+funkce()
+# Výstup:
+# Lokální: 50
+# Globální: 100
 ```
 
 Rizika používání globálních proměnných:
@@ -460,9 +453,9 @@ Rizika používání globálních proměnných:
 - Konflikty názvů – v rozsáhlých projektech může docházet k nežádoucím kolizím názvů. Proto je doporučováno minimalizovat používání globálních proměnných a preferovat
 předávání hodnot pomocí parametrů funkcí.
 
-## 5. Modularita programů, knihovny a jejich využití, hlavičkové soubory
+# 5. Modularita programů, knihovny a jejich využití, hlavičkové soubory
 
-### 5.1 Modularita a její přínosy
+## 5.1 Modularita a její přínosy
 
 S růstem velikosti a složitosti programů se stává nezbytné rozdělit kód do více samostatných částí. Modularita je princip členění programu na menší, logicky související celky nazývané moduly. Modularita přináší několik zásadních výhod:
 
@@ -472,7 +465,7 @@ S růstem velikosti a složitosti programů se stává nezbytné rozdělit kód 
 - Snadnější údržba – změny v jednom modulu neovlivňují ostatní.
 - Testování – jednotlivé moduly lze testovat nezávisle.
 
-### 5.2 Programové knihovny
+## 5.2 Programové knihovny
 
 Knihovna je kolekce předpřipravených funkcí, tříd a dalších programových konstrukcí, které řeší běžné úlohy. Knihovny umožňují programátorům využívat již napsaný a otestovaný kód místo opětovného vymýšlení a implementace základních funkcionalit. Rozlišujeme: Standardní knihovny – dodávány společně s programovacím jazykem a poskytují základní funkcionalitu, například:
 
@@ -482,36 +475,31 @@ Knihovna je kolekce předpřipravených funkcí, tříd a dalších programovýc
 - práce se soubory. Externí knihovny – vytvářené třetími stranami pro specifické účely, například:
 - grafické knihovny,
 - síťové knihovny,
-- knihovny pro zpracování dat. V jazyce Python se knihovny připojují pomocí příkazu import , v jazyce C pomocí
-direktivy preprocesoru #include . Příklad použití standardní knihovny v jazyce C:
+- knihovny pro zpracování dat. V jazyce Python se knihovny připojují pomocí příkazu `import`, v jazyce C pomocí
+direktivy preprocesoru `#include`. Příklad použití standardní knihovny v jazyce C:
 
-```
-# include <stdio .h>
-# include <math.h>
-```
+```c
+#include <stdio.h>
+#include <math.h>
 
-```
-int main () {
-double vysledek = sqrt (16.0) ;         // Odmocnina
-```
-
-```
-printf ("%.1f\n", vysledek );       // Vystup : 4.0
-return 0;
+int main(void) {
+    double vysledek = sqrt(16.0);  // Odmocnina
+    printf("%.1f\n", vysledek);   // Výstup: 4.0
+    return 0;
 }
 ```
 
 Příklad použití standardní knihovny v Pythonu:
 
-```
+```python
 import math
-vysledek = math.sqrt (16) # Odmocnina
-print ( vysledek ) # Vystup : 4.0
+vysledek = math.sqrt(16)  # Odmocnina
+print(vysledek)  # Výstup: 4.0
 ```
 
-### 5.3 Hlavičkové soubory v jazyce C
+## 5.3 Hlavičkové soubory v jazyce C
 
-Hlavičkový soubor (header file) je soubor s příponou .h , který obsahuje deklarace funkcí, datových typů, konstant a dalších konstruktů, které mají být sdíleny mezi různými částmi programu. Hlavičkové soubory plní dvě základní role:
+Hlavičkový soubor (*header file*) je soubor s příponou `.h`, který obsahuje deklarace funkcí, datových typů, konstant a dalších konstruktů, které mají být sdíleny mezi různými částmi programu. Hlavičkové soubory plní dvě základní role:
 
 - Rozhraní – definují, jaké funkce a datové struktury jsou dostupné,
 - Deklarace – oddělují deklaraci funkcí od jejich implementace. Typická struktura programu v jazyce C:
@@ -519,104 +507,99 @@ hlavickovy_soubor.h - deklarace funkcí a typů zdrojovy_soubor.c - implementace
 
 Standardní hlavičkové soubory jsou součástí standardní knihovny jazyka C a poskytují základní funkcionalitu:
 
-- <stdio.h> – vstup a výstup (např. printf , scanf ),
-- <math.h> – matematické funkce (např. sqrt , sin , cos ),
-- <string.h> – práce s řetězci (např. strlen , strcpy ),
-- <stdlib.h> – obecné funkce (např. malloc , free , rand ).
+- `<stdio.h>` – vstup a výstup (např. `printf`, `scanf`),
+- `<math.h>` – matematické funkce (např. `sqrt`, `sin`, `cos`),
+- `<string.h>` – práce s řetězci (např. `strlen`, `strcpy`),
+- `<stdlib.h>` – obecné funkce (např. `malloc`, `free`, `rand`).
 
 Standardní hlavičkové soubory se vkládají pomocí lomených závorek:
 
-```
-# include <stdio .h>
-# include <math.h>
+```c
+#include <stdio.h>
+#include <math.h>
 ```
 
 Uživatelské hlavičkové soubory jsou vytvářeny programátorem pro vlastní projekty. Umožňují rozdělit kód do logických celků a znovupoužití funkcí v různých částech programu. Uživatelské hlavičkové soubory se vkládají pomocí uvozovek:
 
-```
-# include "matematika .h"
+```c
+#include "matematika.h"
 ```
 
 Příklad uživatelského hlavičkového souboru matematika.h :
 
-```
-# ifndef MATEMATIKA_H
-# define MATEMATIKA_H
-```
+```c
+#ifndef MATEMATIKA_H
+#define MATEMATIKA_H
 
-```
-int secti (int a, int b);
-int odecti (int a, int b);
+int secti(int a, int b);
+int odecti(int a, int b);
 #endif
 ```
 
 Příklad implementace v souboru matematika.c :
 
-```
-# include "matematika .h"
-int secti (int a, int b) {
-return a + b;
-}
-```
+```c
+#include "matematika.h"
 
-```
-int odecti (int a, int b) {
-return a - b;
+int secti(int a, int b) {
+    return a + b;
+}
+
+int odecti(int a, int b) {
+    return a - b;
 }
 ```
 
 Použití v hlavním programu:
 
-```
-# include <stdio .h>
-# include " matematika .h"
-```
+```c
+#include <stdio.h>
+#include "matematika.h"
 
-```
-int main () {
-int vysledek = secti (10 , 5);
-printf ("Vý sledek : %d\n", vysledek );      // Vystup : 15
-return 0;
+int main(void) {
+    int vysledek = secti(10, 5);
+    printf("Výsledek: %d\n", vysledek);  // Výstup: 15
+    return 0;
 }
 ```
 
-Direktivy #ifndef , #define a #endif tvoří tzv. include guard (ochranu proti vícenásobnému zahrnutí), který zajišťuje, že hlavičkový soubor bude do programu vložen pouze jednou, i když je k němu odkazováno z více míst.
+Direktivy `#ifndef`, `#define` a `#endif` tvoří tzv. *include guard* (ochranu proti vícenásobnému zahrnutí), který zajišťuje, že hlavičkový soubor bude do programu vložen pouze jednou, i když je k němu odkazováno z více míst.
 
-### 5.4 Moduly v jazyce Python
+## 5.4 Moduly v jazyce Python
 
-V Pythonu se modularita realizuje pomocí modulů. Modul je jednoduše soubor s příponou .py obsahující definice funkcí, tříd a proměnných. Příklad modulu matematika.py :
+V Pythonu se modularita realizuje pomocí modulů. Modul je jednoduše soubor s příponou `.py` obsahující definice funkcí, tříd a proměnných. Příklad modulu `matematika.py`:
 
+```python
+def secti(a, b):
+    return a + b
 ```
-def secti (a, b):
-return a + b
-```
 
-```
-def odecti (a, b):
-return a - b
+```python
+def odecti(a, b):
+    return a - b
 ```
 
 Použití modulu v jiném souboru:
 
-```
+```python
 import matematika
-vysledek = matematika.secti (10 , 5)
-print (f"Vý sledek : { vysledek }") # Vystup : 15
+vysledek = matematika.secti(10, 5)
+print(f"Výsledek: {vysledek}")  # Výstup: 15
 ```
 
 Alternativně lze importovat pouze konkrétní funkce:
 
-```
+```python
 from matematika import secti
-vysledek = secti (10 , 5)
-print (f"Vý sledek : { vysledek }")    # Vystup : 15
+vysledek = secti(10, 5)
+print(f"Výsledek: {vysledek}")  # Výstup: 15
 ```
 
 Modularita je klíčovým principem moderního programování a její správné využití výrazně zvyšuje kvalitu a udržovatelnost softwarových projektů.
 
-## 6 Rekurze, výjimky a validace vstupu
+# 6. Rekurze, výjimky a validace vstupu
 
-### 6.1 Rekurze: když funkce volá sama sebe
+## 6.1 Rekurze: když funkce volá sama sebe
 
 V předchozích částech jsme opakování řešili především pomocí cyklů. Některé problémy však lze přirozeně popsat jiným způsobem: pomocí **rekurze**. Rekurzivní funkce je funkce, která při svém běhu zavolá sama sebe, obvykle s jednodušší verzí původního problému.
 
@@ -668,7 +651,7 @@ Při návrhu rekurze je proto užitečné položit si dvě jednoduché otázky:
 
 **Je při každém dalším volání problém skutečně jednodušší?**
 
-### 6.2 Rekurze a iterace: dvě cesty ke stejnému výsledku
+## 6.2 Rekurze a iterace: dvě cesty ke stejnému výsledku
 
 Mnoho úloh lze vyřešit jak rekurzivně, tak pomocí cyklu. Faktoriál můžeme například napsat také takto:
 
@@ -694,7 +677,7 @@ Nemá proto smysl rozhodovat podle pravidla „rekurze je pokročilejší, takž
 
 Pro běžné opakování je často vhodnější cyklus. Pro hierarchicky uspořádané problémy může být rekurze výrazně přirozenější.
 
-### 6.3 Výjimky: když operaci nelze dokončit běžným způsobem
+## 6.3 Výjimky: když operaci nelze dokončit běžným způsobem
 
 Program nepracuje vždy s ideálními vstupy. Uživatel může zadat text tam, kde očekáváme číslo, soubor nemusí existovat nebo může nastat jiná situace, která znemožní pokračovat běžným způsobem.
 
@@ -755,7 +738,7 @@ except:
 
 Takový program může skutečný problém pouze zatajit. Je lepší zachytávat především konkrétní výjimky, se kterými skutečně počítáme a na které umíme vhodně reagovat.
 
-### 6.4 Validace vstupu: je hodnota nejen správného typu, ale také smysluplná?
+## 6.4 Validace vstupu: je hodnota nejen správného typu, ale také smysluplná?
 
 Úspěšné načtení hodnoty ještě neznamená, že je vstup správný.
 
