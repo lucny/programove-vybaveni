@@ -1,18 +1,228 @@
 # TEXTBOOK BUILD REPORT
 
-Datum: 2026-08-12T16:56:57.896997+00:00
+Datum: 2026-08-12T17:53:44.246045+00:00
 Git commit: NEOVĚŘENO (repozitář není Git pracovní kopie)
 
-- Témata: 5
-- Lekce: 30
-- Podkapitoly: 121
-- Nalezené QUIZ: 30
-- Nalezené WEBP: 0
+- Témata: 20
+- Lekce: 120
+- Podkapitoly: 607
+- Nalezené QUIZ: 120
+- Nalezené WEBP: 188
 - Doplňkové kapitoly: 0
 - PDF: NEOVĚŘENO
 - TEX: NEOVĚŘENO
 
 ## Diagnostika podle okruhů
+
+### 01-zaklady-informatiky
+- Master: `D:\vyuka\programove-vybaveni\01-zaklady-informatiky\zaklady-informatiky.md`
+- Lekce v masteru: 1, 2, 3, 4, 5, 6
+- Chybějící lekce v masteru: žádné
+- Lekční adresáře: 1, 2, 3, 4, 5, 6
+- Chybějící lekční adresáře: žádné
+- QUIZ 1: D:\vyuka\programove-vybaveni\01-zaklady-informatiky\1-lekce\1-QUIZ.md
+- QUIZ 2: D:\vyuka\programove-vybaveni\01-zaklady-informatiky\2-lekce\2-QUIZ.md
+- QUIZ 3: D:\vyuka\programove-vybaveni\01-zaklady-informatiky\3-lekce\3-QUIZ.md
+- QUIZ 4: D:\vyuka\programove-vybaveni\01-zaklady-informatiky\4-lekce\4-QUIZ.md
+- QUIZ 5: D:\vyuka\programove-vybaveni\01-zaklady-informatiky\5-lekce\5-QUIZ.md
+- QUIZ 6: D:\vyuka\programove-vybaveni\01-zaklady-informatiky\6-lekce\6-QUIZ.md
+- Duplicitní kandidáti obrázků: žádní
+
+### 02-programy-a-data
+- Master: `D:\vyuka\programove-vybaveni\02-programy-a-data\programy-a-data.md`
+- Lekce v masteru: 1, 2, 3, 4, 5, 6
+- Chybějící lekce v masteru: žádné
+- Lekční adresáře: 1, 2, 3, 4, 5, 6
+- Chybějící lekční adresáře: žádné
+- QUIZ 1: D:\vyuka\programove-vybaveni\02-programy-a-data\1-lekce\2-1-QUIZ.md
+- QUIZ 2: D:\vyuka\programove-vybaveni\02-programy-a-data\2-lekce\2-2-QUIZ.md
+- QUIZ 3: D:\vyuka\programove-vybaveni\02-programy-a-data\3-lekce\2-3-QUIZ.md
+- QUIZ 4: D:\vyuka\programove-vybaveni\02-programy-a-data\4-lekce\2-4-QUIZ.md
+- QUIZ 5: D:\vyuka\programove-vybaveni\02-programy-a-data\5-lekce\2-5-QUIZ.md
+- QUIZ 6: D:\vyuka\programove-vybaveni\02-programy-a-data\6-lekce\2-6-QUIZ.md
+- Duplicitní kandidáti obrázků: žádní
+
+### 03-informacni-a-databazove-systemy
+- Master: `D:\vyuka\programove-vybaveni\03-informacni-a-databazove-systemy\informacni-a-databazove-systemy.md`
+- Lekce v masteru: 1, 2, 3, 4, 5, 6
+- Chybějící lekce v masteru: žádné
+- Lekční adresáře: 1, 2, 3, 4, 5, 6
+- Chybějící lekční adresáře: žádné
+- QUIZ 1: D:\vyuka\programove-vybaveni\03-informacni-a-databazove-systemy\1-lekce\3-1-QUIZ.md
+- QUIZ 2: D:\vyuka\programove-vybaveni\03-informacni-a-databazove-systemy\2-lekce\3-2-QUIZ.md
+- QUIZ 3: D:\vyuka\programove-vybaveni\03-informacni-a-databazove-systemy\3-lekce\3-3-QUIZ.md
+- QUIZ 4: D:\vyuka\programove-vybaveni\03-informacni-a-databazove-systemy\4-lekce\3-4-QUIZ.md
+- QUIZ 5: D:\vyuka\programove-vybaveni\03-informacni-a-databazove-systemy\5-lekce\3-5-QUIZ.md
+- QUIZ 6: D:\vyuka\programove-vybaveni\03-informacni-a-databazove-systemy\6-lekce\3-6-QUIZ.md
+- Duplicitní kandidáti obrázků: žádní
+
+### 04-rastrova-grafika-a-digitalni-fotografie
+- Master: `D:\vyuka\programove-vybaveni\04-rastrova-grafika-a-digitalni-fotografie\rastrova-grafika-a-digitalni-fotografie.md`
+- Lekce v masteru: 1, 2, 3, 4, 5, 6
+- Chybějící lekce v masteru: žádné
+- Lekční adresáře: 1, 2, 3, 4, 5, 6
+- Chybějící lekční adresáře: žádné
+- QUIZ 1: D:\vyuka\programove-vybaveni\04-rastrova-grafika-a-digitalni-fotografie\1-lekce\4-1-QUIZ.md
+- QUIZ 2: D:\vyuka\programove-vybaveni\04-rastrova-grafika-a-digitalni-fotografie\2-lekce\4-2-QUIZ.md
+- QUIZ 3: D:\vyuka\programove-vybaveni\04-rastrova-grafika-a-digitalni-fotografie\3-lekce\4-3-QUIZ.md
+- QUIZ 4: D:\vyuka\programove-vybaveni\04-rastrova-grafika-a-digitalni-fotografie\4-lekce\4-4-QUIZ.md
+- QUIZ 5: D:\vyuka\programove-vybaveni\04-rastrova-grafika-a-digitalni-fotografie\5-lekce\4-5-QUIZ.md
+- QUIZ 6: D:\vyuka\programove-vybaveni\04-rastrova-grafika-a-digitalni-fotografie\6-lekce\4-6-QUIZ.md
+- Duplicitní kandidáti obrázků: žádní
+
+### 05-vektorova-grafika
+- Master: `D:\vyuka\programove-vybaveni\05-vektorova-grafika\vektorova-grafika.md`
+- Lekce v masteru: 1, 2, 3, 4, 5, 6
+- Chybějící lekce v masteru: žádné
+- Lekční adresáře: 1, 2, 3, 4, 5, 6
+- Chybějící lekční adresáře: žádné
+- QUIZ 1: D:\vyuka\programove-vybaveni\05-vektorova-grafika\1-lekce\5-1-QUIZ.md
+- QUIZ 2: D:\vyuka\programove-vybaveni\05-vektorova-grafika\2-lekce\5-2-QUIZ.md
+- QUIZ 3: D:\vyuka\programove-vybaveni\05-vektorova-grafika\3-lekce\5-3-QUIZ.md
+- QUIZ 4: D:\vyuka\programove-vybaveni\05-vektorova-grafika\4-lekce\5-4-QUIZ.md
+- QUIZ 5: D:\vyuka\programove-vybaveni\05-vektorova-grafika\5-lekce\5-5-QUIZ.md
+- QUIZ 6: D:\vyuka\programove-vybaveni\05-vektorova-grafika\6-lekce\5-6-QUIZ.md
+- Duplicitní kandidáti obrázků: žádní
+
+### 06-zpracovani-textu-na-pocitaci
+- Master: `D:\vyuka\programove-vybaveni\06-zpracovani-textu-na-pocitaci\zpracovani-textu.md`
+- Lekce v masteru: 1, 2, 3, 4, 5, 6
+- Chybějící lekce v masteru: žádné
+- Lekční adresáře: 1, 2, 3, 4, 5, 6
+- Chybějící lekční adresáře: žádné
+- QUIZ 1: D:\vyuka\programove-vybaveni\06-zpracovani-textu-na-pocitaci\1-lekce\6-1-QUIZ.md
+- QUIZ 2: D:\vyuka\programove-vybaveni\06-zpracovani-textu-na-pocitaci\2-lekce\6-2-QUIZ.md
+- QUIZ 3: D:\vyuka\programove-vybaveni\06-zpracovani-textu-na-pocitaci\3-lekce\6-3-QUIZ.md
+- QUIZ 4: D:\vyuka\programove-vybaveni\06-zpracovani-textu-na-pocitaci\4-lekce\6-4-QUIZ.md
+- QUIZ 5: D:\vyuka\programove-vybaveni\06-zpracovani-textu-na-pocitaci\5-lekce\6-5-QUIZ.md
+- QUIZ 6: D:\vyuka\programove-vybaveni\06-zpracovani-textu-na-pocitaci\6-lekce\6-6-QUIZ.md
+- Duplicitní kandidáti obrázků: žádní
+
+### 07-prace-s-daty-a-tabulkove-procesory
+- Master: `D:\vyuka\programove-vybaveni\07-prace-s-daty-a-tabulkove-procesory\prace-s-daty-a-tabulkove-procesory.md`
+- Lekce v masteru: 1, 2, 3, 4, 5, 6
+- Chybějící lekce v masteru: žádné
+- Lekční adresáře: 1, 2, 3, 4, 5, 6
+- Chybějící lekční adresáře: žádné
+- QUIZ 1: D:\vyuka\programove-vybaveni\07-prace-s-daty-a-tabulkove-procesory\1-lekce\7-1-QUIZ.md
+- QUIZ 2: D:\vyuka\programove-vybaveni\07-prace-s-daty-a-tabulkove-procesory\2-lekce\7-2-QUIZ.md
+- QUIZ 3: D:\vyuka\programove-vybaveni\07-prace-s-daty-a-tabulkove-procesory\3-lekce\7-3-QUIZ.md
+- QUIZ 4: D:\vyuka\programove-vybaveni\07-prace-s-daty-a-tabulkove-procesory\4-lekce\7-4-QUIZ.md
+- QUIZ 5: D:\vyuka\programove-vybaveni\07-prace-s-daty-a-tabulkove-procesory\5-lekce\7-5-QUIZ.md
+- QUIZ 6: D:\vyuka\programove-vybaveni\07-prace-s-daty-a-tabulkove-procesory\6-lekce\7-6-QUIZ.md
+- Duplicitní kandidáti obrázků: žádní
+
+### 08-pocitacove-zpracovani-zvuku
+- Master: `D:\vyuka\programove-vybaveni\08-pocitacove-zpracovani-zvuku\pocitacove-zpracovani-zvuku.md`
+- Lekce v masteru: 1, 2, 3, 4, 5, 6
+- Chybějící lekce v masteru: žádné
+- Lekční adresáře: 1, 2, 3, 4, 5, 6
+- Chybějící lekční adresáře: žádné
+- QUIZ 1: D:\vyuka\programove-vybaveni\08-pocitacove-zpracovani-zvuku\1-lekce\8-1-QUIZ.md
+- QUIZ 2: D:\vyuka\programove-vybaveni\08-pocitacove-zpracovani-zvuku\2-lekce\8-2-QUIZ.md
+- QUIZ 3: D:\vyuka\programove-vybaveni\08-pocitacove-zpracovani-zvuku\3-lekce\8-3-QUIZ.md
+- QUIZ 4: D:\vyuka\programove-vybaveni\08-pocitacove-zpracovani-zvuku\4-lekce\8-4-QUIZ.md
+- QUIZ 5: D:\vyuka\programove-vybaveni\08-pocitacove-zpracovani-zvuku\5-lekce\8-5-QUIZ.md
+- QUIZ 6: D:\vyuka\programove-vybaveni\08-pocitacove-zpracovani-zvuku\6-lekce\8-6-QUIZ.md
+- Duplicitní kandidáti obrázků: žádní
+
+### 09-digitalni-video-a-multimedialni-prezentace
+- Master: `D:\vyuka\programove-vybaveni\09-digitalni-video-a-multimedialni-prezentace\digitalni-video-a-multimedialni-prezentace-modernizovany-master.md`
+- Lekce v masteru: 1, 2, 3, 4, 5, 6
+- Chybějící lekce v masteru: žádné
+- Lekční adresáře: 1, 2, 3, 4, 5, 6
+- Chybějící lekční adresáře: žádné
+- QUIZ 1: D:\vyuka\programove-vybaveni\09-digitalni-video-a-multimedialni-prezentace\1-lekce\9-1-QUIZ.md
+- QUIZ 2: D:\vyuka\programove-vybaveni\09-digitalni-video-a-multimedialni-prezentace\2-lekce\9-2-QUIZ.md
+- QUIZ 3: D:\vyuka\programove-vybaveni\09-digitalni-video-a-multimedialni-prezentace\3-lekce\9-3-QUIZ.md
+- QUIZ 4: D:\vyuka\programove-vybaveni\09-digitalni-video-a-multimedialni-prezentace\4-lekce\9-4-QUIZ.md
+- QUIZ 5: D:\vyuka\programove-vybaveni\09-digitalni-video-a-multimedialni-prezentace\5-lekce\9-5-QUIZ.md
+- QUIZ 6: D:\vyuka\programove-vybaveni\09-digitalni-video-a-multimedialni-prezentace\6-lekce\9-6-QUIZ.md
+- Duplicitní kandidáti obrázků: žádní
+
+### 10-relacni-databaze-a-sql
+- Master: `D:\vyuka\programove-vybaveni\10-relacni-databaze-a-sql\relacni-databaze-a-jazyk-sql.md`
+- Lekce v masteru: 1, 2, 3, 4, 5, 6
+- Chybějící lekce v masteru: žádné
+- Lekční adresáře: 1, 2, 3, 4, 5, 6
+- Chybějící lekční adresáře: žádné
+- QUIZ 1: D:\vyuka\programove-vybaveni\10-relacni-databaze-a-sql\1-lekce\10-1-QUIZ.md
+- QUIZ 2: D:\vyuka\programove-vybaveni\10-relacni-databaze-a-sql\2-lekce\10-2-QUIZ.md
+- QUIZ 3: D:\vyuka\programove-vybaveni\10-relacni-databaze-a-sql\3-lekce\10-3-QUIZ.md
+- QUIZ 4: D:\vyuka\programove-vybaveni\10-relacni-databaze-a-sql\4-lekce\10-4-QUIZ.md
+- QUIZ 5: D:\vyuka\programove-vybaveni\10-relacni-databaze-a-sql\5-lekce\10-5-QUIZ.md
+- QUIZ 6: D:\vyuka\programove-vybaveni\10-relacni-databaze-a-sql\6-lekce\10-6-QUIZ.md
+- Duplicitní kandidáti obrázků: žádní
+
+### 11-internet-a-www
+- Master: `D:\vyuka\programove-vybaveni\11-internet-a-www\internet-a-www.md`
+- Lekce v masteru: 1, 2, 3, 4, 5, 6
+- Chybějící lekce v masteru: žádné
+- Lekční adresáře: 1, 2, 3, 4, 5, 6
+- Chybějící lekční adresáře: žádné
+- QUIZ 1: D:\vyuka\programove-vybaveni\11-internet-a-www\1-lekce\11-1-QUIZ.md
+- QUIZ 2: D:\vyuka\programove-vybaveni\11-internet-a-www\2-lekce\11-2-QUIZ.md
+- QUIZ 3: D:\vyuka\programove-vybaveni\11-internet-a-www\3-lekce\11-3-QUIZ.md
+- QUIZ 4: D:\vyuka\programove-vybaveni\11-internet-a-www\4-lekce\11-4-QUIZ.md
+- QUIZ 5: D:\vyuka\programove-vybaveni\11-internet-a-www\5-lekce\11-5-QUIZ.md
+- QUIZ 6: D:\vyuka\programove-vybaveni\11-internet-a-www\6-lekce\11-6-QUIZ.md
+- Duplicitní kandidáti obrázků: žádní
+
+### 12-html-a-css
+- Master: `D:\vyuka\programove-vybaveni\12-html-a-css\html-a-css.md`
+- Lekce v masteru: 1, 2, 3, 4, 5, 6
+- Chybějící lekce v masteru: žádné
+- Lekční adresáře: 1, 2, 3, 4, 5, 6
+- Chybějící lekční adresáře: žádné
+- QUIZ 1: D:\vyuka\programove-vybaveni\12-html-a-css\1-lekce\12-1-QUIZ.md
+- QUIZ 2: D:\vyuka\programove-vybaveni\12-html-a-css\2-lekce\12-2-QUIZ.md
+- QUIZ 3: D:\vyuka\programove-vybaveni\12-html-a-css\3-lekce\12-3-QUIZ.md
+- QUIZ 4: D:\vyuka\programove-vybaveni\12-html-a-css\4-lekce\12-4-QUIZ.md
+- QUIZ 5: D:\vyuka\programove-vybaveni\12-html-a-css\5-lekce\12-5-QUIZ.md
+- QUIZ 6: D:\vyuka\programove-vybaveni\12-html-a-css\6-lekce\12-6-QUIZ.md
+- Duplicitní kandidáti obrázků: žádní
+
+### 13-webove-technologie
+- Master: `D:\vyuka\programove-vybaveni\13-webove-technologie\webove-technologie.md`
+- Lekce v masteru: 1, 2, 3, 4, 5, 6
+- Chybějící lekce v masteru: žádné
+- Lekční adresáře: 1, 2, 3, 4, 5, 6
+- Chybějící lekční adresáře: žádné
+- QUIZ 1: D:\vyuka\programove-vybaveni\13-webove-technologie\1-lekce\13-1-QUIZ.md
+- QUIZ 2: D:\vyuka\programove-vybaveni\13-webove-technologie\2-lekce\13-2-QUIZ.md
+- QUIZ 3: D:\vyuka\programove-vybaveni\13-webove-technologie\3-lekce\13-3-QUIZ.md
+- QUIZ 4: D:\vyuka\programove-vybaveni\13-webove-technologie\4-lekce\13-4-QUIZ.md
+- QUIZ 5: D:\vyuka\programove-vybaveni\13-webove-technologie\5-lekce\13-5-QUIZ.md
+- QUIZ 6: D:\vyuka\programove-vybaveni\13-webove-technologie\6-lekce\13-6-QUIZ.md
+- Duplicitní kandidáti obrázků: žádní
+
+### 14-webove-aplikace
+- Master: `D:\vyuka\programove-vybaveni\14-webove-aplikace\webove-aplikace.md`
+- Lekce v masteru: 1, 2, 3, 4, 5, 6
+- Chybějící lekce v masteru: žádné
+- Lekční adresáře: 1, 2, 3, 4, 5, 6
+- Chybějící lekční adresáře: žádné
+- QUIZ 1: D:\vyuka\programove-vybaveni\14-webove-aplikace\1-lekce\14-1-QUIZ.md
+- QUIZ 2: D:\vyuka\programove-vybaveni\14-webove-aplikace\2-lekce\14-2-QUIZ.md
+- QUIZ 3: D:\vyuka\programove-vybaveni\14-webove-aplikace\3-lekce\14-3-QUIZ.md
+- QUIZ 4: D:\vyuka\programove-vybaveni\14-webove-aplikace\4-lekce\14-4-QUIZ.md
+- QUIZ 5: D:\vyuka\programove-vybaveni\14-webove-aplikace\5-lekce\14-5-QUIZ.md
+- QUIZ 6: D:\vyuka\programove-vybaveni\14-webove-aplikace\6-lekce\14-6-QUIZ.md
+- Duplicitní kandidáti obrázků: žádní
+
+### 15-kyberbezpecnost
+- Master: `D:\vyuka\programove-vybaveni\15-kyberbezpecnost\kyberbezpecnost.md`
+- Lekce v masteru: 1, 2, 3, 4, 5, 6
+- Chybějící lekce v masteru: žádné
+- Lekční adresáře: 1, 2, 3, 4, 5, 6
+- Chybějící lekční adresáře: žádné
+- QUIZ 1: D:\vyuka\programove-vybaveni\15-kyberbezpecnost\1-lekce\15-1-QUIZ.md
+- QUIZ 2: D:\vyuka\programove-vybaveni\15-kyberbezpecnost\2-lekce\15-2-QUIZ.md
+- QUIZ 3: D:\vyuka\programove-vybaveni\15-kyberbezpecnost\3-lekce\15-3-QUIZ.md
+- QUIZ 4: D:\vyuka\programove-vybaveni\15-kyberbezpecnost\4-lekce\15-4-QUIZ.md
+- QUIZ 5: D:\vyuka\programove-vybaveni\15-kyberbezpecnost\5-lekce\15-5-QUIZ.md
+- QUIZ 6: D:\vyuka\programove-vybaveni\15-kyberbezpecnost\6-lekce\15-6-QUIZ.md
+- Duplicitní kandidáti obrázků: žádní
 
 ### 16-zaklady-programovani-a-algoritmizace
 - Master: `D:\vyuka\programove-vybaveni\16-zaklady-programovani-a-algoritmizace\zaklady-programovani-a-algoritmizace.md`
@@ -90,6 +300,66 @@ Git commit: NEOVĚŘENO (repozitář není Git pracovní kopie)
 
 ## Warningy
 
+- 03-informacni-a-databazove-systemy: chybí WEBP pro podkapitolu 6.6
+- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 1.1
+- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 2.2
+- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 3.3
+- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 4.4
+- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 5.5
+- 06-zpracovani-textu-na-pocitaci: chybí WEBP pro podkapitolu 6.6
+- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 1.1
+- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 2.2
+- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 3.3
+- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 4.4
+- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 5.5
+- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 6.6
+- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 1.1
+- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 2.2
+- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 3.3
+- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 4.4
+- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 5.5
+- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 6.6
+- 09-digitalni-video-a-multimedialni-prezentace: chybí WEBP pro podkapitolu 1.1
+- 09-digitalni-video-a-multimedialni-prezentace: chybí WEBP pro podkapitolu 2.2
+- 09-digitalni-video-a-multimedialni-prezentace: chybí WEBP pro podkapitolu 3.3
+- 09-digitalni-video-a-multimedialni-prezentace: chybí WEBP pro podkapitolu 4.4
+- 09-digitalni-video-a-multimedialni-prezentace: chybí WEBP pro podkapitolu 5.5
+- 09-digitalni-video-a-multimedialni-prezentace: chybí WEBP pro podkapitolu 6.6
+- 10-relacni-databaze-a-sql: chybí WEBP pro podkapitolu 1.1
+- 10-relacni-databaze-a-sql: chybí WEBP pro podkapitolu 2.2
+- 10-relacni-databaze-a-sql: chybí WEBP pro podkapitolu 3.3
+- 10-relacni-databaze-a-sql: chybí WEBP pro podkapitolu 4.4
+- 10-relacni-databaze-a-sql: chybí WEBP pro podkapitolu 5.5
+- 10-relacni-databaze-a-sql: chybí WEBP pro podkapitolu 6.6
+- 11-internet-a-www: chybí WEBP pro podkapitolu 1.1
+- 11-internet-a-www: chybí WEBP pro podkapitolu 2.2
+- 11-internet-a-www: chybí WEBP pro podkapitolu 3.3
+- 11-internet-a-www: chybí WEBP pro podkapitolu 4.4
+- 11-internet-a-www: chybí WEBP pro podkapitolu 5.5
+- 11-internet-a-www: chybí WEBP pro podkapitolu 6.6
+- 12-html-a-css: chybí WEBP pro podkapitolu 1.1
+- 12-html-a-css: chybí WEBP pro podkapitolu 2.2
+- 12-html-a-css: chybí WEBP pro podkapitolu 4.4
+- 12-html-a-css: chybí WEBP pro podkapitolu 5.5
+- 12-html-a-css: chybí WEBP pro podkapitolu 6.6
+- 13-webove-technologie: chybí WEBP pro podkapitolu 1.1
+- 13-webove-technologie: chybí WEBP pro podkapitolu 2.2
+- 13-webove-technologie: chybí WEBP pro podkapitolu 3.3
+- 13-webove-technologie: chybí WEBP pro podkapitolu 4.4
+- 13-webove-technologie: chybí WEBP pro podkapitolu 5.5
+- 13-webove-technologie: chybí WEBP pro podkapitolu 6.6
+- 14-webove-aplikace: chybí WEBP pro podkapitolu 1.1
+- 14-webove-aplikace: chybí WEBP pro podkapitolu 2.2
+- 14-webove-aplikace: chybí WEBP pro podkapitolu 3.3
+- 14-webove-aplikace: chybí WEBP pro podkapitolu 4.4
+- 14-webove-aplikace: chybí WEBP pro podkapitolu 5.5
+- 14-webove-aplikace: chybí WEBP pro podkapitolu 6.6
+- 15-kyberbezpecnost: chybí WEBP pro podkapitolu 1.1
+- 15-kyberbezpecnost: chybí WEBP pro podkapitolu 2.2
+- 15-kyberbezpecnost: chybí WEBP pro podkapitolu 3.3
+- 15-kyberbezpecnost: chybí WEBP pro podkapitolu 4.4
+- 15-kyberbezpecnost: chybí WEBP pro podkapitolu 5.5
+- 15-kyberbezpecnost: chybí WEBP pro podkapitolu 6.6
 - 16-zaklady-programovani-a-algoritmizace: chybí WEBP pro podkapitolu 1.1
 - 16-zaklady-programovani-a-algoritmizace: chybí WEBP pro podkapitolu 2.2
 - 16-zaklady-programovani-a-algoritmizace: chybí WEBP pro podkapitolu 3.3

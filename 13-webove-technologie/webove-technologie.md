@@ -2,9 +2,9 @@
 
 > Webová stránka dnes není jen dokument uložený na serveru. Může fungovat jako plnohodnotná aplikace: reaguje na uživatele, načítá data bez obnovování celé stránky, komunikuje s databází a někdy udržuje se serverem trvalé spojení. Abychom se v této oblasti neztratili, je důležité rozumět především rolím jednotlivých vrstev a tomu, jak mezi nimi proudí data.
 
-## 1. Klient, server, frontend a backend
+# 1. Klient, server, frontend a backend
 
-### 1.1 Klient a server
+## 1.1 Klient a server
 
 Web je založen na komunikaci mezi programy. **Klient** požaduje určitou službu a **server** na tento požadavek odpovídá. Nejčastějším webovým klientem je prohlížeč, ale stejnou službu může používat také mobilní aplikace, desktopový program nebo jiný server.
 
@@ -16,7 +16,7 @@ Uživatel například zadá adresu webu. Prohlížeč odešle požadavek na serv
 
 Server nemusí znamenat jeden fyzický počítač. Jednu webovou službu může ve skutečnosti zajišťovat několik serverů, databáze, cache, cloudové služby nebo reverzní proxy. Z pohledu klienta je však podstatné, že odešle požadavek na určitou adresu a obdrží odpověď.
 
-### 1.2 Frontend a backend
+## 1.2 Frontend a backend
 
 Pojmy **frontend** a **backend** popisují dvě různé části webové aplikace.
 
@@ -28,7 +28,7 @@ Například v e-shopu může frontend zobrazit katalog zboží a tlačítko „P
 
 Frontend a backend tedy nejsou dvě oddělené aplikace bez vazby. Společně tvoří jeden systém a komunikují přes síťové rozhraní, nejčastěji pomocí HTTP.
 
-### 1.3 Webové servery
+## 1.3 Webové servery
 
 **Webový server** je program, který přijímá požadavky protokolu HTTP nebo HTTPS a vrací odpovědi. Pojem je dobré odlišit od fyzického serveru: jeden počítač může provozovat několik serverových programů a naopak jedna webová služba může být rozložena mezi mnoho počítačů.
 
@@ -52,7 +52,7 @@ Webový server může také provozovat více webů na jedné IP adrese. Podle po
 
 Je proto přesnější chápat webový server jako vstupní síťovou vrstvu webové služby než jen jako „program, který posílá stránky“.
 
-### 1.4 Frontendové technologie
+## 1.4 Frontendové technologie
 
 **Frontend** je část aplikace, která vytváří uživatelské rozhraní a reaguje na uživatele. Ve webovém prohlížeči stojí na trojici HTML, CSS a JavaScript.
 
@@ -74,7 +74,7 @@ JavaScript ale nepracuje s webem sám. Prohlížeč mu poskytuje **Web APIs** �
 
 Nad těmito základy se používají knihovny a frameworky. React, Vue, Angular nebo Svelte pomáhají organizovat rozsáhlejší interaktivní rozhraní; Bootstrap nebo Tailwind CSS usnadňují tvorbu vzhledu; TypeScript přidává kontrolu typů. Tyto nástroje však základní webové technologie neruší. Výsledkem je stále dokument a rozhraní, které musí prohlížeč převést na DOM, aplikovat CSS a obsluhovat pomocí webových API.
 
-### 1.5 Serverové technologie
+## 1.5 Serverové technologie
 
 Serverová část webu může být vytvořena v mnoha jazycích a prostředích. JavaScript používá **Node.js**, Python například **Django** nebo **FastAPI**, PHP **Laravel** či **Symfony**, Java **Spring** a C# **ASP.NET Core**. Tyto názvy je vhodné chápat jako příklady různých ekosystémů, nikoli jako seznam technologií, které je nutné znát nazpaměť.
 
@@ -96,9 +96,9 @@ Server může vrátit hotové HTML, které prohlížeč rovnou zobrazí, nebo je
 
 Důležitá je hranice důvěry. Kód běžící v prohlížeči má uživatel pod kontrolou, proto backend nesmí spoléhat na to, že klientská aplikace posílá vždy správná a oprávněná data. Server musí důležitá pravidla ověřovat sám.
 
-## 2. JavaScript: jazyk pro web
+# 2. JavaScript: jazyk pro web
 
-### 2.1 JavaScript a ECMAScript
+## 2.1 JavaScript a ECMAScript
 
 **JavaScript** vznikl v roce 1995 jako jazyk pro programování webových stránek. Dnes se používá nejen v prohlížeči, ale také na serveru, v desktopových aplikacích nebo ve vývojových nástrojích.
 
@@ -113,7 +113,7 @@ value = "deset";
 
 Takový zápis je platný, i když bývá vhodné držet význam proměnné konzistentní.
 
-### 2.2 `let`, `const`, `var`, scope a hoisting
+## 2.2 Proměnné a jejich rozsah
 
 Proměnné v moderním JavaScriptu deklarujeme především pomocí `const` a `let`.
 
@@ -166,7 +166,7 @@ U `let` a `const` jsou deklarace také známy před samotným vykonáním jejich
 
 > Proměnnou deklaruj před prvním použitím. Preferuj `const`; použij `let`, pokud potřebuješ vazbu měnit. `var` je důležité umět přečíst ve starším kódu, ale pro nový kód obvykle není první volbou.
 
-### 2.3 Datové typy a jejich zvláštnosti
+## 2.3 Datové typy a jejich zvláštnosti
 
 JavaScript je **dynamicky typovaný**. Typ je vlastností hodnoty a jedna proměnná může v průběhu programu obsahovat hodnoty různých typů. To přináší pružnost, ale také možnost nečekaných převodů.
 
@@ -224,7 +224,7 @@ Number("abc"); // NaN
 
 Pro velmi velká celá čísla existuje typ `bigint`, například `12345678901234567890n`. Není však běžnou náhradou typu `number`; používá se tam, kde je skutečně potřeba přesná práce s velkými celými hodnotami.
 
-### 2.4 Operátory a jejich specifika
+## 2.4 Operátory a jejich specifika
 
 Základní aritmetické operátory jsou podobné jako v jiných jazycích:
 
@@ -283,7 +283,7 @@ podmínka ? hodnota_při_true : hodnota_při_false
 
 Pro jednoduchou volbu je přehledný. Složitější větvení je vhodnější zapisovat klasickým `if`.
 
-### 2.5 Podmínky a cykly
+## 2.5 Podmínky a cykly
 
 Základní podmínka má podobu:
 
@@ -418,9 +418,9 @@ class Student {
 
 JavaScript obsahuje také mnoho vestavěných objektů. Například `Array` pro pole, `Date` pro datum a čas, `Math` pro matematické funkce, `JSON` pro převod mezi objekty a JSON, `Map` a `Set` pro další datové struktury a `Promise` pro práci s budoucím výsledkem asynchronní operace.
 
-## 3. Propojení JavaScriptu s webovou stránkou
+# 3. Propojení JavaScriptu s webovou stránkou
 
-### 3.1 Jak připojit JavaScript k HTML
+# 3.1 Jak připojit JavaScript k HTML
 
 JavaScript lze vložit přímo do HTML:
 
@@ -463,7 +463,7 @@ import { add } from "./math.js";
 console.log(add(2, 3));
 ```
 
-### 3.2 DOM — Document Object Model
+## 3.2 DOM — Document Object Model
 
 HTML soubor je text. Prohlížeč jej ale při načítání **parsuje** a vytváří z něj v paměti objektovou stromovou strukturu nazývanou **DOM — Document Object Model**.
 
@@ -522,7 +522,7 @@ Užitečné je také rozlišovat **atribut v HTML** a **vlastnost objektu DOM**.
 
 DOM tak vytváří most mezi statickou strukturou HTML a programovým chováním JavaScriptu.
 
-### 3.3 BOM — Browser Object Model
+## 3.3 BOM — Browser Object Model
 
 DOM popisuje dokument, ale webový prohlížeč poskytuje JavaScriptu i další informace a funkce, které se netýkají přímo HTML stránky. Tradičně se pro ně používá označení **BOM — Browser Object Model**.
 
@@ -614,7 +614,7 @@ message.innerHTML = "<strong>Důležité</strong>";
 
 Pokud do `innerHTML` vložíme neověřený text od uživatele nebo z nedůvěryhodného zdroje, může se stát součástí stránky i škodlivý kód. Proto se pro běžný text preferuje `textContent` nebo bezpečné vytváření elementů přes DOM API.
 
-### 3.5 Interaktivní web — události
+## 3.5 Interaktivní web — události
 
 Dynamická změna stránky sama o sobě nestačí. Aby web reagoval na člověka, potřebuje **události — events**. Událost oznamuje, že se něco stalo: uživatel klikl, stiskl klávesu, změnil hodnotu formuláře, odeslal formulář nebo se dokončilo načtení určitého zdroje.
 
@@ -657,9 +657,9 @@ Interaktivní frontend lze proto chápat jako opakující se cyklus:
 událost → obslužná funkce → změna stavu nebo dat → změna DOM → nový obraz stránky
 ```
 
-## 4. Node.js a JavaScript na serveru
+# 4. Node.js a JavaScript na serveru
 
-### 4.1 Node.js a jeho princip
+## 4.1 Node.js a jeho princip
 
 **Node.js** je běhové prostředí pro JavaScript mimo webový prohlížeč. Používá JavaScriptový engine V8, ale doplňuje jej o rozhraní potřebná pro serverové a systémové programování: souborový systém, síťová spojení, procesy nebo práci s operačním systémem.
 
@@ -669,7 +669,7 @@ Node.js je známý událostně řízenou architekturou a efektivní prací s I/O
 
 To neznamená, že „Node.js umí dělat všechno současně v jednom vlákně“. JavaScriptová část programu typicky používá event loop, zatímco runtime a operační systém mohou některé operace obsluhovat jinými mechanismy. Pro základní pochopení stačí vědět, že čekání na I/O nemusí zastavit celý server.
 
-### 4.2 Správa modulů
+## 4.2 Správa modulů
 
 Větší program se nerozumně neukládá do jednoho souboru. JavaScript proto podporuje **moduly**, které rozdělují program na části s jasně určenými vstupy a výstupy.
 
@@ -795,7 +795,7 @@ spuštění operace → čekání mimo hlavní tok → dokončení
 
 Asynchronní přístup je vhodný hlavně pro I/O. Dlouhý čistý výpočet na hlavním vlákně může event loop naopak blokovat.
 
-### 4.5 Práce se soubory
+## 4.5 Práce se soubory
 
 Na serveru je běžné pracovat se souborovým systémem. Node.js k tomu poskytuje vestavěný modul `fs`.
 
@@ -818,7 +818,7 @@ Server může soubory načítat, zapisovat nebo vytvářet. V praxi se to použ�
 
 Je však důležité rozlišovat **souborové úložiště** a **databázi**. Uložit několik nastavení do JSON souboru může být přiměřené. Spravovat tímto způsobem tisíce současně měněných uživatelských účtů už obvykle vhodné není. Databáze nabízí nástroje pro vyhledávání, souběžný přístup, transakce a další vlastnosti, které prostý soubor sám neposkytuje.
 
-### 4.6 Propojení s databází
+## 4.6 Propojení s databází
 
 Backend často potřebuje trvale ukládat strukturovaná data. K tomu slouží databáze.
 
@@ -870,9 +870,9 @@ data + šablona → výsledný HTML dokument
 
 Šablonování se hodí pro obsahové weby, administrační rozhraní nebo aplikace, kde je jednodušší sestavit stránku na serveru. Nevylučuje JavaScript na klientu — výsledné HTML lze dále doplnit o interaktivní chování.
 
-## 5. Webové API a AJAX
+# 5. Webové API a AJAX
 
-### 5.1 Webové API
+## 5.1 Webové API
 
 **API — Application Programming Interface** je rozhraní, přes které jeden program využívá funkce nebo data jiného programu. **Webové API** zpřístupňuje takové rozhraní přes síť, nejčastěji pomocí HTTP.
 
@@ -891,7 +891,7 @@ API může být **interní**, určené pro části jednoho systému, nebo **veř
 
 Samotná existence API neříká, kdo má právo jej používat. Přístup může být veřejný, omezený přihlášením, tokenem, API klíčem nebo jiným způsobem autentizace.
 
-### 5.2 AJAX a Fetch API
+## 5.2 AJAX a Fetch API
 
 Původní web fungoval převážně tak, že každá důležitá akce načetla nový HTML dokument. **AJAX — Asynchronous JavaScript and XML** přinesl možnost, aby JavaScript poslal požadavek na pozadí, získal data a změnil jen potřebnou část stránky.
 
@@ -931,7 +931,7 @@ Důležitá zvláštnost: `fetch()` obvykle neodmítne Promise jen proto, že se
 
 Při komunikaci s jiným originem může prohlížeč uplatnit **CORS**. Jde o pravidla určující, zda smí skript z jedné webové origin číst odpověď jiné služby. CORS není náhradou autentizace backendu.
 
-### 5.3 REST API
+## 5.3 REST API
 
 **REST — Representational State Transfer** je architektonický styl pro síťové aplikace. V praxi se tím často myslí HTTP API, které pracuje se **zdroji — resources**. Zdrojem může být článek, uživatel, produkt nebo objednávka.
 
@@ -1000,7 +1000,7 @@ Citlivý tajný klíč nelze bezpečně schovat do veřejného JavaScriptu v pro
 
 REST není jediný správný návrh API. Jeho hlavní síla spočívá v jednoduchém modelu zdrojů a v dobrém využití vlastností HTTP.
 
-### 5.4 REST API v praxi
+## 5.4 REST API v praxi
 
 REST API umožňuje oddělit zdroj dat od aplikace, která je zobrazuje.
 
@@ -1047,7 +1047,7 @@ REST API se používá také pro mapy, překlady, platební služby, cloudová �
 
 Důležitou dovedností proto není naučit se konkrétní URL zpaměti, ale umět z dokumentace pochopit kontrakt služby a sestavit správný požadavek.
 
-### 5.5 GraphQL
+## 5.5 GraphQL
 
 **GraphQL** je jiný způsob zpřístupnění dat přes API. Zatímco REST často nabízí více endpointů pro různé zdroje, GraphQL obvykle poskytuje jednotné rozhraní se **schématem**, které popisuje dostupné typy a vztahy.
 
@@ -1083,7 +1083,7 @@ Výhodou je flexibilita klienta. Mobilní aplikace může chtít menší množst
 
 Tato pružnost má cenu. Server musí řídit schéma, validovat dotazy, řešit autorizaci a hlídat, aby klient nevytvořil nepřiměřeně náročný dotaz. GraphQL proto není „lepší REST“, ale jiný návrhový přístup vhodný zejména pro systémy s bohatě propojenými daty a různými klienty.
 
-### 5.6 WebSocket a Socket.IO
+## 5.6 WebSocket a Socket.IO
 
 Běžná komunikace přes HTTP je založena na modelu **požadavek → odpověď**. Klient se zeptá a server odpoví. U chatu, multiplayerové hry nebo společné editace ale server často potřebuje poslat zprávu okamžitě, aniž by klient pokaždé předem vytvořil nový požadavek.
 
@@ -1125,9 +1125,9 @@ Nad touto oblastí existují knihovny s vyšší úrovní abstrakce. Známým p�
 
 Socket.IO není totéž jako samotný standard WebSocket. Je to knihovna a vlastní komunikační vrstva, která může WebSocket využívat. Toto rozlišení je důležité při propojování klientů a serverů různých technologií.
 
-## 6. Knihovny a frameworky
+# 6. Knihovny a frameworky
 
-### 6.1 Webové knihovny a CDN
+## 6.1 Webové knihovny a CDN
 
 **Knihovna** je soubor hotového kódu pro určitou oblast. Programátor ji využívá, aby nemusel znovu implementovat běžný problém — například grafy, mapy, práci s datem, animace nebo 3D scénu.
 
@@ -1149,7 +1149,7 @@ Ve výuce se často ukazuje přímé vložení knihovny:
 
 Je to pohodlné pro jednoduchý příklad, ale produkční projekt musí zvažovat dostupnost cizí služby, soukromí a bezpečnost. Externí JavaScript běží se schopnostmi dané stránky. U moderních projektů se proto knihovny často instalují přes npm a zahrnou do vlastního produkčního buildu.
 
-### 6.2 Webové frameworky
+## 6.2 Webové frameworky
 
 **Framework** poskytuje širší strukturu pro tvorbu aplikace. Zatímco knihovna řeší vybranou úlohu, framework často určuje způsob, jakým se jednotlivé části projektu organizují a propojují.
 
@@ -1176,7 +1176,7 @@ knihovna  → náš program si volá její funkce
 framework → náš program se zapojuje do rámce, který řídí větší část aplikace
 ```
 
-### 6.3 Komponentový frontend
+## 6.3 Komponentový frontend
 
 U rozsáhlého frontendu vzniká problém: stránka obsahuje mnoho propojených interaktivních částí a jejich ruční změny v DOM mohou být obtížně udržovatelné. **Komponentový přístup** rozděluje rozhraní na menší opakovaně použitelné celky.
 
@@ -1208,7 +1208,7 @@ Mezi známé technologie patří **React**, **Angular**, **Vue** a **Svelte**. N
 
 Komponentový nástroj nenahrazuje platformu prohlížeče. Výsledné rozhraní stále používá HTML/DOM, CSS, události a síťová API.
 
-### 6.4 TypeScript a transkompilace
+## 6.4 TypeScript a transkompilace
 
 **TypeScript** rozšiřuje JavaScript především o statickou kontrolu typů.
 
@@ -1236,7 +1236,7 @@ TypeScript je užitečný zejména u větších projektů. Pomáhá dokumentovat
 
 Je však důležité pochopit hranici jeho možností. Typová informace sama nezaručí, že JSON přijatý ze sítě má skutečně správný obsah. Vnější data je stále nutné za běhu validovat. TypeScript kontroluje především konzistenci kódu, který zná během vývoje.
 
-### 6.5 Nástroje a proces vývoje webu
+## 6.5 Nástroje a proces vývoje webu
 
 Moderní webový projekt prochází více kroky než jen „napsat soubor a otevřít jej v prohlížeči“. Zjednodušený proces může vypadat:
 
@@ -1276,7 +1276,7 @@ V každé fázi pomáhají jiné nástroje.
 
 Smyslem toolchainu není přidat co nejvíce nástrojů. Každý by měl řešit konkrétní opakovaný problém a poskytovat rychlou zpětnou vazbu. U malého statického webu může být proces velmi jednoduchý; rozsáhlá aplikace bude mít automatizované testy, build a nasazení.
 
-### 6.6 WebAssembly
+## 6.6 WebAssembly
 
 **WebAssembly — Wasm** je nízkoúrovňový binární formát a běhový model navržený pro rychlé a přenositelné vykonávání kódu. Umožňuje přinést do webového prostředí programy nebo knihovny napsané například v C, C++ nebo Rustu.
 
