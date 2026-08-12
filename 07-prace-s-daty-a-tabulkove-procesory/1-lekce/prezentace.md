@@ -26,11 +26,11 @@ Formát 16:9, ideálně 1600 × 900 px. Profesionální encyklopedická grafika 
 
 ***
 Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
-
+Jeden záznam, jedna proměnná, jedna hodnota
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
------
-**## 1.2 Jeden záznam, jedna proměnná, jedna hodnota
+
+-
 
 Pro analýzu je nejpraktičtější **obdélníková datová tabulka**. Jeden řádek představuje jeden záznam, jeden sloupec jednu proměnnou a jedna buňka jednu hodnotu. Tento způsob uspořádání se často označuje jako **tidy data — uklizená data**.
 
