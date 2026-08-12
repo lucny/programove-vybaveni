@@ -1,13 +1,13 @@
 # TEXTBOOK BUILD REPORT
 
-Datum: 2026-08-12T19:22:00.211530+00:00
+Datum: 2026-08-12T20:55:34.238547+00:00
 Git commit: NEOVĚŘENO (repozitář není Git pracovní kopie)
 
 - Témata: 20
 - Lekce: 120
 - Podkapitoly: 607
 - Nalezené QUIZ: 120
-- Nalezené WEBP: 233
+- Nalezené WEBP: 294
 - Doplňkové kapitoly: 0
 - PDF: NEOVĚŘENO
 - TEX: NEOVĚŘENO
@@ -302,66 +302,7 @@ Git commit: NEOVĚŘENO (repozitář není Git pracovní kopie)
 
 - 02-programy-a-data: chybí WEBP pro podkapitolu 1.5
 - 04-rastrova-grafika-a-digitalni-fotografie: chybí WEBP pro podkapitolu 6.7
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 1.1
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 1.2
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 1.3
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 1.4
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 2.1
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 2.2
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 2.3
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 2.4
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 2.5
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 3.1
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 3.2
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 3.3
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 3.4
 - 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 3.5
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 4.1
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 4.2
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 4.3
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 4.4
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 5.1
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 5.2
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 5.3
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 5.4
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 6.1
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 6.2
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 6.3
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 6.4
-- 07-prace-s-daty-a-tabulkove-procesory: chybí WEBP pro podkapitolu 6.5
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 1.1
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 1.2
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 1.3
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 1.4
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 1.5
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 1.6
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 2.1
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 2.2
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 2.3
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 2.4
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 2.5
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 2.6
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 2.7
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 3.1
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 3.2
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 3.3
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 3.4
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 4.1
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 4.2
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 4.3
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 4.4
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 5.1
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 5.2
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 5.3
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 5.4
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 5.5
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 6.1
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 6.2
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 6.3
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 6.4
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 6.5
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 6.6
-- 08-pocitacove-zpracovani-zvuku: chybí WEBP pro podkapitolu 6.7
 - 09-digitalni-video-a-multimedialni-prezentace: chybí WEBP pro podkapitolu 1.1
 - 09-digitalni-video-a-multimedialni-prezentace: chybí WEBP pro podkapitolu 1.2
 - 09-digitalni-video-a-multimedialni-prezentace: chybí WEBP pro podkapitolu 1.3

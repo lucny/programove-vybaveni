@@ -248,16 +248,15 @@ class Book:
 
     def build(self) -> None:
         docs = self.root / "docs"
-        if docs.exists():
-            shutil.rmtree(docs)
-        (docs / "assets/images").mkdir(parents=True)
-        (docs / "downloads").mkdir()
-        (docs / "stylesheets").mkdir()
+        docs.mkdir(parents=True, exist_ok=True)
+        (docs / "assets/images").mkdir(parents=True, exist_ok=True)
+        (docs / "downloads").mkdir(parents=True, exist_ok=True)
+        (docs / "stylesheets").mkdir(parents=True, exist_ok=True)
         shutil.copy2(self.root / "textbook/theme/extra.css", docs / "stylesheets/extra.css")
         index = ["# Informatika", "", "Elektronická učebnice informatiky.", "", "## Tematické okruhy", ""]
         for topic in self.topics:
             td = docs / topic.slug
-            td.mkdir()
+            td.mkdir(parents=True, exist_ok=True)
             lesson_links = []
             intro = "\n".join(topic.intro).strip()
             body = f"# {topic.title}\n\n{intro}\n\n## Lekce\n\n" + "\n".join(f"- [{l.number}. {l.title}]({l.number}-lekce/index.md)" for l in topic.lessons)
@@ -265,7 +264,7 @@ class Book:
             index.append(f"- [{topic.number:02d} {topic.title}]({topic.slug}/index.md)")
             for lesson in topic.lessons:
                 ld = td / f"{lesson.number}-lekce"
-                ld.mkdir()
+                ld.mkdir(parents=True, exist_ok=True)
                 chunks = [f"# {lesson.number}. {lesson.title}", ""]
                 for subchapter in lesson.subchapters:
                     chunks += [f"## {subchapter.source_heading}", ""] + subchapter.lines + [""]

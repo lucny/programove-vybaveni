@@ -6,7 +6,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.1 Když se hodinový rozhovor změní v text
 
 Rozpoznávání řeči neboli **ASR — Automatic Speech Recognition** dnes dokáže během krátké doby převést dlouhou nahrávku na text. Pro uživatele není podstatná detailní architektura modelu. Stačí vědět, že systém hledá v audio signálu vzory odpovídající řeči a podle jazykového kontextu odhaduje nejpravděpodobnější posloupnost slov.
 
@@ -31,7 +30,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.2 TTS: text dostane hlas
 
 **Text-to-Speech — TTS** provádí opačný převod. Z napsané věty vytvoří mluvený zvuk. Moderní systémy už často nepůsobí jako monotónní „počítačový hlas“. Dokážou vytvářet přirozené pauzy, měnit tempo a do určité míry řídit styl či emoci přednesu.
 
@@ -58,7 +56,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.3 Hlasové klonování a nová otázka důvěry
 
 Ještě překvapivější je **voice cloning**. Z krátké ukázky hlasu lze vytvořit model schopný pronášet nové věty hlasem, který původního člověka připomíná.
 
@@ -81,7 +78,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.4 AI jako „inteligentní zvukař“
 
 Další skupina nástrojů se nesnaží vytvářet nový obsah, ale opravovat nebo rozkládat existující nahrávku. Model může potlačit ruch, omezit dozvuk nebo odhadnout čistší řeč. **Source separation** se pokouší rozdělit smíšený zvuk na původní zdroje; v hudbě může například vytvořit samostatný vokál, bicí a basu.
 
@@ -104,7 +100,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.5 Od promptu ke zvukovému efektu nebo skladbě
 
 Generativní AI už nepracuje jen s textem a obrazem. Můžeme zadat například:
 
@@ -131,7 +126,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.6 Hlasový asistent jako spojení celého tématu
 
 Moderní hlasový asistent je výborným příkladem, jak se jednotlivé části tohoto okruhu propojují.
 
@@ -160,7 +154,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.7 Je nahrávka ještě důkaz?
 
 Digitální zvuk býval intuitivně považován za poměrně silný záznam reality: „Vždyť je to slyšet na nahrávce.“ Dnes je situace složitější. Audio může být sestříhané, vyčištěné, hlasově převedené, částečně rekonstruované nebo vytvořené úplně synteticky.
 
@@ -168,26 +161,6 @@ To neznamená, že zvukovým záznamům přestáváme věřit. Znamená to, že 
 
 Stejné pravidlo se postupně stává běžnou součástí digitální gramotnosti u textu, obrazu, videa i audia.
 
----
-
-# Závěrečné propojení
-
-Celý okruh lze chápat jako cestu mezi fyzickým a digitálním světem.
-
-Na začátku stojí skutečný zdroj zvuku. Jeho mechanické vlnění zachytí mikrofon, elektrický signál převede A/D převodník na číselné vzorky a počítač je uloží jako digitální audio. Nahrávku potom můžeme stříhat, filtrovat, komprimovat, míchat a přenášet.
-
-Zvuk ale nemusí vzniknout jen mikrofonem. Syntetizátor jej může vytvořit matematicky, sampler z nahraných vzorků a virtuální nástroj podle MIDI instrukcí. Moderní AI k tomu přidává další možnosti: řeč může převést na text, text na hlas, smíšenou nahrávku na odhadnuté zdrojové stopy a slovní popis na nový zvuk nebo hudbu.
-
-Celý řetězec lze shrnout:
-
-**fyzický zvuk → mikrofon → digitalizace → audio data → editace a komprese → reprodukce**
-
-a nově také:
-
-**audio ↔ řeč a text → AI analýza, transformace nebo generování**
-
-Nejdůležitější není znát co největší množství kodeků, mikrofonů nebo efektových pluginů. Podstatné je rozumět rozdílu mezi tím, co bylo skutečně zachyceno, co bylo matematicky upraveno, co software pravděpodobnostně rekonstruoval a co vzniklo jako úplně nový syntetický obsah.**
-------
 Formát 16:9, ideálně 1600 × 900 px. Profesionální encyklopedická grafika pro středoškolskou výuku informatiky. Světlá, vzdušná kompozice s dostatkem volného prostoru; dominantní metafora může vytvářet vlastní prostor a hloubku. Výrazný tmavý titulek organicky začleněný do architektury obrazu, bez povinné horní lišty. Velké bezpatkové písmo, vysoký kontrast, bezpečné okraje. Grafické prvky mají nést hlavní výklad; text používej jen pro nezbytné přesné názvy, cesty a krátká vysvětlení.
 **Obraz má vysvětlovat, ne jen zdobit.** Atraktivita musí pomáhat pochopení nebo zapamatování.
 **Konkrétní příklad je cennější než obecný symbol.** Skutečná situace, objekt nebo rozhodnutí často vysvětlí téma lépe než sada ikon. **Metafora, technický model a realita se nesmějí slít.** Je-li použita metafora, musí být jasné, co představuje a kde její platnost končí. **Text je součást kompozice, nikoli povinná sada boxů.** Může být vytištěn na objektu, začleněn do prostoru, položen do negativního místa, veden podél řezu nebo tvořit součást vizuálního kontrastu. Text by měl být dobře čitelný, používej dostatečné velikosti fontů. Nepoužívej univerzální karty, opakované boxy ani dekorativní šipky; směr a vztahy vyjadřuj prostorem, světlem, měřítkem a návazností objektů. Všechny popisky jsou česky, bez pseudo-textu, falešných log a vodoznaků.
