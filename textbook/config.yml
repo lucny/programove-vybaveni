@@ -8,7 +8,7 @@ source:
 
 liascript:
   reader_base: "https://liascript.github.io/course/?"
-  raw_base: ""
+  raw_base: "https://raw.githubusercontent.com/lucny/programove-vybaveni/main/"
   branch: "main"
 
 exports:
