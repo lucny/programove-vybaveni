@@ -145,9 +145,9 @@ Proces hledání a opravování chyb v kódu s využitím různých nástrojů a
 
 ## 6. Využití umělé inteligence při programování
 
-Nástroje založené na **umělé inteligenci (AI)** se staly součástí současného vývojového prostředí. Mohou pomáhat při psaní a vysvětlování kódu, hledání chyb, tvorbě testů, refaktoringu i práci s rozsáhlejším projektem. Nejde však o náhradu znalostí programátora. Vygenerovaný kód je nutné chápat, ověřovat a testovat stejně jako kód napsaný člověkem.
-
 ### 6.1 Od automatického doplňování k AI asistentovi
+
+Nástroje založené na **umělé inteligenci (AI)** se staly součástí současného vývojového prostředí. Mohou pomáhat při psaní a vysvětlování kódu, hledání chyb, tvorbě testů, refaktoringu i práci s rozsáhlejším projektem. Nejde však o náhradu znalostí programátora. Vygenerovaný kód je nutné chápat, ověřovat a testovat stejně jako kód napsaný člověkem.
 
 Klasické vývojové prostředí již dlouho nabízí **automatické doplňování kódu (autocomplete)**, zvýraznění syntaxe, navigaci mezi symboly nebo statickou analýzu. Tyto nástroje obvykle pracují podle syntaxe jazyka, typů, názvů funkcí a informací dostupných v projektu.
 

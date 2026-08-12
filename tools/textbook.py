@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import shutil
@@ -11,6 +12,7 @@ import sys
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 GENERATED = "<!--\nGENERATED FILE.\nDo not edit manually.\nGenerator: tools/textbook.py\nSource: {source}\n-->\n\n"
@@ -130,11 +132,13 @@ class Book:
             topic.lessons.append(section)
 
     def find_assets(self, topic: Topic) -> None:
+        lesson_dirs: set[int] = set()
         for lesson_dir in sorted(topic.path.glob("*-lekce")):
             lm = LESSON_RE.match(lesson_dir.name)
             if not lm:
                 continue
             lesson = int(lm.group(1))
+            lesson_dirs.add(lesson)
             topic.images.extend(sorted({p.resolve() for p in lesson_dir.glob("media/images/*") if p.suffix.lower() == ".webp"}, key=lambda p: p.name.lower()))
             for q in lesson_dir.glob("*-QUIZ.md"):
                 qm = QUIZ_RE.match(q.name)
@@ -158,16 +162,25 @@ class Book:
                         self.errors.append(f"{p.relative_to(self.root)}: doplněk nemá první H1")
                     else:
                         topic.supplements.append((p, h1))
-        if len(topic.lessons) != 6 or [x.number for x in topic.lessons] != list(range(1, 7)):
-            self.errors.append(f"{topic.slug}: očekáváno přesně šest lekcí 1–6")
+        found_master = {lesson.number for lesson in topic.lessons}
+        found_dirs = lesson_dirs
+        missing_master = sorted(set(range(1, 7)) - found_master)
+        missing_dirs = sorted(set(range(1, 7)) - found_dirs)
+        if missing_master:
+            self.errors.append(f"{topic.slug}: v masteru chybí lekce {', '.join(map(str, missing_master))}; nalezené: {', '.join(map(str, sorted(found_master))) or 'žádné'}")
+        if missing_dirs:
+            self.errors.append(f"{topic.slug}: v adresářích chybí lekce {', '.join(map(str, missing_dirs))}; nalezené: {', '.join(map(str, sorted(found_dirs))) or 'žádné'}")
         for lesson in range(1, 7):
             if lesson not in topic.quizzes:
                 message = f"{topic.slug}/{lesson}-lekce: chybí QUIZ"
                 (self.errors if self.cfg.get("strict_quizzes", True) else self.warnings).append(message)
 
-    def image_for(self, topic: Topic, lesson: int, sub: int) -> Path | None:
+    def image_matches(self, topic: Topic, lesson: int, sub: int) -> list[Path]:
         names = [f"{topic.slug}-{lesson}-{sub}.webp", f"{lesson}-{sub}.webp"]
-        matches = [p for p in topic.images if p.name in names]
+        return [p for p in topic.images if p.name in names]
+
+    def image_for(self, topic: Topic, lesson: int, sub: int) -> Path | None:
+        matches = self.image_matches(topic, lesson, sub)
         if len(matches) > 1:
             message = f"{topic.slug}: více obrázků pro {lesson}.{sub}: {', '.join(p.name for p in matches)}"
             if message not in self.errors:
@@ -175,9 +188,9 @@ class Book:
             return None
         if matches:
             return matches[0]
-            message = f"{topic.slug}: chybí WEBP pro podkapitolu {lesson}.{sub}"
-            if message not in self.warnings:
-                self.warnings.append(message)
+        message = f"{topic.slug}: chybí WEBP pro podkapitolu {lesson}.{sub}"
+        if message not in self.warnings:
+            self.warnings.append(message)
         return None
 
     def raw_url(self, quiz: Path) -> str:
@@ -268,7 +281,34 @@ class Book:
         downloads = self.root / "docs" / "downloads"
         pdf_count = len(list(downloads.rglob("*.pdf"))) if downloads.exists() else 0
         tex_count = len(list(downloads.rglob("*.tex"))) if downloads.exists() else 0
-        report += [f"- {k}: {v}" for k, v in labels] + [f"- PDF: {pdf_count if pdf_count else 'NEOVĚŘENO'}", f"- TEX: {tex_count if tex_count else 'NEOVĚŘENO'}", "", "## Chyby", ""]
+        report += [f"- {k}: {v}" for k, v in labels] + [f"- PDF: {pdf_count if pdf_count else 'NEOVĚŘENO'}", f"- TEX: {tex_count if tex_count else 'NEOVĚŘENO'}", "", "## Diagnostika podle okruhů", ""]
+        expected = set(range(1, 7))
+        for topic in self.topics:
+            master = str(topic.master.resolve()) if topic.master else "NENALEZEN"
+            master_lessons = {lesson.number for lesson in topic.lessons}
+            dir_lessons = {int(m.group(1)) for p in topic.path.glob("*-lekce") if (m := LESSON_RE.match(p.name))}
+            report += [f"### {topic.slug}", f"- Master: `{master}`", f"- Lekce v masteru: {', '.join(map(str, sorted(master_lessons))) or 'žádné'}", f"- Chybějící lekce v masteru: {', '.join(map(str, sorted(expected - master_lessons))) or 'žádné'}", f"- Lekční adresáře: {', '.join(map(str, sorted(dir_lessons))) or 'žádné'}", f"- Chybějící lekční adresáře: {', '.join(map(str, sorted(expected - dir_lessons))) or 'žádné'}"]
+            for lesson in range(1, 7):
+                quiz = topic.quizzes.get(lesson)
+                report.append(f"- QUIZ {lesson}: {str(quiz.resolve()) if quiz else 'CHYBÍ'}")
+            duplicate_lines = []
+            for lesson in topic.lessons:
+                for sub, _, _ in lesson.subchapters:
+                    matches = self.image_matches(topic, lesson.number, sub)
+                    if len(matches) > 1:
+                        duplicate_lines.append(f"  - Obrázek {lesson.number}.{sub}:")
+                        for image in matches:
+                            try:
+                                digest = hashlib.sha256(image.read_bytes()).hexdigest()
+                                with Image.open(image) as opened:
+                                    dimensions = f"{opened.width}x{opened.height}"
+                            except Exception as exc:
+                                digest = f"NEOVĚŘENO ({exc})"
+                                dimensions = "NEOVĚŘENO"
+                            duplicate_lines.append(f"    - cesta: `{image.resolve()}`; SHA-256: `{digest}`; rozměry: `{dimensions}`")
+            report += duplicate_lines or ["- Duplicitní kandidáti obrázků: žádní"]
+            report.append("")
+        report += ["## Chyby", ""]
         report += [f"- {x}" for x in self.errors] or ["- žádné"]
         report += ["", "## Warningy", ""] + ([f"- {x}" for x in self.warnings] or ["- žádné"])
         (self.root / "TEXTBOOK-BUILD-REPORT.md").write_text("\n".join(report) + "\n", encoding="utf-8")

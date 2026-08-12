@@ -5,7 +5,7 @@ build:
     python: "3.11"
   jobs:
     pre_build:
-      - python tools/textbook.py all
+      - python tools/textbook.py validate && python tools/textbook.py build
   apt_packages:
     - pandoc
     - texlive-xetex

@@ -49,6 +49,7 @@ kritéria:
 - Zalij vroucí vodou.
 - Počkej 3–5 minut.
 - Vyjmi sáček.
+
 ### 1.3 Programovací jazyk
 
 Přirozený jazyk je jazyk, kterým lidé běžně komunikují (např. čeština, angličtina). Tyto jazyky jsou však pro počítače příliš složité a nejednoznačné. Programovací jazyk je formální jazyk určený k psaní počítačových programů. Umožňuje programátorům komunikovat s počítačem a vyjadřovat algoritmy a logiku pomocí přesně definovaných instrukcí. Každý programovací jazyk má:
@@ -77,7 +78,7 @@ Rozlišujeme dva základní typy překladačů:
 - Python je také převáděn do bytecode, který je interpretován Python interpreterem. Bytecode představuje mezikrok mezi zdrojovým kódem a strojovým kódem. Umožňuje lepší přenositelnost programů mezi různými platformami, protože bytecode lze spustit
 na libovolném zařízení s odpovídajícím interpretem nebo virtuálním strojem.
 
-## 2. Stručný vývoj programování, nižší a vyšší programovací jazyky
+## 2. Vývoj programování, nižší a vyšší programovací jazyky
 
 ### 2.1 Historický vývoj programování
 
@@ -123,6 +124,7 @@ Moderní programovací jazyky lze rozdělit podle různých hledisek. Jedním z 
 - Programovací jazyky pro mobilní aplikace – Swift – aplikace pro iOS, – Kotlin – aplikace pro Android.
 - Programovací jazyky pro vědecké výpočty a práci s daty – Python – analýza dat, umělá inteligence, – R – statistika a datová analýza.
 - Speciální a doménově orientované jazyky – SQL – práce s databázemi, – Bash – skriptování v operačních systémech. Výběr programovacího jazyka závisí na konkrétním účelu použití, požadavcích na výkon, přenositelnost, bezpečnost a také na zkušenostech vývojáře nebo vývojového týmu.
+
 ## 3. Princip fungování programu v počítači
 
 ### 3.1 Princip fungování programu v počítači
@@ -139,6 +141,7 @@ Operační systém přitom zajišťuje:
 - spouštění programů,
 - přidělování systémových prostředků (čas procesoru, paměť),
 - komunikaci mezi hardwarem a softwarem. Program tedy nikdy neběží „sám o sobě”, ale vždy za asistence operačního systému.
+
 ### 3.2 Program a proces, multitasking a multithreading
 
 Program je pasivní entita – jedná se o soubor instrukcí uložený na disku (např. soubor .exe , .py , .jar ). Proces je aktivní instance programu, která právě běží v paměti a je vykonávána procesorem.
@@ -161,6 +164,7 @@ Vlastnosti vláken:
 - webový prohlížeč může mít jedno vlákno pro vykreslování stránky,
 - jiné vlákno pro načítání dat,
 - další vlákno pro reakce na vstupy uživatele.
+
 ### 3.3 Využití paměti, ukazatele
 
 Během běhu programu jsou data a instrukce uloženy v operační paměti (RAM). Paměť je rozdělena na malé adresovatelné jednotky, z nichž každá má svou adresu. Program při běhu typicky pracuje s:
@@ -198,6 +202,7 @@ Konec Funkce
 ```
 
 - Vývojový diagram – grafické znázornění algoritmu pomocí symbolů a šipek, které ukazují tok řízení mezi jednotlivými kroky. Vývojové diagramy jsou užitečné pro vizualizaci struktury algoritmu a jeho logiky.
+
 ### 4.3 Vývojový diagram
 
 Vývojový diagram (flowchart) používá různé tvary k reprezentaci různých typů operací a rozhodnutí v algoritmu. Přehled symbolů:
@@ -252,11 +257,15 @@ else:
 return n * factorial (n - 1)
 ```
 
-## 7. print ( factorial (5))   # Vystup : 120
+```
+print ( factorial (5))   # Vystup : 120
+```
 
 Stejný algoritmus v jazyce C by vypadal takto:
 
-## 1. # include <stdio .h>
+```
+# include <stdio .h>
+```
 
 ```
 int factorial (int n) {
@@ -291,9 +300,10 @@ Při psaní kódu se mohou vyskytnout různé typy chyb, které lze rozdělit do
 - Code reviews – kontrola kódu jinými vývojáři za účelem odhalení chyb a zlepšení kvality kódu. Ladění je klíčovou součástí vývojového procesu a pomáhá zajistit, že program funguje
 správně a efektivně.
 
-# 6 Efektivita algoritmů a volba řešení
 
-## 6.1 Správné řešení nemusí být dobré řešení
+## 6 Efektivita algoritmů a volba řešení
+
+### 6.1 Správné řešení nemusí být dobré řešení
 
 Při programování je nejdůležitější, aby program dával správný výsledek. Tím ale práce programátora často nekončí. Stejný problém totiž můžeme vyřešit několika různými způsoby a některé z nich mohou být výrazně rychlejší, úspornější nebo jednodušší.
 
@@ -340,7 +350,7 @@ Takový algoritmus je jednoduchý, přehledný a zároveň efektivní. Nemusíme
 
 To je dobrý příklad situace, kdy lepší algoritmus nemusí znamenat složitější algoritmus.
 
-## 6.2 Jak přibližně měřit náročnost algoritmu
+### 6.2 Jak přibližně měřit náročnost algoritmu
 
 Když chceme porovnat dva algoritmy, nestačí pouze spustit oba programy a změřit čas stopkami. Výsledek by totiž závisel na konkrétním počítači, rychlosti procesoru, momentálním zatížení systému i použitém programovacím jazyce.
 
@@ -393,13 +403,13 @@ Programátoři proto při hodnocení algoritmu často sledují hlavně dvě věc
 
 Pro běžnou programátorskou praxi není nutné vždy provádět přesné matematické výpočty. Často stačí umět rozpoznat, zda algoritmus prochází data jednou, několikrát, nebo například používá vnořené cykly.
 
-## 6.3 Co znamená O(1), O(n) a O(n²)
+### 6.3 Co znamená O(1), O(n) a O(n²)
 
 Pro přibližný popis růstu náročnosti se používá takzvaná **asymptotická složitost**, obvykle zapisovaná pomocí symbolu **O**.
 
 Není potřeba chápat tento zápis jako přesný výpočet času. Vyjadřuje především, jak se množství práce mění při zvětšování vstupu.
 
-### Konstantní čas — O(1)
+**Konstantní čas — O(1)**
 
 Představme si pole:
 
@@ -416,7 +426,7 @@ Tomuto typu operace říkáme **O(1)**.
 
 Neznamená to, že operace trvá přesně jednu instrukci. Znamená to, že její náročnost se zásadně nezvětšuje s počtem prvků.
 
-### Lineární čas — O(n)
+**Lineární čas — O(n)**
 
 Při hledání hodnoty v neuspořádaném seznamu můžeme být nuceni projít všechny prvky:
 
@@ -432,7 +442,7 @@ Pro 100 položek maximálně přibližně 100 kontrol, pro 10 000 položek přib
 
 Takové chování označujeme jako **O(n)**.
 
-### Kvadratický čas — O(n²)
+**Kvadratický čas — O(n²)**
 
 U vnořených cyklů může počet operací růst mnohem rychleji:
 
@@ -469,7 +479,7 @@ Pro základní představu stačí pamatovat:
 
 **O(n²)** — práce roste velmi rychle, často kvůli vnořeným průchodům stejnými daty.
 
-## 6.4 Lineární a binární vyhledávání
+### 6.4 Lineární a binární vyhledávání
 
 Velmi názorným příkladem rozdílu mezi algoritmy je hledání určité hodnoty.
 
@@ -519,7 +529,7 @@ Binární vyhledávání má ale jednu zásadní podmínku: data musí být **se
 
 To ukazuje důležitou vlastnost algoritmů — rychlejší řešení často vyžaduje nějakou přípravu nebo splnění určité podmínky.
 
-## 6.5 Třídění jako příklad různě dobrých algoritmů
+### 6.5 Třídění jako příklad různě dobrých algoritmů
 
 Třídění znamená uspořádání hodnot podle určitého pravidla, například od nejmenšího po největší.
 
@@ -578,7 +588,7 @@ To přináší důležitou praktickou zásadu:
 
 Znalost jednoduchých třídicích algoritmů je ale stále důležitá, protože na nich lze dobře pochopit způsob práce algoritmu a rozdíly v efektivitě.
 
-## 6.6 Rychlost není jediným kritériem
+### 6.6 Rychlost není jediným kritériem
 
 Při výběru algoritmu bychom neměli automaticky hledat pouze nejrychlejší možné řešení.
 
@@ -610,7 +620,7 @@ for x in data:
 
 Pokud obě řešení dostatečně rychle splní požadovaný úkol, může být důležitější zvolit kód, kterému tým dobře rozumí.
 
-### Rychlost versus paměť
+**Rychlost versus paměť**
 
 Někdy lze výpočet urychlit tím, že si předem uložíme další data.
 
@@ -620,7 +630,7 @@ Vyhledávání je potom rychlejší, ale index zabírá další místo.
 
 Podobný princip využívají databáze i vyhledávače.
 
-### Příprava versus opakované použití
+**Příprava versus opakované použití**
 
 Představme si seznam milionu čísel.
 
@@ -634,7 +644,7 @@ Jinými slovy:
 
 Takový kompromis se v informatice objevuje velmi často.
 
-## 6.7 Jak poznat zbytečně pomalý program
+### 6.7 Jak poznat zbytečně pomalý program
 
 Při běžném programování není nutné u každé funkce počítat složitost pomocí matematických vzorců. Stačí si vytvořit několik praktických návyků.
 
@@ -694,7 +704,7 @@ ale také:
 
 > Jaký způsob reprezentace dat mi tento úkol usnadní?
 
-## 6.8 Teorie a skutečný výkon programu
+### 6.8 Teorie a skutečný výkon programu
 
 Zápis typu O(n) nebo O(n²) je velmi užitečný, ale neříká přesně, jak dlouho bude program běžet.
 
@@ -724,7 +734,7 @@ Pro základní programování je ale důležitější jiná zásada:
 
 Předčasná optimalizace může vést ke složitějšímu kódu bez skutečného přínosu.
 
-## Závěrečné propojení
+# Závěrečné propojení
 
 Algoritmus není pouze postup, který vede ke správnému výsledku. Při skutečném programování nás zajímá také to, kolik práce musí počítač vykonat a jak se tato práce změní při větším množství dat.
 

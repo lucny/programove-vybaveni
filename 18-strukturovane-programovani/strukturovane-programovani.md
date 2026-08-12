@@ -27,8 +27,8 @@ Strukturované programování je programovací paradigma, které klade důraz na
 - čitelnější – struktura programu je jasná a logická,
 - udržovatelnější – změny lze provádět s menším rizikem zavedení chyb,
 - testovatelné – jednotlivé části lze testovat odděleně,
-- opakovaně použitelné – dobře navržené funkce lze využít v jiných projektech.
-## 2. Konstanty, proměnné, datové typy; rozdíly ve způsobu deklarace a použití
+
+## 2. Konstanty, proměnné, datové typy
 
 ### 2.1 Proměnné a konstanty
 
@@ -36,6 +36,7 @@ Proměnná je pojmenované místo v paměti počítače, které uchovává hodno
 
 - proměnná může měnit svou hodnotu během běhu programu,
 - konstanta má pevně stanovenou hodnotu, která zůstává neměnná.
+
 ### 2.2 Datové typy
 
 Datový typ určuje, jaký druh hodnot může proměnná nebo konstanta obsahovat a jaké operace s nimi lze provádět. Datové typy definují:
@@ -47,7 +48,8 @@ Datový typ určuje, jaký druh hodnot může proměnná nebo konstanta obsahova
 - Desetinná čísla ( float , double ) – např. 3.14 , -0.001 ,
 - Znaky ( char ) – jednotlivé znaky jako 'a' , 'Z' , '5' ,
 - Textové řetězce ( string ) – posloupnosti znaků jako "Hello" , "Programování" ,
-- Logické hodnoty ( bool ) – true nebo false .
+- Logické hodnoty ( bool ) – true nebo false.
+
 ### 2.3 Statické vs. dynamické typování
 
 Programovací jazyky se liší v přístupu k deklaraci a typování proměnných: Statické typování – datový typ proměnné musí být explicitně deklarován a nelze jej během běhu programu změnit. Tento přístup používají jazyky jako C, C++, Java nebo C#. Výhodou je lepší kontrola chyb již při překladu programu a často i vyšší výkon. Dynamické typování – datový typ proměnné není explicitně deklarován a může se měnit během běhu programu. Tento přístup používají jazyky jako Python, JavaScript nebo Ruby. Výhodou je rychlejší vývoj a flexibilnější kód, nevýhodou může být menší kontrola chyb a potenciálně pomalejší běh programu. Příklad deklarace v jazyce C (statické typování):
@@ -70,11 +72,17 @@ PI = 3.14159                # Konstanta ( podle konvence velkymi pismeny )
 
 V jazyce C je nutné při deklaraci proměnné uvést její datový typ ( int , float , char ), zatímco Python datový typ automaticky odvodí z přiřazené hodnoty. V jazyce C se pro konstanty používá klíčové slovo const , v Pythonu se konstanty označují konvenčně velkymi pismeny, ale technicky se chovají jako běžné proměnné.
 
-## 3. Řídicí struktury a jejich realizace v programovacích jazycích; podmíněné příkazy a cykly
+## 3. Řídicí struktury
+
+### 3.1 Význam řídicích struktur
 
 Řídicí struktury určují, v jakém pořadí se budou vykonávat jednotlivé příkazy programu. Bez řídicích struktur by program vykonával příkazy pouze sekvenčně jeden za druhým. Řídicí struktury umožňují vytvářet složitější logiku a reagovat na různé situace. V rámci strukturovaného programování rozlišujeme tři základní typy řídicích struktur:
 
-### 3.1 Sekvence
+- **Sekvence** – příkazy jsou vykonávány postupně v pořadí, v jakém jsou zapsány v kódu.
+- **Větvení (selekce)** – umožňuje programu rozhodnout se mezi různými cestami vykonávání na základě splnění nebo nesplnění určité podmínky.
+- **Cykly (iterace)** – umožňují opakované vykonávání skupiny příkazů, dokud je splněna určitá podmínka. Tyto tři typy řídicích struktur tvoří základní stavební kameny pro tvorbu logicky správných a efektivních programů.
+
+### 3.2 Sekvence
 
 Sekvence je nejjednodušší řídicí struktura. Příkazy jsou vykonávány postupně v pořadí, v jakém jsou zapsány v kódu. Příklad v Pythonu:
 
@@ -94,7 +102,7 @@ int c = a + b;
 printf ("%d\n", c);      // Vystup : 15
 ```
 
-### 3.2 Větvení (selekce)
+### 3.3 Větvení (selekce)
 
 Větvení umožňuje programu rozhodnout se mezi různými cestami vykonávání na základě splnění nebo nesplnění určité podmínky. Základním nástrojem větvení je podmíněný příkaz. Podmíněný příkaz if vyhodnotí logickou podmínku a na základě jejího výsledku vykoná nebo nevykoná příslušný blok kódu. Schéma toku řízení pro podmíněný příkaz:
 
@@ -126,32 +134,31 @@ if (podmínka): příkazy vykonané, pokud je podmínka splněna else: příkazy
 
 Příkaz elif/else if umožňuje testovat více podmínek postupně. Příklad v jazyce C:
 
-## 1. int vek = 18;
-
 ```
+int vek = 18;
 if (vek >= 18) {
-printf ("Jste plnolet ý\n");
+printf ("Jste plnoletý");
 } else {
-printf ("Jste mladistv ý\n");
+printf ("Jste mladistvý");
 }
 ```
 
 Příklad v Pythonu:
 
-## 1. vek = 18
 
 ```
+vek = 18
 if vek >= 18:
-print ("Jste plnolet ý")
+print ("Jste plnoletý")
 else:
-print ("Jste mladistv ý")
+print ("Jste mladistvý")
 ```
 
 Ternární operátor je zkrácený zápis jednoduchého podmíněného příkazu, který vrací jednu ze dvou hodnot podle splnění podmínky. Používá se především tam, kde je potřeba stručné rozhodnutí v rámci výrazu. Příklad v Pythonu:
 
 ```
 vek = 20
-stav = " plnolet ý" if vek >= 18 else " mladistv ý"
+stav = " plnoletý" if vek >= 18 else " mladistvý"
 print (stav)
 ```
 
@@ -159,15 +166,14 @@ Příklad v jazyce C:
 
 ```
 int vek = 20;
-const char *stav = (vek >= 18) ? " plnolet ý" : " mladistv ý";
+const char *stav = (vek >= 18) ? " plnoletý" : " mladistvý";
 printf ("%s\n", stav);
 ```
 
 Příkaz switch umožňuje výběr z více větví na základě hodnoty výrazu. Je vhodný tam, kde by bylo potřeba dlouhé řetězení if-else if . Větve se obvykle ukončují příkazem break , aby nedošlo k nechtěnému průchodu do další větve. Příklad v jazyce C:
 
-## 1. int volba = 2;
-
 ```
+int volba = 2;
 switch ( volba ) {
 case 1:
 printf ("První volba \n");
@@ -182,13 +188,10 @@ printf ("Neznámá volba \n");
 
 Příklad v Pythonu (od verze 3.10):
 
-## 1. volba = 2
-
-## 3. match volba :
-
-## 4. case 1:
-
 ```
+volba = 2
+match volba :
+case 1:
 print ("První volba")
 case 2:
 print ("Druhá volba")
@@ -327,16 +330,14 @@ return vysledek ;
 }
 ```
 
-## 6. // Volani funkce
-
 ```
+// Volani funkce
 int main () {
 int suma = secti (5, 3);
 printf ("%d\n", suma); // Vystup : 8
 return 0;
+}
 ```
-
-## 11. }
 
 Příklad funkce v Pythonu:
 
@@ -359,6 +360,7 @@ Parametry jsou proměnné definované v hlavičce funkce, které přijímají ho
 - více parametrů,
 - žádný parametr,
 - žádnou návratovou hodnotu (procedura). Příklad funkce s více parametry a návratovou hodnotou v jazyce C:
+
 ```
 int secti (int a, int b) {
 return a + b;
@@ -399,9 +401,12 @@ Příklad funkce bez návratové hodnoty v Pythonu:
 ```
 def pozdrav ( jmeno ):
 print (f"Ahoj , { jmeno }!")
+...
+pozdrav ("Alice")    
+# Vystup : Ahoj , Alice !
 ```
 
-## 4. pozdrav (" Alice")    # Vystup : Ahoj , Alice !
+
 
 ### 4.4 Lokální a globální proměnné
 
@@ -413,16 +418,15 @@ Lokální proměnné jsou deklarovány uvnitř funkce a existují pouze po dobu 
 - viditelnost v celém programu,
 - sdíleny mezi všemi funkcemi,
 - uchování hodnoty mezi jednotlivými voláními funkcí. Příklad v jazyce C:
-## 1. int globalni_promenna = 100;        // Globalni promenna
+
 
 ```
-void funkce () {
+int globalni_promenna = 100; // Globalni promennavoid funkce () {
 int lokalni_promenna = 50; // Lokalni promenna
 printf ("Lokální: %d\n", lokalni_promenna );
 printf ("Globální: %d\n", globalni_promenna );
+}
 ```
-
-## 7. }
 
 ```
 int main () {
@@ -433,9 +437,8 @@ return 0;
 
 Příklad v Pythonu:
 
-## 1. globalni_promenna = 100    # Globalni promenna
-
 ```
+globalni_promenna = 100    # Globalni promenna
 def funkce ():
 lokalni_promenna = 50 # Lokalni promenna
 print (f"Lokální: { lokalni_promenna }")
@@ -468,6 +471,7 @@ S růstem velikosti a složitosti programů se stává nezbytné rozdělit kód 
 - Týmová spolupráce – různí vývojáři mohou pracovat na různých modulech současně.
 - Snadnější údržba – změny v jednom modulu neovlivňují ostatní.
 - Testování – jednotlivé moduly lze testovat nezávisle.
+
 ### 5.2 Programové knihovny
 
 Knihovna je kolekce předpřipravených funkcí, tříd a dalších programových konstrukcí, které řeší běžné úlohy. Knihovny umožňují programátorům využívat již napsaný a otestovaný kód místo opětovného vymýšlení a implementace základních funkcionalit. Rozlišujeme: Standardní knihovny – dodávány společně s programovacím jazykem a poskytují základní funkcionalitu, například:
@@ -499,9 +503,8 @@ return 0;
 
 Příklad použití standardní knihovny v Pythonu:
 
-## 1. import math
-
 ```
+import math
 vysledek = math.sqrt (16) # Odmocnina
 print ( vysledek ) # Vystup : 4.0
 ```
@@ -520,6 +523,7 @@ Standardní hlavičkové soubory jsou součástí standardní knihovny jazyka C 
 - <math.h> – matematické funkce (např. sqrt , sin , cos ),
 - <string.h> – práce s řetězci (např. strlen , strcpy ),
 - <stdlib.h> – obecné funkce (např. malloc , free , rand ).
+
 Standardní hlavičkové soubory se vkládají pomocí lomených závorek:
 
 ```
@@ -529,7 +533,9 @@ Standardní hlavičkové soubory se vkládají pomocí lomených závorek:
 
 Uživatelské hlavičkové soubory jsou vytvářeny programátorem pro vlastní projekty. Umožňují rozdělit kód do logických celků a znovupoužití funkcí v různých částech programu. Uživatelské hlavičkové soubory se vkládají pomocí uvozovek:
 
-## 1. # include " moje_funkce .h"
+```
+# include "matematika .h"
+```
 
 Příklad uživatelského hlavičkového souboru matematika.h :
 
@@ -541,15 +547,13 @@ Příklad uživatelského hlavičkového souboru matematika.h :
 ```
 int secti (int a, int b);
 int odecti (int a, int b);
+#endif
 ```
-
-## 7. #endif
 
 Příklad implementace v souboru matematika.c :
 
-## 1. # include " matematika .h"
-
 ```
+# include "matematika .h"
 int secti (int a, int b) {
 return a + b;
 }
@@ -594,27 +598,25 @@ return a - b
 
 Použití modulu v jiném souboru:
 
-## 1. import matematika
-
 ```
-vysledek = matematika . secti (10 , 5)
+import matematika
+vysledek = matematika.secti (10 , 5)
 print (f"Vý sledek : { vysledek }") # Vystup : 15
 ```
 
 Alternativně lze importovat pouze konkrétní funkce:
 
-## 1. from matematika import secti
-
 ```
+from matematika import secti
 vysledek = secti (10 , 5)
 print (f"Vý sledek : { vysledek }")    # Vystup : 15
 ```
 
 Modularita je klíčovým principem moderního programování a její správné využití výrazně zvyšuje kvalitu a udržovatelnost softwarových projektů.
 
-# 6 Rekurze, výjimky a validace vstupu
+## 6 Rekurze, výjimky a validace vstupu
 
-## 6.1 Rekurze: když funkce volá sama sebe
+### 6.1 Rekurze: když funkce volá sama sebe
 
 V předchozích částech jsme opakování řešili především pomocí cyklů. Některé problémy však lze přirozeně popsat jiným způsobem: pomocí **rekurze**. Rekurzivní funkce je funkce, která při svém běhu zavolá sama sebe, obvykle s jednodušší verzí původního problému.
 
@@ -666,7 +668,7 @@ Při návrhu rekurze je proto užitečné položit si dvě jednoduché otázky:
 
 **Je při každém dalším volání problém skutečně jednodušší?**
 
-## 6.2 Rekurze a iterace: dvě cesty ke stejnému výsledku
+### 6.2 Rekurze a iterace: dvě cesty ke stejnému výsledku
 
 Mnoho úloh lze vyřešit jak rekurzivně, tak pomocí cyklu. Faktoriál můžeme například napsat také takto:
 
@@ -692,7 +694,7 @@ Nemá proto smysl rozhodovat podle pravidla „rekurze je pokročilejší, takž
 
 Pro běžné opakování je často vhodnější cyklus. Pro hierarchicky uspořádané problémy může být rekurze výrazně přirozenější.
 
-## 6.3 Výjimky: když operaci nelze dokončit běžným způsobem
+### 6.3 Výjimky: když operaci nelze dokončit běžným způsobem
 
 Program nepracuje vždy s ideálními vstupy. Uživatel může zadat text tam, kde očekáváme číslo, soubor nemusí existovat nebo může nastat jiná situace, která znemožní pokračovat běžným způsobem.
 
@@ -753,7 +755,7 @@ except:
 
 Takový program může skutečný problém pouze zatajit. Je lepší zachytávat především konkrétní výjimky, se kterými skutečně počítáme a na které umíme vhodně reagovat.
 
-## 6.4 Validace vstupu: je hodnota nejen správného typu, ale také smysluplná?
+### 6.4 Validace vstupu: je hodnota nejen správného typu, ale také smysluplná?
 
 Úspěšné načtení hodnoty ještě neznamená, že je vstup správný.
 

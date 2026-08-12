@@ -406,7 +406,7 @@ Celý proces lze shrnout jako řetězec:
 
 Moderní webdesign proto není jen znalost značek a barev. Je to schopnost vytvořit dokument, který má smysluplnou strukturu, pružně se rozloží v různém prostoru, zůstává čitelný a ovladatelný a lze jej dlouhodobě udržovat. Flexbox, Grid, container queries nebo nové selektory jsou důležité nástroje, ale stojí na starší a stále platné myšlence: web funguje nejlépe tehdy, když je význam obsahu oddělen od způsobu jeho prezentace.
 
-## Referenční zdroje pro další studium
+# Referenční zdroje pro další studium
 
 - WHATWG: HTML Living Standard — https://html.spec.whatwg.org/
 - W3C: CSS Snapshot — https://www.w3.org/TR/css-2026/

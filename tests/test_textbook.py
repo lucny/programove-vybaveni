@@ -1,4 +1,5 @@
 import sys
+import subprocess
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -24,3 +25,8 @@ def test_generated_files_have_guard_header():
     generated = ROOT / "docs" / "01-zaklady-informatiky" / "1-lekce" / "index.md"
     if generated.exists():
         assert generated.read_text(encoding="utf-8").startswith("<!--\nGENERATED FILE.")
+
+
+def test_current_validation_has_nonzero_exit_for_critical_errors():
+    result = subprocess.run([sys.executable, "tools/textbook.py", "validate"], cwd=ROOT)
+    assert result.returncode != 0
