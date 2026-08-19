@@ -1,0 +1,31 @@
+Return-Path: <podpora@skolni.example>
+Received: from gateway.skolni.example (gateway.skolni.example [192.0.2.18])
+        by inbox.skolni.example with ESMTPS id LAB2018
+        for <student@skolni.example>; Mon, 11 May 2026 14:05:11 +0200
+Received: from helpdesk.skolni.example (helpdesk.skolni.example [192.0.2.17])
+        by gateway.skolni.example with ESMTP id OUT2017;
+        Mon, 11 May 2026 14:05:07 +0200
+Authentication-Results: mail.skolni.example;
+        spf=pass smtp.mailfrom=skolni.example;
+        dkim=pass header.d=skolni.example;
+        dmarc=pass header.from=skolni.example
+From: "Školní IT podpora" <podpora@skolni.example>
+Reply-To: <podpora@skolni.example>
+To: student@skolni.example
+Subject: Plánovaná údržba školního portálu ve středu
+Date: Mon, 11 May 2026 14:05:08 +0200
+Message-ID: <udrzba-2018@skolni.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Dobrý den,
+
+ve středu od 18:00 do 19:00 proběhne plánovaná údržba školního portálu.
+V této době může být služba krátce nedostupná. Není třeba nic potvrzovat
+ani zadávat přihlašovací údaje. Aktuální stav najdete po ručním otevření
+školního portálu z obvyklé záložky.
+
+Školní IT podpora
+
+POZNÁMKA PRO VÝUKU: Jde o zcela fiktivní zprávu. Domény .example a adresy
+z rozsahu 192.0.2.0/24 jsou rezervovány pro dokumentaci a nevedou k reálnému cíli.

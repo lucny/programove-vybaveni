@@ -1,6 +1,6 @@
 # TEXTBOOK BUILD REPORT
 
-Datum: 2026-08-19T14:12:25.880128+00:00
+Datum: 2026-08-19T16:29:23.465638+00:00
 Git commit: NEOVĚŘENO (repozitář není Git pracovní kopie)
 
 - Témata: 20

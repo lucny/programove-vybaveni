@@ -1,0 +1,4 @@
+zarizeni;adresa;vlastnik;ucel;ocekavane_sluzby;schvaleny_rozsah
+TESTOVACI-PC;127.0.0.1;student;lokalni test;nezname;POVOLENO
+UCITELSKY-SERVER;DOPLNI_UCITEL;skola;laboratorni cil;webova ukazka;JEN_POKUD_UCITEL_POVOLI
+

@@ -1,0 +1,14 @@
+BEZPEČNÝ ŠKOLNÍ VZOREK PRO EXPERIMENT 2.1
+=========================================
+
+Identifikátor: PV-KYB-2-1
+Účel: výpočet digitálního otisku a kontrola neškodného souboru
+
+Tento textový soubor neobsahuje programový kód, makra ani škodlivý obsah.
+Je určen pouze pro výuku práce s hashem a službou VirusTotal.
+
+Kontrolní věta:
+Když změníme jediný znak, změní se digitální otisk celého souboru.
+
+Bezpečnostní pravidlo:
+Do veřejné analytické služby se nikdy nenahrávají důvěrné, osobní ani neveřejné soubory.

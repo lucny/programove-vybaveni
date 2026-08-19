@@ -1,0 +1,33 @@
+Return-Path: <security@notify-login.example>
+Received: from mail.notify-login.example (mail.notify-login.example [192.0.2.44])
+        by mail.skolni.example with ESMTPS id LAB2044
+        for <student@skolni.example>; Tue, 12 May 2026 08:14:22 +0200
+Received: from workstation.notify-login.example (workstation.notify-login.example [192.0.2.55])
+        by mail.notify-login.example with ESMTP id OUT2043;
+        Tue, 12 May 2026 08:13:57 +0200
+Authentication-Results: mail.skolni.example;
+        spf=fail smtp.mailfrom=notify-login.example;
+        dkim=none;
+        dmarc=fail header.from=skolni.example
+From: "Školní IT podpora" <podpora@skolni.example>
+Reply-To: "Ověření účtu" <security@notify-login.example>
+To: student@skolni.example
+Subject: NALÉHAVÉ: účet bude dnes v 9:00 zablokován
+Date: Tue, 12 May 2026 08:14:18 +0200
+Message-ID: <verify-2044@notify-login.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Dobrý den,
+
+zaznamenali jsme chybu synchronizace vašeho školního účtu. Pokud do 45 minut
+nepotvrdíte své údaje, účet bude automaticky zablokován.
+
+Ověření proveďte zde:
+https://prihlaseni-skoly.example/overeni?ucet=student
+
+Na tuto zprávu neodpovídejte.
+Školní IT podpora
+
+POZNÁMKA PRO VÝUKU: Jde o zcela fiktivní zprávu. Domény .example a adresy
+z rozsahu 192.0.2.0/24 jsou rezervovány pro dokumentaci a nevedou k reálnému cíli.

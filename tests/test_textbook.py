@@ -34,6 +34,25 @@ def test_generated_files_have_guard_header():
         assert generated.read_text(encoding="utf-8").startswith("<!--\nGENERATED FILE.")
 
 
+def test_topic_15_lessons_link_practical_laboratories_after_quizzes():
+    book = Book(ROOT)
+    topics = book.discover({"15"})
+    assert len(topics) == 1
+    topic = topics[0]
+    assert sorted(topic.experiments) == [1, 2, 3, 4, 5, 6]
+
+    for lesson in range(1, 7):
+        assert topic.experiments[lesson].name == f"15-{lesson}-EXPERIMENTY.md"
+        generated = ROOT / "docs" / "15-kyberbezpecnost" / f"{lesson}-lekce" / "index.md"
+        if generated.exists():
+            text = generated.read_text(encoding="utf-8")
+            quiz_link = f"15-{lesson}-QUIZ.md"
+            experiment_link = f"15-{lesson}-EXPERIMENTY.md"
+            assert quiz_link in text
+            assert experiment_link in text
+            assert text.index(quiz_link) < text.index(experiment_link)
+
+
 @pytest.fixture
 def validation_repository(tmp_path):
     tools = tmp_path / "tools"
@@ -292,4 +311,4 @@ def test_all_current_subchapter_numbers_and_image_names_are_unambiguous():
                     assert matches[0].resolve() not in used_images
                     used_images.add(matches[0].resolve())
 
-    assert total == 607
+    assert total == 610

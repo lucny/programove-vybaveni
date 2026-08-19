@@ -1,0 +1,10 @@
+id;aktivum;vlastnik;data_nebo_sluzba;kriticnost;aktualizace;zaloha;poznamka
+A01;notebook vedouciho;vedouci;ucty a fotografie;vysoka;automaticke;ano;disk je sifrovany
+A02;stary notebook u projektoru;skola;prezentace;stredni;nezname;ne;pouziva se jen obcas
+A03;cloudova galerie;krouzek;publikovane fotografie;vysoka;provozovatel;export mesicne;tri spravci
+A04;fotoaparat;krouzek;pracovni snimky;stredni;firmware neznamy;kopie po akci;pametova karta
+A05;sdileny e-mail;krouzek;komunikace a obnova uctu;vysoka;provozovatel;ne;heslo zna vice lidi
+A06;tiskarna s Wi-Fi;skola;tiskova fronta;nizka;nezname;neuplatni se;vychozi nastaveni
+A07;externi disk;krouzek;archiv originalu;vysoka;neuplatni se;je to zaloha;ulozen ve stejne skrini
+A08;verejny web;krouzek;galerie a reputace;stredni;automaticke;ano;spravuje externi firma
+

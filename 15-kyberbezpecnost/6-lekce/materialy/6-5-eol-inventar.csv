@@ -1,0 +1,6 @@
+produkt;verze;zpusob_zjisteni;kriticnost;datum_kontroly;stav_podpory;primarni_zdroj;navrh
+Windows;DOPLNIT;winver;vysoka;;;;
+Android;DOPLNIT;Nastaveni-O telefonu;vysoka;;;;
+Firefox;DOPLNIT;Napoveda-O aplikaci;stredni;;;;
+Python;DOPLNIT;python --version;nizka;;;;
+

@@ -19,6 +19,7 @@ GENERATED = "<!--\nGENERATED FILE.\nDo not edit manually.\nGenerator: tools/text
 TOPIC_RE = re.compile(r"^(\d{2})-(.+)$")
 LESSON_RE = re.compile(r"^(\d+)-lekce$")
 QUIZ_RE = re.compile(r"^(?:(\d{1,2})-)?(\d+)-QUIZ\.md$", re.I)
+EXPERIMENT_RE = re.compile(r"^(?:(\d{1,2})-)?(\d+)-EXPERIMENTY\.md$", re.I)
 HEADING_RE = re.compile(r"^(#{1,6})[ \t]+(.+?)\s*$")
 SUB_RE = re.compile(r"^(\d+)\.(\d+)\.?\s+(.+?)\s*$")
 LESSON_HEADING_RE = re.compile(r"^(?:Lekce\s+)?(\d+)\.?\s*[:.-]?\s+(.+?)\s*$", re.I)
@@ -52,6 +53,7 @@ class Topic:
     intro: list[str] = field(default_factory=list)
     lessons: list[Section] = field(default_factory=list)
     quizzes: dict[int, Path] = field(default_factory=dict)
+    experiments: dict[int, Path] = field(default_factory=dict)
     images: list[Path] = field(default_factory=list)
     supplements: list[tuple[Path, str]] = field(default_factory=list)
 
@@ -184,6 +186,28 @@ class Book:
                     self.errors.append(f"{topic.slug}/{lesson_dir.name}: duplicitní kvíz pro lekci {lesson}")
                 else:
                     topic.quizzes[int(qlesson)] = q
+            for experiment in lesson_dir.glob("*-EXPERIMENTY.md"):
+                match = EXPERIMENT_RE.match(experiment.name)
+                if not match:
+                    self.errors.append(
+                        f"{topic.slug}/{lesson_dir.name}: neplatný název praktické laboratoře {experiment.name}"
+                    )
+                    continue
+                etopic, elesson = match.groups()
+                if etopic and int(etopic) != topic.number:
+                    self.errors.append(
+                        f"{topic.slug}/{experiment.name}: špatné číslo tématu"
+                    )
+                if int(elesson) != lesson:
+                    self.errors.append(
+                        f"{topic.slug}/{experiment.name}: špatné číslo lekce"
+                    )
+                if int(elesson) in topic.experiments:
+                    self.errors.append(
+                        f"{topic.slug}/{lesson_dir.name}: duplicitní praktická laboratoř pro lekci {lesson}"
+                    )
+                else:
+                    topic.experiments[int(elesson)] = experiment
             supplement_dir = lesson_dir / "doplnky"
             if supplement_dir.exists():
                 for p in sorted(supplement_dir.glob("*.md")):
@@ -285,6 +309,14 @@ class Book:
                 if lesson.number in topic.quizzes:
                     url = self.raw_url(topic.quizzes[lesson.number])
                     chunks += ["---", "", "## Procvičení lekce", "", "Ověřte si porozumění v interaktivním kvízu.", "", f"[Spustit interaktivní kvíz v LiaScriptu]({url}){{ .md-button .md-button--primary target=\"_blank\" rel=\"noopener noreferrer\" }}", ""]
+                    if lesson.number in topic.experiments:
+                        experiment_url = self.raw_url(topic.experiments[lesson.number])
+                        chunks += [
+                            "Prozkoumejte téma v šesti bezpečně vedených praktických experimentech.",
+                            "",
+                            f"[Otevřít Praktickou laboratoř v LiaScriptu]({experiment_url}){{ .md-button target=\"_blank\" rel=\"noopener noreferrer\" }}",
+                            "",
+                        ]
                 (ld / "index.md").write_text(self.generated_text(str(topic.master.relative_to(self.root)) if topic.master else topic.slug, "\n".join(chunks)), encoding="utf-8")
             for p, title in topic.supplements:
                 lesson = next((x for x in topic.path.glob("*-lekce") if p.parent == x / "doplnky"), None)
