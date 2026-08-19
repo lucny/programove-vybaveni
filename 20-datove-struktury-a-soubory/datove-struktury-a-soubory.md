@@ -354,7 +354,7 @@ shoda = re.match(vzor, text)
 novy_text = re.sub(vzor, nahrada, text)
 ```
 
-## 3.4 Praktické příklady
+## 3.4 Použití regulárních výrazů v praxi
 
 Validace emailové adresy:
 
@@ -430,7 +430,15 @@ Příklady binárních souborů:
 
 ## 4.3 Základní operace se soubory
 
-Práce se soubory typicky zahrnuje čtyři základní kroky: 1. Otevření souboru – vytvoření spojení mezi programem a souborem. 2. Čtení nebo zápis – manipulace s daty. 3. Zpracování dat – operace s načtenými daty. 4. Uzavření souboru – uvolnění prostředků.
+Práce se soubory typicky zahrnuje čtyři základní kroky: 
+
+1. Otevření souboru – vytvoření spojení mezi programem a souborem. 
+2. Čtení nebo zápis – manipulace s daty. 
+3. Zpracování dat – operace s načtenými daty. 
+4. Uzavření souboru – uvolnění prostředků.
+
+Cílem je zajistit, aby soubor byl správně uzavřen, aby nedošlo k poškození dat nebo úniku paměti. V jazyce C je nutné explicitně zavolat funkci fclose() , zatímco v Pythonu lze využít kontextový manažer (with), který se postará o automatické uzavření souboru.
+Python nabízí pohodlnější a bezpečnější práci se soubory díky automatické správě prostředků, zatímco C poskytuje nižší úroveň kontroly.
 
 ## 4.4 Práce se soubory v jazyce C
 
@@ -535,11 +543,6 @@ Režimy otevření v Pythonu:
 - "r+" – čtení i zápis,
 - "b" – binární režim (např. "rb" , "wb" ).
 
-## 4.6 Srovnání práce se soubory
-
-Aspekt C Python Otevření fopen() open() Čtení fgets() , fgetc() read() , readline() Zápis fprintf() , fputc() write() Uzavření Manuální fclose() Automatické s with Bezpečnost Vyžaduje kontrolu Jednodušší správa chyb
-
-Python nabízí pohodlnější a bezpečnější práci se soubory díky automatické správě prostředků, zatímco C poskytuje nižší úroveň kontroly.
 
 # 5. Nejpoužívanější typy datových formátů
 

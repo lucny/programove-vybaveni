@@ -154,17 +154,17 @@ nav:
       - Výukový text: 09-digitalni-video-a-multimedialni-prezentace/6-lekce/index.md
   - "10 Relační databáze a jazyk SQL":
     - Přehled: 10-relacni-databaze-a-sql/index.md
-    - "1. Relační model – data jako tvrzení a vztahy":
+    - "1. Data jako tabulky, vztahy a pravidla":
       - Výukový text: 10-relacni-databaze-a-sql/1-lekce/index.md
-    - "2. Od požadavků k databázovému schématu":
+    - "2. Od požadavků k dobře navrženému schématu":
       - Výukový text: 10-relacni-databaze-a-sql/2-lekce/index.md
-    - "3. Vytvoření databáze a bezpečné změny dat":
+    - "3. Správa databáze, uživatelé a spolehlivost dat":
       - Výukový text: 10-relacni-databaze-a-sql/3-lekce/index.md
-    - "4. SELECT – od otázky k výsledku":
+    - "4. SQL od změny dat k přesné otázce":
       - Výukový text: 10-relacni-databaze-a-sql/4-lekce/index.md
-    - "5. Když odpověď leží ve více tabulkách":
+    - "5. Databáze jako aktivní součást aplikace":
       - Výukový text: 10-relacni-databaze-a-sql/5-lekce/index.md
-    - "6. Transakce, výkon, bezpečnost a provoz":
+    - "6. Od Accessu k podnikovým databázím":
       - Výukový text: 10-relacni-databaze-a-sql/6-lekce/index.md
   - "11 Internet a WWW":
     - Přehled: 11-internet-a-www/index.md

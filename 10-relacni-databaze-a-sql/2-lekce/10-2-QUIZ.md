@@ -5,135 +5,138 @@ language: cs
 
 # 1. Testovací část
 
-Vyber správnou odpověď nebo všechny správné odpovědi. Pořadí možností se při novém načtení kvízu náhodně mění.
-
-**1. Čím má začít návrh databáze?**
+**1. Čím začíná smysluplný návrh databáze?**
 
 <!-- data-randomize="true" -->
-[(X)] Požadavky, uživateli a obchodními pravidly.
-[( )] Tvorbou indexů.
-[( )] Volbou názvů SQL funkcí.
-[( )] Importem náhodné tabulky.
+[(X)] Zjištěním požadavků, uživatelů a pravidel systému.
+[( )] Výběrem indexu pro každý sloupec.
+[( )] Zápisem hotových příkazů `CREATE TABLE`.
+[( )] Importem formuláře do databáze.
 
 ---
 
-**2. Co je konceptuální návrh?**
+**2. Co zachycuje konceptuální návrh?**
 
 <!-- data-randomize="true" -->
-[(X)] Popis významu entit a vztahů bez vazby na konkrétní DBMS.
-[( )] Nastavení konkrétních indexů.
-[( )] Hotový CREATE TABLE skript.
-[( )] Záloha databáze.
+[(X)] Význam entit a vztahů nezávisle na konkrétním databázovém produktu.
+[( )] Konkrétní nastavení indexů a rozdělení dat.
+[( )] Pouze vzhled uživatelského formuláře.
+[( )] Postup pro obnovu databáze ze zálohy.
 
 ---
 
-**3. Co je logický návrh?**
+**3. Co převádí logický návrh?**
 
 <!-- data-randomize="true" -->
-[(X)] Převod konceptu do tabulek, atributů, klíčů a omezení.
-[( )] Volba fyzického serveru.
-[( )] Pouze kresba obrazovky.
-[( )] Monitoring výkonu.
+[(X)] Koncept na tabulky, atributy, klíče a omezení.
+[( )] Tabulky na grafické prvky ER diagramu.
+[( )] Zálohu na soubor CSV.
+[( )] Oprávnění na názvy uživatelů.
 
 ---
 
-**4. Co je fyzický návrh?**
+**4. Které rozhodnutí patří do fyzického návrhu?**
 
 <!-- data-randomize="true" -->
-[(X)] Volba konkrétních typů, indexů a provozních detailů zvoleného DBMS.
-[( )] Formulace uživatelského problému.
-[( )] Výběr barev ER diagramu.
-[( )] Pouze pojmenování entit.
+[(X)] Volba datových typů, indexů a provozního nastavení konkrétního DBMS.
+[( )] Určení, zda existuje entita učebna.
+[( )] Rozlišení organizátora a účastníka rezervace.
+[( )] Stanovení, že rezervace nesmějí kolidovat.
 
 ---
 
 **5. K čemu slouží ER diagram?**
 
 <!-- data-randomize="true" -->
-[(X)] K vizualizaci entit, atributů a vztahů.
-[( )] K měření výkonu SQL.
-[( )] K záloze dat.
-[( )] K řízení transakcí.
+[(X)] Ke společné diskusi o entitách, atributech a vztazích před tvorbou kódu.
+[( )] K automatickému zrychlení všech dotazů.
+[( )] K uložení dat namísto tabulek.
+[( )] K šifrování citlivých hodnot.
 
 ---
 
-**6. Co je slabá entita?**
+**6. Co znamená, že položka objednávky je slabá entita?**
 
 <!-- data-randomize="true" -->
-[(X)] Entita, jejíž identita závisí na vlastníkovi.
-[( )] Tabulka bez dat.
-[( )] Tabulka bez cizích klíčů.
-[( )] Každá vazební tabulka.
+[(X)] Bez objednávky nemá úplnou identitu; určí ji například objednávka a pořadí.
+[( )] Nikdy nemůže obsahovat žádné atributy.
+[( )] Musí být uložena v jediné společné tabulce.
+[( )] Nemůže odkazovat na jiný záznam.
 
 ---
 
-**7. Co řeší 1NF?**
+**7. Co požaduje první normální forma?**
 
 <!-- data-randomize="true" -->
-[(X)] Jednotlivé hodnoty v polích a odstranění opakujících se skupin.
-[( )] Tranzitivní závislosti.
-[( )] Pouze indexy.
-[( )] Transakce.
+[(X)] Jednu hodnotu dané domény v každé pozici a žádné opakující se skupiny.
+[( )] Všechny tabulky musí mít umělý číselný klíč.
+[( )] Každý atribut musí být povinný.
+[( )] Všechny dotazy musí používat index.
 
 ---
 
-**8. Co řeší 2NF?**
+**8. Jakou závislost odstraňuje druhá normální forma?**
 
 <!-- data-randomize="true" -->
-[(X)] Částečné závislosti na části složeného klíče.
-[( )] Všechny cizí klíče.
-[( )] Pouze NULL.
-[( )] Šifrování.
+[(X)] Závislost neklíčového údaje jen na části složeného klíče.
+[( )] Závislost mezi tabulkou a databázovým serverem.
+[( )] Závislost výsledku na pořadí řádků.
+[( )] Závislost cizího klíče na primárním klíči.
 
 ---
 
-**9. Co řeší 3NF?**
+**9. Co řeší třetí normální forma?**
 
 <!-- data-randomize="true" -->
-[(X)] Tranzitivní závislosti neklíčových atributů.
-[( )] Pouze složené primární klíče.
-[( )] Datové typy.
-[( )] Replikaci.
+[(X)] Tranzitivní závislost neklíčového atributu na jiném neklíčovém atributu.
+[( )] Počet povolených uživatelů databáze.
+[( )] Podmínku pro spojení dvou tabulek.
+[( )] Automatické generování identifikátoru.
 
 ---
 
-**10. Která omezení lze zapsat přímo do schématu?**
+**10. Která pravidla lze běžně zapsat přímo do schématu?**
 
 <!-- data-randomize="true" -->
-[[X]] PRIMARY KEY
-[[X]] FOREIGN KEY
-[[X]] UNIQUE
-[[X]] NOT NULL
-[[X]] CHECK
-[[ ]] ORDER BY
-
+[[X]] Jedinečnost e-mailu.
+[[X]] Povinné vyplnění kapacity.
+[[X]] Kladná hodnota kapacity.
+[[X]] Odkaz na existující učebnu.
+[[ ]] Zákaz překryvu rezervací vždy vyřeší jediný `CHECK`.
 
 # 2. Interaktivní shrnutí kapitoly
 
-## Návrh před SQL
+## Od problému k modelu
 
-Databáze začíná otázkou, co má systém umět a která pravidla nesmí porušit. Konceptuální návrh zachycuje význam, logický návrh tabulky a [[klíče]], fyzický návrh konkrétní typy, indexy a provozní nastavení.
+Databáze není cílem sama o sobě. Návrh začíná otázkami, co má systém umožnit, kdo ho používá a která pravidla nesmí být porušena. Rezervační systém může zobrazit volné učebny, umožnit učiteli rezervaci a správci blokaci místnosti. Současně musí zabránit dvěma platným rezervacím stejné učebny v jednom čase. Při analýze se hledají entity, jejich vlastnosti, vztahy a [[pravidla]].
 
-## ER diagram
+Nestačí opsat prvky formuláře. Pole „účastníci“ může v rozhraní vypadat jako jedna položka, ale v datech představuje opakující se skupinu lidí. Také stav rezervace vyžaduje výčet možných stavů a povolených přechodů. Model má vyjádřit skutečný význam, ne jen současnou podobu obrazovky.
 
-ER diagram je mapa entit, atributů a [[vztahů]]. Notace crow's foot vyjadřuje kardinalitu a povinnost účasti. Diagram má sloužit jako nástroj diskuse ještě před vytvořením databáze.
+## Tři úrovně návrhu
 
-Slabá entita nemá úplnou identitu bez svého [[vlastníka]].
+Konceptuální návrh popisuje, co data znamenají, bez vazby na konkrétní databázi. Logický návrh převádí tento model na tabulky, atributy, klíče a omezení. Fyzický návrh pak volí konkrétní datové typy, [[indexy]], rozdělení dat a provozní parametry systému, například PostgreSQL nebo MySQL. Fyzická vrstva ovlivňuje výkon, ale nemůže napravit chybný významový model.
 
-## Normalizace
+ER diagram zobrazuje entity, jejich atributy a vztahy. V notaci crow's foot symboly na koncích čar vyjadřují minimální a maximální účast. Diagram je komunikační nástroj: učitel, správce a vývojář na něm mohou odhalit rozdílné představy dříve, než se vytvoří databáze. Entita je [[slabá]], pokud bez vlastníka nemá úplnou identitu; položku objednávky může určit dvojice `objednavka_id` a pořadí.
 
-1NF odstraňuje opakující se skupiny a vyžaduje jednu hodnotu v jedné pozici. 2NF řeší částečné závislosti na části složeného [[klíče]]. 3NF odstraňuje tranzitivní závislosti.
+## Normalizace jako práce se závislostmi
 
-Normalizace není soutěž o největší počet tabulek; cílem je omezit redundanci a anomálie.
+Normalizace rozděluje data tak, aby se jeden fakt zbytečně neopakoval a nevznikaly anomálie při vložení, změně nebo odstranění. První normální forma (1NF) vyžaduje jednu hodnotu v každé pozici tabulky a odmítá opakující se skupiny typu `ucastnik1`, `ucastnik2`. Vztah účasti se proto ukládá jako samostatný řádek vazební tabulky, nikoli jako seznam v jednom poli. Co je atomické, závisí na účelu: adresa může být pro jeden systém text, pro doručování soubor samostatných částí.
 
-**Vyber správná tvrzení:**
+Ve 2NF nesmí neklíčový údaj záviset jen na části složeného klíče. E-mail uživatele proto nepatří k dvojici `(rezervace_id, uzivatel_id)`, ale do tabulky uživatelů. 3NF odstraňuje [[tranzitivní]] závislosti: adresa budovy patří k budově, ne přímo k učebně, která na budovu odkazuje. Normalizace není soutěž v počtu tabulek; vychází z funkčních závislostí a významu údajů.
+
+## Pravidla, která databáze vynutí
+
+Pravidlo jen ve formuláři může obejít jiná aplikace nebo import. `PRIMARY KEY` chrání identitu, `FOREIGN KEY` odkazy, `UNIQUE` jedinečnost, `NOT NULL` povinnost hodnoty a `CHECK` podmínky nad hodnotou či řádkem. Databáze například umí zajistit kladnou kapacitu a to, že konec rezervace následuje po začátku. Zákaz kolizí je složitější: podle produktu potřebuje zvláštní omezení, transakční logiku nebo bezpečnou proceduru. Samotné „nejprve ověřit, pak vložit“ není při souběhu dostatečné.
+
+## Vědomé kompromisy
+
+Vyšší normální formy rozlišují další druhy závislostí, pro základní návrh však obvykle stačí porozumět prvním třem. Někdy je rozumné data záměrně denormalizovat, například v analytickém skladu nebo pro velmi časté čtení. Takové kopie ale musí mít jasný důvod a známý způsob, jak zůstanou konzistentní. Denormalizace není náhradou za špatně navržený dotaz. Podobně fyzické volby — datové typy či indexy — mají podporovat správný model, nikoli dodatečně opravovat nejasný význam dat.
+
+Normalizace má omezit [[ opakování faktů | (redundanci a anomálie) | počet všech tabulek ]], ne vytvářet tabulky bez významu.
+
+**Vyber pravidla vhodná pro databázové schéma:**
 
 <!-- data-randomize="true" -->
-[[X]] seznam účastníků není vhodné ukládat jako jeden textový řetězec
-[[X]] denormalizace může být vědomým výkonovým kompromisem
-[[X]] funkční závislosti vyjadřují, na čem údaj závisí
-[[ ]] 3NF znamená, že tabulka musí mít právě tři sloupce
-
-## Omezení
-
-`PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `NOT NULL` a [[CHECK]] převádějí pravidla do databáze. Pravidlo vynucené jen ve formuláři lze jinou aplikací nebo importem obejít.
+[[X]] Jedinečnost hodnoty lze vyjádřit omezením `UNIQUE`.
+[[X]] Povinný atribut lze vyjádřit pomocí `NOT NULL`.
+[[ ]] Každé složité pravidlo vyřeší kontrola pouze ve formuláři.

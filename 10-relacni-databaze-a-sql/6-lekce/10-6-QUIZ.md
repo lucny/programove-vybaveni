@@ -114,19 +114,25 @@ Vyber správnou odpověď nebo všechny správné odpovědi. Pořadí možností
 
 Transakce sdružuje operace do jednoho celku. `COMMIT` změny potvrdí, [[ROLLBACK]] je vrátí. ACID znamená atomicitu, konzistenci, izolaci a trvalost.
 
-Atomicita je princip „[[všechno nebo nic]]“. Izolace řeší souběžné transakce a může mít různé úrovně.
+[[Atomicita]] je princip „všechno, nebo nic“. Izolace řeší souběžné transakce a může mít různé úrovně.
 
-Deadlock je kruhové čekání; databáze jednu transakci obvykle zruší a aplikace musí umět některé operace bezpečně [[opakovat]].
+Konzistence znamená, že transakce převádí databázi mezi stavy splňujícími zapsaná pravidla; nezachrání však pravidlo, které návrhář do systému vůbec nevložil. Trvalost zajišťuje, že potvrzená změna přežije běžný výpadek. Slabší izolace může dovolit, aby dva kroky téhož procesu viděly odlišný stav, silnější může více čekat nebo rušit konfliktní operace.
+
+Deadlock je kruhové čekání; databáze jednu transakci obvykle zruší a aplikace musí umět některé operace bezpečně [[opakovat]]. Transakce mají být krátké, například nemají během otevřené operace čekat na potvrzení uživatele. Zákaz překrývajících se rezervací je vhodné vyjádřit omezením nebo správnou transakční strategií, ne spoléhat na to, že dva uživatelé nekliknou současně.
 
 ## Indexy a výkon
 
 Index je podobný [[rejstříku]]. Pomáhá určitým dotazům, ale zabírá místo a musí se aktualizovat při zápisech. Pořadí sloupců ve složeném indexu je významné.
 
-`EXPLAIN` ukáže plán a `EXPLAIN ANALYZE` v řadě systémů dotaz také skutečně provede.
+Složený index `(ucebna_id, zacatek)` dobře podporuje hledání podle učebny a začátku, ale nemusí stejně pomoci dotazu jen podle začátku. Při čtení velké části tabulky může být sekvenční průchod rychlejší než mnoho jednotlivých přístupů přes index. O plánu rozhoduje optimalizátor podle statistik a ceny operací; přidat index každému sloupci proto není správná [[optimalizace]].
+
+`EXPLAIN` ukáže plán a `EXPLAIN ANALYZE` v řadě systémů dotaz také skutečně provede a změří. U měnících příkazů se tedy varianta ANALYZE používá obezřetně. Výkon se zlepšuje měřením, vhodným schématem a správnou otázkou, ne přepisováním dotazu podle dojmu.
 
 ## Bezpečnost
 
 SQL injection vzniká, když aplikace skládá příkaz s nedůvěryhodným vstupem. Obrana používá [[parametrizované]] dotazy.
+
+Parametr se předává databázovému API odděleně od SQL řetězce; konkrétní značka závisí na ovladači. Parametry obvykle nelze použít místo názvu tabulky nebo směru řazení, proto se takové volby vybírají z pevného seznamu povolených možností. Obrana není ruční nahrazování apostrofů. Princip nejmenších oprávnění navíc zajistí, že účet veřejné aplikace nemůže mazat tabulky a reportovací účet nemění rezervace.
 
 **Vyber správné zásady:**
 
@@ -141,4 +147,6 @@ SQL injection vzniká, když aplikace skládá příkaz s nedůvěryhodným vstu
 
 Replika zvyšuje dostupnost, ale není [[záloha]]. Obnova se musí pravidelně testovat. Monitoring sleduje výkon, zámky, úložiště, chyby a stav záloh.
 
-Aplikace obvykle používá omezený pool [[připojení]] a ORM může pomáhat s mapováním objektů, ale neodstraňuje potřebu rozumět SQL, transakcím a výkonu.
+Chybné smazání se může okamžitě přenést i na repliku. Export CSV navíc nezachytí celé schéma, omezení, oprávnění ani transakční stav. Záloha má hodnotu jen tehdy, jestliže z ní lze obnovit požadovaný stav v přijatelném čase; cíle ztráty dat a doby obnovy je nutné stanovit a postup zkoušet.
+
+Aplikace obvykle používá omezený pool [[připojení]] a ORM může pomáhat s mapováním objektů, ale neodstraňuje potřebu rozumět SQL, transakcím a výkonu. Generativní AI může navrhnout první verzi dotazu, nemá však automaticky znalost významu dat ani oprávnění. Její výstup je nutné číst, nejdříve ověřit nad bezpečnými testovacími daty a před změnou dat použít transakci či kontrolní kopii. Do veřejné AI služby nepatří skutečná hesla, osobní údaje ani neveřejný obsah databáze.

@@ -6,7 +6,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.1 Od živého výkladu k učebnímu prostředí
 
 **E-learning** spojuje digitální obsah, komunikaci, aktivitu a zpětnou vazbu. Synchronní forma probíhá společně v čase, například při živé videolekci. Asynchronní forma umožní pracovat vlastním tempem s textem, videem, úlohami a diskusí. Obě lze kombinovat: samostudium připraví základ a společné setkání se věnuje otázkám, procvičení nebo spolupráci.
 
@@ -27,7 +26,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.2 Screencast jako malá video lekce
 
 Screencast kombinuje záznam obrazovky, komentář, kurzor a někdy obraz kamery. Dobře se hodí pro postup v programu, protože ukazuje nejen výsledek, ale i pořadí akcí. Musí však být navržen stejně pečlivě jako jiné video. Nejdříve určíme jeden dosažitelný cíl, připravíme čisté prostředí bez osobních údajů, zvětšíme důležité prvky a odstraníme čekání či bloudění.
 
@@ -46,7 +44,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.3 AI jako pomocník ve výrobním řetězci
 
 Umělá inteligence může zasáhnout téměř do každé fáze. Při přípravě navrhne varianty osnovy, shrne podklady nebo pomůže vytvořit storyboard. Při postprodukci přepíše řeč, navrhne střih podle přepisu, vyhledá záběry, odstraní pozadí, přeloží titulky nebo syntetizuje hlas. Generativní model může ze slovního zadání vytvořit obraz, hudbu, animaci či celý videoklip.
 
@@ -67,7 +64,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.4 Personalizace není totéž co kvalitní učení
 
 AI tutor může vysvětlit pojem jiným příkladem, vytvořit procvičovací otázky nebo nabídnout nápovědu podle předchozí odpovědi. Adaptivní systém může změnit pořadí a obtížnost úloh. Taková personalizace je užitečná, pokud vede ke stejnému ověřitelnému cíli a pokud člověk rozumí, proč dostává určité doporučení.
 
@@ -88,7 +84,6 @@ Zpracuj v podobě encyklopedické grafiky tuto kapitolu:
 -----
 Vycházej z tohoto textu, ale k vyjádření obsahu používej hlavně grafické prvky:
 -----
-**## 6.5 Původ média a otázka důvěry
 
 Digitální video lze sestříhat, přerámovat, zpomalit, doplnit syntetickým hlasem nebo celé vygenerovat. Samotný realistický vzhled proto není dostatečný důkaz pravosti. Důvěryhodnost posuzujeme podle původu, kontextu, historie úprav, nezávislého potvrzení a motivace zdroje.
 
@@ -96,19 +91,6 @@ Technologie **Content Credentials** založená na standardu C2PA může k médiu
 
 Při ověřování podezřelého videa proto hledáme původní zveřejnění, celé nezkrácené znění, datum a místo, další záznamy stejné události a důvěryhodnost autora. Kontrolujeme, zda zvuk odpovídá obrazu a zda titulek nevkládá scéně jiný význam. AI detektor může být jedním signálem, neměl by být jediným rozhodčím.
 
-# Závěrečné propojení
-
-Digitální video začíná fyzickou scénou. Světlo projde objektivem, snímač je převede na elektrické hodnoty a obrazový procesor vytvoří řadu digitálních snímků. Kodek zmenší jejich datovou náročnost, kontejner spojí obraz se zvukem, titulky a metadaty a postprodukce z materiálu sestaví sdělení. Distribuční systém pak připraví varianty, které se přizpůsobují síti a zařízení diváka.
-
-Multimediální prezentace používá stejné stavební prvky, ale její kvalita nevzniká jejich počtem. Text, obraz, zvuk, video, animace a interaktivita musí mít rozdělené role a společný komunikační cíl. E-learning k nim přidává aktivitu, zpětnou vazbu a sledování pokroku. Umělá inteligence může celý řetězec urychlit a rozšířit, zároveň však zvyšuje potřebu kontroly, souhlasu a ověřování původu.
-
-Celý okruh lze shrnout dvěma navazujícími cestami:
-
-**scéna → světlo a zvuk → digitalizace → komprese a kontejner → střih → distribuce → obraz a zvuk pro diváka**
-
-**záměr → struktura sdělení → volba médií → prezentace nebo kurz → aktivita publika → zpětná vazba a porozumění**
-
-Nejdůležitější není zapamatovat si nejdelší seznam kodeků, kamer nebo prezentačních aplikací. Podstatné je rozlišit, co bylo zachyceno, jak je informace reprezentována, co se při kompresi či úpravě změnilo, jak technická volba slouží sdělení a podle čeho lze výslednému médiu důvěřovat.**
 ------
 Formát 16:9, ideálně 1600 × 900 px. Profesionální encyklopedická grafika pro středoškolskou výuku informatiky. Světlá, vzdušná kompozice s dostatkem volného prostoru; dominantní metafora může vytvářet vlastní prostor a hloubku. Výrazný tmavý titulek organicky začleněný do architektury obrazu, bez povinné horní lišty. Velké bezpatkové písmo, vysoký kontrast, bezpečné okraje. Grafické prvky mají nést hlavní výklad; text používej jen pro nezbytné přesné názvy, cesty a krátká vysvětlení.
 **Obraz má vysvětlovat, ne jen zdobit.** Atraktivita musí pomáhat pochopení nebo zapamatování.

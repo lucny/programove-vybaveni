@@ -4,7 +4,7 @@
 
 Vývoj softwaru probíhá v několika fázích, přičemž každá z nich vyžaduje specifické nástroje pro efektivní řízení a realizaci projektu.
 
-## 1.1 Návrh a plánování
+## 1.1 Návrh a plánování aplikace
 
 - **Význam:** V této fázi se definuje struktura aplikace, algoritmy a logika programu.
 - **Používané nástroje:**
@@ -137,7 +137,7 @@ Proces hledání a opravování chyb v kódu s využitím různých nástrojů a
 - **Git** je nejpoužívanějším distribuovaným verzovacím systémem, který je oblíbený pro svou rychlost, flexibilitu a širokou podporu.
 - **GitHub** je platforma pro sdílení a spolupráci na projektech postavených na Gitu. Umožňuje vytvářet repozitáře, spravovat issues a pull requests a sdílet kód s ostatními.
 
-## 5.2 Využití v praxi
+## 5.2 Využití verzovacího systému v praxi
 
 - **Individuální vývoj:** Snadná správa verzí kódu při dlouhodobém vývoji.
 - **Týmová spolupráce:** Každý člen týmu může pracovat na samostatné větvi a následně provést **sloučení změn (merge)**.

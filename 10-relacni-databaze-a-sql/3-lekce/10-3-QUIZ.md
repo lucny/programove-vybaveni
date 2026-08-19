@@ -113,17 +113,19 @@ Vyber správnou odpověď nebo všechny správné odpovědi. Pořadí možností
 
 SQL je převážně [[deklarativní]]: popisujeme, čeho chceme dosáhnout, zatímco optimalizátor volí plán provedení. DDL definuje strukturu, DML pracuje s daty, DCL s oprávněními a TCL s [[transakcemi]].
 
-Jednotlivé databázové produkty používají vlastní dialekty a rozšíření.
+Stejný dotaz tedy může podle velikosti tabulek, indexů a statistik dostat jiný plán, aniž se změní jeho požadovaný výsledek. Skupiny příkazů jsou užitečná orientace, ne úplná definice všech možností produktu. Jednotlivé databázové produkty používají vlastní dialekty a rozšíření: například `LIMIT` je běžný v PostgreSQL, MySQL a SQLite, zatímco standard zná také `FETCH FIRST`. Při změně databázového systému je nutné ověřit [[dokumentaci]].
 
 ## Schéma jako pravidla
 
 `CREATE TABLE` nepopisuje pouze sloupce, ale také klíče, výchozí hodnoty a omezení. `ON DELETE CASCADE` může automaticky smazat závislé řádky, proto se musí používat [[vědomě]].
 
-Změny schématu se v provozu verzují pomocí [[migrací]] a testují.
+Například tabulka účasti může po odstranění rezervace ztratit navázané řádky, zatímco použitou učebnu bez povolené kaskády nelze jednoduše odstranit. Kaskáda je užitečná jen tehdy, odpovídá-li významu vztahu; jinak může odstranit více dat, než uživatel čekal. Změny schématu se v provozu verzují pomocí [[migrací]], testují na kopii dat a nasazují s plánem návratu. I zdánlivě jednoduchý `ALTER TABLE` může nad velkou tabulkou trvat dlouho nebo blokovat práci ostatních.
 
 ## Změny dat
 
 `INSERT` přidává řádky, `UPDATE` mění a `DELETE` odstraňuje. Před rizikovou změnou je vhodné ověřit stejnou podmínku pomocí SELECT a pracovat v [[transakci]].
+
+U `INSERT` se vyplatí cílové sloupce psát výslovně: kód pak nezávisí na jejich fyzickém pořadí a je čitelnější. Hromadné importy patří do dávkových či specializovaných mechanismů, ne do tisíců ručně sestavených dotazů. Zapomenuté `WHERE` u `UPDATE` či `DELETE` zasáhne všechny řádky. Měkké smazání místo fyzického odstranění zachovává historii, ale komplikuje dotazy a samo nenahrazuje audit ani pravidla uchovávání údajů.
 
 **Vyber správné zásady:**
 
@@ -138,3 +140,11 @@ Změny schématu se v provozu verzují pomocí [[migrací]] a testují.
 Databázový server ověřuje uživatele, plánuje dotazy a řídí souběh. Klient může být DBeaver, pgAdmin, příkazová řádka nebo aplikace.
 
 DBA spravuje provoz, ale aplikační účet má dodržovat princip nejmenších [[oprávnění]].
+
+Server přijímá spojení, ověřuje uživatele, plánuje dotazy, řídí souběh a ukládá data. Klient je jen nástroj, například administrační program, příkazová řádka nebo webová aplikace s ovladačem; grafické rozhraní pravidla nevynucuje. DBA se stará o účty, oprávnění, zálohy, obnovu, aktualizace, výkon i dostupnost. Název superuživatele závisí na produktu a aplikace nemá běžet s nejvyššími právy.
+
+## Praktická bezpečnost změn
+
+Každá změna dat má být čitelná a ověřitelná. Před příkazem, který mění či maže řádky, lze spustit `SELECT` se stejnou podmínkou, zkontrolovat počet výsledků a teprve potom pracovat v transakci. Tento postup omezuje riziko chybného zásahu, ale nenahrazuje vhodně navržená omezení schématu. Při práci ve více aplikacích jsou pravidla vložená přímo do databáze spolehlivější než kontroly ukryté jen v jednom klientovi. Bezpečný provoz proto spojuje přesné SQL, řízené změny schématu a omezená oprávnění.
+
+Při velkém importu je vhodnější [[ dávkové vkládání nebo specializovaný mechanismus | (dávkové vkládání nebo specializovaný mechanismus) | ručně skládané jednotlivé dotazy ]]. Takový postup je čitelnější, lépe měřitelný a nezatěžuje systém zbytečným opakováním stejných kroků.

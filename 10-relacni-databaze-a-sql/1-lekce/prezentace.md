@@ -70,6 +70,3 @@ Kardinalita sama neříká vše. Návrh musí určit také povinnost vztahu. Rez
 
 ---
 
-# Lekce 2: Od požadavků k databázovému schématu
-
-***
